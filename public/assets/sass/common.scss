@@ -1,0 +1,45 @@
+/*
+ * Custom CSS Goteo
+ *
+ *
+ */
+@import 'variables';
+
+
+
+@import 'components/custom_animations';
+@import 'components/icons';
+@import 'components/buttons';
+@import 'components/file_types';
+@import 'components/circle';
+@import 'components/alerts';
+@import 'components/widgets';
+@import 'components/widgets_call';
+@import 'components/forms';
+@import 'components/slider';
+@import 'components/lists';
+@import 'components/material_tables';
+@import 'components/foundation';
+@import 'components/main_slider';
+
+@import 'misc/misc';
+@import 'misc/charts';
+// This will dissappear some day, cows may fly...
+@import 'misc/unordered';
+@import 'misc/responsive_utils';
+
+
+@import 'layouts/layout';
+@import 'layouts/header';
+@import 'layouts/search';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+@import 'layouts/home';
+@import 'layouts/discover';
+@import 'layouts/project';
+@import 'layouts/channel';
+@import 'layouts/channels';
+@import 'layouts/dashboard';
+@import 'layouts/admin';
+@import 'layouts/blog';
+

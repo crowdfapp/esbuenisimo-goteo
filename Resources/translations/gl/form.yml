@@ -1,0 +1,16 @@
+---
+form-add-button: Engadir
+form-ajax-info: 'O formulario vaise gravando segundo pases por cada campo'
+form-errors-info: 'Total: %s | Neste paso: %s'
+form-errors-total: 'Hai %s erros en total'
+form-footer-errors_title: Erros
+form-image_upload-button: 'Cargar imaxe'
+form-media_send-button: 'Engadir video'
+form-next-button: Seguinte
+form-project-info_status-title: 'Estado global da información'
+form-project-progress-title: 'Avaliación de datos'
+form-project-status-title: 'Estado do proxecto'
+form-project_status-cancel: Descartado
+form-project_status-fulfilled: 'Retorno cumprido'
+form-project_status-review: 'Pendente de valoración'
+form-self_review-button: Corrixir

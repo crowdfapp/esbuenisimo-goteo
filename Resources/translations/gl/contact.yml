@@ -1,0 +1,9 @@
+---
+contact-captcha-field: 'Proba de humanidade (sentímolo...)'
+contact-captcha-refresh: 'Actualizar imaxe'
+contact-message-field: Mensaxe
+contact-name-field: Nome
+contact-send_message-header: 'Envíanos unha mensaxe'
+error-contact-email-empty: 'Non engadiches o teu email'
+error-contact-message-empty: 'Non escribiches ningunha mensaxe'
+error-contact-subject-empty: 'Non escribiches o asunto'
