@@ -1,5 +1,4 @@
 .vagrant
-.sass-cache
 
 /extend/*
 !/extend/README.md
@@ -8,7 +7,6 @@
 !/extend/plugin-responsive
 !/extend/invest-return
 
-/node_modules/
 /vendor/
 /public/assets/vendor/footable/releases/
 /bower_components/
@@ -21,7 +19,6 @@
 !/var/data
 !/var/php
 /var/php/sess_*
-composer.lock
 
 phpunit.xml
 /tests/build
