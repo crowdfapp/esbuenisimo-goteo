@@ -4,7 +4,7 @@ CREATE TABLE `criteria_lang` (
 `title` TINYTEXT NULL ,
 `description` TEXT NULL ,
  UNIQUE KEY `id_lang` (`id`,`lang`)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 -- pendiente de traducir
 ALTER TABLE `criteria_lang` ADD `pending` INT( 1 ) NULL DEFAULT '0' COMMENT 'Debe revisarse la traducción';

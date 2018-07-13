@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS `call_lang` (
-`id` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+`id` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
 `lang` varchar(2) NOT NULL,
-`description` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
-`whom` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
-`apply` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
-`legal` LONGTEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
-`subtitle` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
+`description` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
+`whom` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
+`apply` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
+`legal` LONGTEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
+`subtitle` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
  UNIQUE KEY `id_lang` (`id`,`lang`)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 -- Dosier informativo
 ALTER TABLE `call_lang` ADD `dossier` tinytext;
@@ -19,7 +19,7 @@ ALTER TABLE `call_lang` ADD `resources` TEXT NULL DEFAULT NULL COMMENT 'Recursos
 ALTER TABLE `call_lang` ADD `tweet` tinytext DEFAULT NULL AFTER `dossier` ;
 
 -- nombre
-ALTER TABLE `call_lang` ADD `name` TINYTEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL AFTER `lang`;
+ALTER TABLE `call_lang` ADD `name` TINYTEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NULL AFTER `lang`;
 
 -- pendiente de traducir
 ALTER TABLE `call_lang` ADD `pending` INT( 1 ) NULL DEFAULT '0' COMMENT 'Debe revisarse la traducción';

@@ -127,7 +127,7 @@ ALTER TABLE `call` CHANGE `description` `description` LONGTEXT NULL;
 ALTER TABLE `call` ADD `fee_projects_drop` INT(2) NOT NULL DEFAULT 4 COMMENT 'Fee to apply in the financial report to the drop';
 
 -- add facebook_pixel
-ALTER TABLE `call` ADD COLUMN `facebook_pixel` varchar(20)  COLLATE utf8_general_ci NULL after `fee_projects_drop`;
+ALTER TABLE `call` ADD COLUMN `facebook_pixel` varchar(20)  COLLATE utf8_unicode_ci NULL after `fee_projects_drop`;
 
 -- constrains
 ALTER TABLE `call` ADD FOREIGN KEY (`owner`) REFERENCES `user`(`id`) ON UPDATE CASCADE;

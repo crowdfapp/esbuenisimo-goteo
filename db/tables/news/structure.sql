@@ -4,7 +4,7 @@ CREATE TABLE `news` (
 `url` TINYTEXT NOT NULL ,
 `order` INT( 11 ) NOT NULL DEFAULT '1',
 PRIMARY KEY ( `id` )
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT = 'Noticias en la cabecera';
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci COMMENT = 'Noticias en la cabecera';
 
 
 -- alters

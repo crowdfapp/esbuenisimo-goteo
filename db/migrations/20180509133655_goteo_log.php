@@ -32,8 +32,8 @@ class GoteoLog
   public function getUpSQL()
   {
      return "
-        ALTER TABLE `log` CHANGE `target_type` `target_type` VARCHAR(50) CHARSET utf8 COLLATE utf8_general_ci NULL COMMENT 'tipo de objetivo', ADD INDEX (`scope`), ADD INDEX (`target_type`), ADD INDEX (`target_id`);
-        ALTER TABLE `log` ADD COLUMN `user_id` VARCHAR(50) CHARSET utf8 COLLATE utf8_general_ci NULL AFTER `scope`, ADD FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
+        ALTER TABLE `log` CHANGE `target_type` `target_type` VARCHAR(50) CHARSET utf8 COLLATE utf8_unicode_ci NULL COMMENT 'tipo de objetivo', ADD INDEX (`scope`), ADD INDEX (`target_type`), ADD INDEX (`target_id`);
+        ALTER TABLE `log` ADD COLUMN `user_id` VARCHAR(50) CHARSET utf8 COLLATE utf8_unicode_ci NULL AFTER `scope`, ADD FOREIGN KEY (`user_id`) REFERENCES `user`(`id`) ON UPDATE CASCADE ON DELETE CASCADE;
      ";
   }
 
@@ -45,7 +45,7 @@ class GoteoLog
   public function getDownSQL()
   {
      return "
-        ALTER TABLE `log` CHANGE `target_type` `target_type` VARCHAR(10) CHARSET utf8 COLLATE utf8_general_ci NULL COMMENT 'tipo de objetivo', DROP INDEX `scope`, DROP INDEX `target_type`, DROP INDEX `target_id`;
+        ALTER TABLE `log` CHANGE `target_type` `target_type` VARCHAR(10) CHARSET utf8 COLLATE utf8_unicode_ci NULL COMMENT 'tipo de objetivo', DROP INDEX `scope`, DROP INDEX `target_type`, DROP INDEX `target_id`;
         ALTER TABLE `log` DROP COLUMN `user_id`, DROP INDEX `user_id`, DROP FOREIGN KEY `log_ibfk_1`;
      ";
   }

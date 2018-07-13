@@ -33,7 +33,7 @@ class GoteoMatchersphere
   {
      return "
         CREATE TABLE `matcher_sphere`(
-            `matcher` VARCHAR(50) CHARSET utf8 COLLATE utf8_general_ci NOT NULL,
+            `matcher` VARCHAR(50) CHARSET utf8 COLLATE utf8_unicode_ci NOT NULL,
             `sphere` BIGINT UNSIGNED NOT NULL,
             `order` SMALLINT UNSIGNED NOT NULL DEFAULT 1,
             UNIQUE INDEX (`matcher`, `sphere`),

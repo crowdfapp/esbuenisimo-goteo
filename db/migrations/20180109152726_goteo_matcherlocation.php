@@ -50,7 +50,7 @@ class GoteoMatcherlocation
           KEY `latitude` (`latitude`),
           KEY `longitude` (`longitude`),
           CONSTRAINT `matcher_location_ibfk_1` FOREIGN KEY (`id`) REFERENCES `matcher` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
      ";
   }
 

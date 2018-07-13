@@ -38,7 +38,7 @@ class GoteoDonors
         ALTER TABLE `donor`
         CHANGE `edited` `edited` INT(1) DEFAULT 0 NOT NULL COMMENT 'Revisados por el usuario',
         CHANGE `confirmed` `confirmed` INT(1) DEFAULT 0 NOT NULL COMMENT 'Certificado generado',
-        CHANGE `pdf` `pdf` VARCHAR(255) CHARSET utf8 COLLATE utf8_general_ci DEFAULT '' NOT NULL COMMENT 'nombre del archivo de certificado',
+        CHANGE `pdf` `pdf` VARCHAR(255) CHARSET utf8 COLLATE utf8_unicode_ci DEFAULT '' NOT NULL COMMENT 'nombre del archivo de certificado',
         ADD COLUMN `processed` DATE NOT NULL COMMENT 'Si se ha presentado el certificado en hacienda' AFTER `pdf`;
         UPDATE `donor` SET `processed`=CONCAT(`year`+1,'-','01','-','01') WHERE `confirmed`=1 AND `pdf`!='' AND `year` < 2017;
      ";
@@ -55,7 +55,7 @@ class GoteoDonors
         ALTER TABLE `donor` DROP COLUMN `processed`,
         CHANGE `edited` `edited` INT(1) DEFAULT 0 NULL COMMENT 'Revisados por el usuario',
         CHANGE `confirmed` `confirmed` INT(1) DEFAULT 0 NULL COMMENT 'Certificado generado',
-        CHANGE `pdf` `pdf` VARCHAR(255) CHARSET utf8 COLLATE utf8_general_ci NULL COMMENT 'nombre del archivo de certificado';
+        CHANGE `pdf` `pdf` VARCHAR(255) CHARSET utf8 COLLATE utf8_unicode_ci NULL COMMENT 'nombre del archivo de certificado';
 
      ";
   }

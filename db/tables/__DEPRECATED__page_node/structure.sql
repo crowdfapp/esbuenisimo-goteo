@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS `page_node` (
 `lang` VARCHAR( 2 ) NOT NULL ,
 `content` LONGTEXT NULL,
   UNIQUE KEY `page` (`page`,`node`,`lang`)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT = 'Contenidos de las paginas';
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci COMMENT = 'Contenidos de las paginas';
 
 -- Titulo y cabecera en el registro del nodo
 ALTER TABLE `page_node` ADD `name` TINYTEXT NULL AFTER `lang` ,

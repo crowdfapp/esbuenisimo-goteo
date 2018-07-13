@@ -5,7 +5,7 @@ CREATE TABLE `news_lang` (
 `description` TEXT NULL ,
 `url` TINYTEXT NULL ,
  UNIQUE KEY `id_lang` (`id`,`lang`)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 -- pendiente de traducir
 ALTER TABLE `news_lang` ADD `pending` INT( 1 ) NULL DEFAULT '0' COMMENT 'Debe revisarse la traducción';

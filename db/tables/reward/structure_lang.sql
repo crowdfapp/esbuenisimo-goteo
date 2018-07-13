@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS `reward_lang` (
 `id` INT(20) NOT NULL,
 `lang` varchar(2) NOT NULL,
-`reward` TINYTEXT CHARACTER SET utf8 COLLATE utf8_general_ci,
-`description` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci ,
+`reward` TINYTEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+`description` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci ,
  UNIQUE KEY `id_lang` (`id`,`lang`)
-) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 -- alter
-ALTER TABLE `reward_lang` ADD `other` TINYTEXT CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE `reward_lang` ADD `other` TINYTEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
 -- pendiente de traducir
 ALTER TABLE `reward_lang` ADD `pending` INT( 1 ) NULL DEFAULT '0' COMMENT 'Debe revisarse la traducción';

@@ -32,7 +32,7 @@ class GoteoRememberme
   public function getUpSQL()
   {
      return "
-        ALTER TABLE `user` ADD COLUMN `rememberme` VARCHAR(255) CHARSET utf8 COLLATE utf8_general_ci NOT NULL AFTER `token`;
+        ALTER TABLE `user` ADD COLUMN `rememberme` VARCHAR(255) CHARSET utf8 COLLATE utf8_unicode_ci NOT NULL AFTER `token`;
      ";
   }
 

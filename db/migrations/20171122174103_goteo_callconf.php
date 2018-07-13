@@ -31,7 +31,7 @@ class GoteoCallconf
    */
   public function getUpSQL()
   {
-    return "ALTER TABLE `call_conf` CHANGE `limit2` `limit2` SET('normal','minimum','unlimited','none','fullunlimited') CHARSET utf8 COLLATE utf8_general_ci DEFAULT 'none' NOT NULL COMMENT 'tipo limite riego segunda ronda'; 
+    return "ALTER TABLE `call_conf` CHANGE `limit2` `limit2` SET('normal','minimum','unlimited','none','fullunlimited') CHARSET utf8 COLLATE utf8_unicode_ci DEFAULT 'none' NOT NULL COMMENT 'tipo limite riego segunda ronda'; 
     ";
   }
 
@@ -42,7 +42,7 @@ class GoteoCallconf
    */
   public function getDownSQL()
   {
-     return "ALTER TABLE `call_conf` CHANGE `limit2` `limit2` SET('normal','minimum','unlimited','none') CHARSET utf8 COLLATE utf8_general_ci DEFAULT 'none' NOT NULL COMMENT 'tipo limite riego segunda ronda'";
+     return "ALTER TABLE `call_conf` CHANGE `limit2` `limit2` SET('normal','minimum','unlimited','none') CHARSET utf8 COLLATE utf8_unicode_ci DEFAULT 'none' NOT NULL COMMENT 'tipo limite riego segunda ronda'";
   }
 
 }
