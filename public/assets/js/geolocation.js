@@ -97,7 +97,7 @@ locator.saveGeolocationData = function (type, item, data) {
 // };
 
 locator.setLocationFromFreegeoip = function (type, item, callback) {
-    $.getJSON('//freegeoip.net/json/?callback=?', function(data){
+    $.getJSON('//api.ipstack.com/186.116.207.169?access_key=0c9334c278a250179cab4748c1dc3f83&output=json&legacy=1?', function(data){
         if(data.latitude && data.longitude) {
             locator.trace('Freegeoip geolocated type:', type, ' item:', item, ' data:', data);
            //save data

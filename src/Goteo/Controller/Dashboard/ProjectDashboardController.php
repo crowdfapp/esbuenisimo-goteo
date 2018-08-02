@@ -624,7 +624,10 @@ class ProjectDashboardController extends DashboardController {
         if($project instanceOf Response) return $project;
 
         $referer = $request->headers->get('referer');
-        if(!$referer || strpos($referer, '/dashboard/') === false) $referer ='/dashboard/project/' . $project->id . '/summary';
+        //if(!$referer || strpos($referer, '/dashboard/') === false) $referer ='/dashboard/project/' . $project->id . '/summary';
+      
+        // FIX 01: Cuando el admin le da verificar a un proyecto, manda a una página de error
+        $referer ='/dashboard/project/' . $project::idealiza($project->name) . '/summary';
 
         $form->handleRequest($request);
         $validation = $project->inEdition() ? $project->getValidation() : false;
@@ -643,7 +646,7 @@ class ProjectDashboardController extends DashboardController {
                 $old_id = $project->id;
                 $this->dispatch(AppEvents::PROJECT_READY, new FilterProjectEvent($project));
 
-                if(strpos($referer, $old_id) !== false) $referer = '/dashboard/project/' . $project->id . '/summary';
+                //if(strpos($referer, $old_id) !== false) $referer = '/dashboard/project/' . $project->id . '/summary';
 
             } catch(\Exception $e) {
                 if($project->inReview()) Message::info(Text::get('project-review-request_mail-success'));
