@@ -175,7 +175,7 @@ db:
 
 # HTML Metas
 meta:
-    title:       --meta-title--       # Html default <title>
+    title:       Es Buenisimo Dev       # Html default <title>
     description: --meta-description-- # Html default <meta description>
     keywords:    --keywords--         # Html default <meta keywords>
     author:      --author--           # Html default <meta author>

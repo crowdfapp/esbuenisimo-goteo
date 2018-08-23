@@ -34,11 +34,11 @@ timezone: Europe/Madrid
 
 # url
 url:
-    main: //es-buenisimo-source-joseantoniobayonamedinaesbuenisi.codeanyapp.com
+    main: //esbuenisimo-goteo-joseantoniobayonamedinaebgithub4.codeanyapp.com
     # static resources url if you use a different assets server
-    assets: //es-buenisimo-source-joseantoniobayonamedinaesbuenisi.codeanyapp.com
+    assets: //esbuenisimo-goteo-joseantoniobayonamedinaebgithub4.codeanyapp.com/dist
     #optional, configure this as hostname only (ex: example.com) if you want languages to be selected as subdomains (es.example.com, en.example.com)
-    url_lang: //es-buenisimo-source-joseantoniobayonamedinaesbuenisi.codeanyapp.com
+    url_lang: //esbuenisimo-goteo-joseantoniobayonamedinaebgithub4.codeanyapp.com
 
     # If you want to use a CDN or another web server to serve the cached images
     # You can define this constants. All cached images links will point to this
@@ -175,7 +175,7 @@ db:
 
 # HTML Metas
 meta:
-    title:       --meta-title--       # Html default <title>
+    title:       Es Buenisimo Dev       # Html default <title>
     description: --meta-description-- # Html default <meta description>
     keywords:    --keywords--         # Html default <meta keywords>
     author:      --author--           # Html default <meta author>
@@ -213,17 +213,17 @@ mail:
         root: 'Root'
 
     transport:
-        from:          noreply@example.com
-        name:          Goteo Sender
+        from:          noreply@esbuenisimodev.com
+        name:          Es Buenisimo Dev
         type:          smtp
         # if type is smtp:
         smtp:
             auth:     true
             secure:   ssl
-            host:     smtp.example.com
-            port:     587
-            username: smtp-usermail
-            password: smtp-password
+            host:     smtp.esbuenisimo.com
+            port:     25
+            username: noreply@esbuenisimo.com
+            password: wAqAE4m6mVHHH74s
 
     quota:
         total: 50000  # Maximum sending quota in 24 hours time (useful for SMTP servers like Amazon SES)
