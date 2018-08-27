@@ -93,6 +93,7 @@ invest-step-3: Confirmar
 invest-step-4: Compartir
 invest-success-make-sure: '¡Bien hecho! Tu donación al proyecto <strong>%s</strong> se ha realizado correctamente.'
 investing_closed: 'No se permiten más aportes en esta campaña.'
+self_investing_no_allowed: 'No se permiten aportes por parte del creador de esta campaña.'
 proj-widget-my_invest: 'Mi aporte'
 project-invest-confirm: 'Estás a un paso de cofinanciar este proyecto...'
 project-invest-continue: 'Haz click sobre el logo del sistema de pago que vas a utilizar:'

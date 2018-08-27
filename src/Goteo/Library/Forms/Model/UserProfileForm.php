@@ -30,7 +30,8 @@ class UserProfileForm extends AbstractFormProcessor {
             $constraints[] = new Constraints\NotBlank();
         }
         elseif($this->getFullValidation()) {
-            if(in_array($field, ['gender', 'about'])) {
+            //if(in_array($field, ['gender', 'about'])) {
+            if(in_array($field, ['gender'])) {
                 $constraints[] = new Constraints\NotBlank();
             }
             if(in_array($field, ['webs', 'facebook', 'twitter'] )) {

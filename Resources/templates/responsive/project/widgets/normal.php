@@ -83,6 +83,7 @@ if(!($label = $this->label)) {
                   </div>
                 </div>
                 <p><?= $percent . '% ' . ucfirst($this->text('horizontal-project-percent')) ?></p>
+                <p><?= ucfirst($this->text('horizontal-project-mincost')) . ': ' . amount_format($this->project->mincost)  ?></p>
             </div>
         </div>
     </div>

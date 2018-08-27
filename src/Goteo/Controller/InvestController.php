@@ -95,11 +95,17 @@ class InvestController extends \Goteo\Core\Controller {
         $project_categories = Project\Category::getNames($project_id);
         $this->page = '/invest/' . $project_id;
         $this->query = http_build_query(['amount' => "$amount_original$currency", 'reward' => $reward_id]);
-
+            
         // Some projects may have activated a non-registering investion
         $this->skip_login = Session::isLogged() ? false : $project->getAccount()->skip_login;
-
-
+      
+        // Project creator cannot invest in its own project
+        // Session::getUser()->id == $this->project->user->id          
+        if(!$this->skip_login && Session::isLogged() && Session::getUser()->id == $this->project->user->id) {
+            Message::error(Text::get('self_investing_no_allowed'));
+            return $this->redirect('/');
+        }
+      
         // Security check
         if ($project->status != Project::STATUS_IN_CAMPAIGN) {
             Message::error(Text::get('project-invest-closed'));
@@ -112,7 +118,6 @@ class InvestController extends \Goteo\Core\Controller {
         }
 
         // Available pay methods
-
         $pay_methods = Payment::getMethods(Session::isLogged() ? Session::getUser() : new User());
 
         foreach($pay_methods as $i => $method) {

@@ -32,13 +32,13 @@ class ProjectOverviewForm extends AbstractFormProcessor implements FormProcessor
         if($field === 'subtitle') {
             $constraints[] = new Constraints\Length(['max' => 140]);
         }
-        if($field === 'description') {
-            // Minimal 80 words
-            $constraints[] = new Constraints\Regex([
-                'pattern' => '/^\s*\S+(?:\s+\S+){79,}\s*$/',
-                'message' => Text::get('validate-project-field-description')
-            ]);
-        }
+//         if($field === 'description') {
+//             // Minimal 80 words
+//             $constraints[] = new Constraints\Regex([
+//                 'pattern' => '/^\s*\S+(?:\s+\S+){79,}\s*$/',
+//                 'message' => Text::get('validate-project-field-description')
+//             ]);
+//         }
         if($this->getFullValidation()) {
             if(!in_array($field, ['media', 'spread'])) {
                 // all fields
