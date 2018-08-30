@@ -46,6 +46,9 @@ class ProjectRewardsForm extends AbstractFormProcessor implements FormProcessorI
         }
         elseif(strpos($field, 'description') !== 0) {
             $constraints[] = new Constraints\NotBlank();
+          
+            // Minimal 10 words
+            $constraints[] = new Constraints\Length(['min' => 10]);
         }
         return $constraints;
     }

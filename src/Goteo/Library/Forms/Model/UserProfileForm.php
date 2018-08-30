@@ -30,10 +30,15 @@ class UserProfileForm extends AbstractFormProcessor {
             $constraints[] = new Constraints\NotBlank();
         }
         elseif($this->getFullValidation()) {
-            //if(in_array($field, ['gender', 'about'])) {
-            if(in_array($field, ['gender'])) {
+            if(in_array($field, ['gender', 'about'])) {
                 $constraints[] = new Constraints\NotBlank();
             }
+          
+            if(in_array($field, ['about'])) {
+              // Minimal 10 words
+              $constraints[] = new Constraints\Length(['min' => 10]);
+            }
+          
             if(in_array($field, ['webs', 'facebook', 'twitter'] )) {
                 $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
                     $data = $context->getRoot()->getData();

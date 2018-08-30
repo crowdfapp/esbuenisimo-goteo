@@ -28,9 +28,12 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         if($this->getFullValidation()) {
             $constraints[] = new Constraints\NotBlank();
         }
-//         elseif(strpos($field, 'description') !== 0) {
-//             $constraints[] = new Constraints\NotBlank();
-//         }
+        elseif(strpos($field, 'description') !== 0) {
+            $constraints[] = new Constraints\NotBlank();
+          
+            // Minimal 10 words
+            $constraints[] = new Constraints\Length(['min' => 10]);
+        }
         return $constraints;
     }
 
