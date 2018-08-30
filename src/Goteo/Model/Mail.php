@@ -311,7 +311,7 @@ class Mail extends \Goteo\Core\Model {
                     if ($mail->send()) {
                         $ok = true;
                     } else {
-                        $errors[] = 'Internal mail server error!';
+                        $errors[] = 'Internal mail server error!: ' . $mail->ErrorInfo;
                     }
                 } else {
                     // exit if not allowed
