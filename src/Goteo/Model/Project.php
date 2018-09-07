@@ -2415,7 +2415,7 @@ namespace Goteo\Model {
             $count = 0;
             foreach($overview as $field) {
                 if($field === 'description') {
-                    if(preg_match('/^\s*\S+(?:\s+\S+){79,}\s*$/', $this->{$field})) {
+                    if(preg_match('/^\s*\S+(?:\s+\S+){9,}\s*$/', $this->{$field})) {
                         continue;
                     }
                 } elseif(!empty($this->{$field})) {
@@ -2424,7 +2424,7 @@ namespace Goteo\Model {
                 $fields['overview'][] = $field;
                 $count++;
             }
-            if($count > 0) {
+            if($count > 0) {              
                 $errors['overview'][] = 'overview';
             }
             $res->overview = round(100 * ($total - $count)/$total);
@@ -2540,7 +2540,7 @@ namespace Goteo\Model {
             $res->errors = $errors;
             $res->fields = $fields;
             $res->project = $this->id;
-            // var_dump($res);
+            //var_dump($res);
             return $res;
         }
 

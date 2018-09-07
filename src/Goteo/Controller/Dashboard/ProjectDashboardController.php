@@ -284,6 +284,7 @@ class ProjectDashboardController extends DashboardController {
      * Project edit (overview)
      */
     public function overviewAction($pid, Request $request) {
+            
         $project = $this->validateProject($pid, 'overview');
         if($project instanceOf Response) return $project;
 

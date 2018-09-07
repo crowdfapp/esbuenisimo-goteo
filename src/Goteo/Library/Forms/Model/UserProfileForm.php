@@ -35,8 +35,11 @@ class UserProfileForm extends AbstractFormProcessor {
             }
           
             if(in_array($field, ['about'])) {
-              // Minimal 10 words
-              $constraints[] = new Constraints\Length(['min' => 10]);
+                  // Minimal 10 words
+                  $constraints[] = new Constraints\Regex([
+                      'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
+                      'message' => Text::get('validate-user-profile-about')
+                  ]);
             }
           
             if(in_array($field, ['webs', 'facebook', 'twitter'] )) {

@@ -32,7 +32,10 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
             $constraints[] = new Constraints\NotBlank();
           
             // Minimal 10 words
-            $constraints[] = new Constraints\Length(['min' => 10]);
+            $constraints[] = new Constraints\Regex([
+                'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
+                'message' => Text::get('validate-project-cost-description')
+            ]);
         }
         return $constraints;
     }
