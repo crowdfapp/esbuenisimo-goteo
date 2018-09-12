@@ -46,12 +46,6 @@ class ProjectRewardsForm extends AbstractFormProcessor implements FormProcessorI
         }
         elseif(strpos($field, 'description') !== 0) {
             $constraints[] = new Constraints\NotBlank();
-          
-            // Minimal 10 words
-            $constraints[] = new Constraints\Regex([
-                'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
-                'message' => Text::get('validate-project-reward-description')
-            ]);
         }
         return $constraints;
     }
