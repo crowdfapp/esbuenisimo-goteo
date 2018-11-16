@@ -1,10 +1,10 @@
 ---
 ID_DEL_TEXTO: 'Texto ID_DEL_TEXTO'
 admin_no_permission: 'No tienes permisos para acceder a <strong>%s</strong>'
-bazar-description-seo: 'Regalos solidarios crowdfunding en Goteo.org.'
-bazar-title-seo: 'Regalos Solidarios :: Goteo.org'
+bazar-description-seo: 'Regalos solidarios crowdfunding en Es Buenisimo.'
+bazar-title-seo: 'Regalos Solidarios :: Es Buenisimo'
 blog-comments: Comentarios
-blog-main-header: 'Blog de Goteo'
+blog-main-header: 'Blog de Es Buenisimo'
 calendar-calls-category: Convocatorias
 calendar-events-category: Eventos
 calendar-home-hour: a
@@ -63,7 +63,7 @@ mandatory-individual_reward-field-amount: 'Es obligatorio indicar el importe que
 mandatory-project-costs: 'Debe desglosarse en al menos dos costes.'
 mandatory-register-field-email: 'Tienes que indicar un email'
 mark-pending: 'Marcar como pendiente de traducir'
-meta-description-index: 'Goteo es la red abierta de crowdfunding, colaboraciones y formación, líder en proyectos de innovación social. Con 2 rondas y ventajas fiscales para donantes!'
+meta-description-index: 'Es Buenisimo es un crowdfunding para financiar eventos y experiencias entretenidas para fanáticos de un área o simplemente para pasar un momento especial.'
 node-menu-home: Node
 overview-field-about: 'Características básicas y objetivos'
 overview-field-motivation: 'Motivación y a quién va dirigido el proyecto'

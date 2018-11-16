@@ -2,6 +2,7 @@
 contact-captcha-field: 'Prueba de humanidad (lo sentimos...)'
 contact-captcha-refresh: 'Refresh image'
 contact-email-field: Email
+contact-phone-field: Teléfono
 contact-form-dev-tag-description: 'Tengo dudas sobre cuestiones técnicas'
 contact-form-dev-tag-name: Desarrollo
 contact-form-new-project-tag-description: 'Tengo un posible proyecto'
@@ -27,5 +28,6 @@ error-contact-captcha: 'The reCAPTCHA wasn''t entered correctly. Try it again.'
 error-contact-email-empty: 'No has añadido tu email'
 error-contact-message-empty: 'No has escrito ningún mensaje'
 error-contact-subject-empty: 'No has escrito el asunto'
-meta-description-contact: 'Contacta con el equipo de Goteo.org'
-meta-title-contact: 'Contáctanos :: Goteo.org'
+meta-description-contact: 'Contacta con el equipo de Es Buenisimo'
+meta-title-contact: 'Contáctanos :: Es Buenisimo'
+new-email-from-contact: 'Nuevo email desde el formulario de contacto'

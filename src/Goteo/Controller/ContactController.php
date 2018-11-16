@@ -22,20 +22,24 @@ use Goteo\Application\Config;
 use Goteo\Application\Lang;
 use Goteo\Model\Template;
 use Goteo\Model\Mail;
+use Goteo\Application\View;
 
 class ContactController extends \Goteo\Core\Controller {
 
     public function indexAction (Request $request) {
 
-        $tags=[ 'contact-form-user-tag-name'         => Text::get('contact-form-user-tag-description'),
-                'contact-form-new-project-tag-name'  => Text::get('contact-form-new-project-tag-description'),
-                'contact-form-project-form-tag-name' => Text::get('contact-form-project-form-tag-description'),
-                'contact-form-dev-tag-name' => Text::get('contact-form-dev-tag-description'),
-                'contact-form-relief-tag-name' => Text::get('contact-form-relief-tag-description'),
-                'contact-form-service-tag-name' => Text::get('contact-form-service-tag-description'),
-                'contact-form-others-tag-name' => Text::get('contact-form-others-tag-description'),
+        //Set the responsive theme
+        View::setTheme('responsive');      
+      
+//         $tags=[ 'contact-form-user-tag-name'         => Text::get('contact-form-user-tag-description'),
+//                 'contact-form-new-project-tag-name'  => Text::get('contact-form-new-project-tag-description'),
+//                 'contact-form-project-form-tag-name' => Text::get('contact-form-project-form-tag-description'),
+//                 'contact-form-dev-tag-name' => Text::get('contact-form-dev-tag-description'),
+//                 'contact-form-relief-tag-name' => Text::get('contact-form-relief-tag-description'),
+//                 'contact-form-service-tag-name' => Text::get('contact-form-service-tag-description'),
+//                 'contact-form-others-tag-name' => Text::get('contact-form-others-tag-description'),
 
-        ];
+//         ];
 
         $errors = array();
         $data = [];
@@ -46,9 +50,10 @@ class ContactController extends \Goteo\Core\Controller {
         if ($request->isMethod('POST')) {
 
             $name = $request->request->get('name');
-            $tag = $request->request->get('tag');
+//             $tag = $request->request->get('tag');
             $email = $request->request->get('email');
-            $subject = $request->request->get('subject');
+            $phone = $request->request->get('phone');
+//             $subject = $request->request->get('subject');
             $message = $request->request->get('message');
 
             // si falta mensaje, email o asunto, error
@@ -58,9 +63,9 @@ class ContactController extends \Goteo\Core\Controller {
                 $errors['email'] = Text::get('error-contact-email-invalid');
             }
 
-            if(empty($subject)) {
-                $errors['subject'] = Text::get('error-contact-subject-empty');
-            }
+//             if(empty($subject)) {
+//                 $errors['subject'] = Text::get('error-contact-subject-empty');
+//             }
 
             if(empty($message)) {
                 $errors['message'] = Text::get('error-contact-message-empty');
@@ -69,14 +74,14 @@ class ContactController extends \Goteo\Core\Controller {
             }
 
             // check captcha
-            if(!$user && $phrase = Session::get('captcha-phrase')) {
-                Session::del('captcha-phrase');
-                $captcha = new CaptchaBuilder($phrase);
-                // captcha verification
-                if (!$captcha->testPhrase($request->request->get('captcha_response'))) {
-                    $errors['recaptcha'] = Text::get('error-contact-captcha');
-                }
-            }
+//             if(!$user && $phrase = Session::get('captcha-phrase')) {
+//                 Session::del('captcha-phrase');
+//                 $captcha = new CaptchaBuilder($phrase);
+//                 // captcha verification
+//                 if (!$captcha->testPhrase($request->request->get('captcha_response'))) {
+//                     $errors['recaptcha'] = Text::get('error-contact-captcha');
+//                 }
+//             }
 
             // check from token (ensures is a submit from the navigator)
             if($token = Session::get('form-token')) {
@@ -87,71 +92,71 @@ class ContactController extends \Goteo\Core\Controller {
             }
 
             $data = array(
-                    'tag' => $tag,
-                    'subject' => $subject,
+//                     'tag' => $tag,
+                    //'subject' => $subject,
                     'name'    => $name,
                     'email'   => $email,
+                    'phone'   => $phone,
                     'message' => $message
             );
 
             if (empty($errors)) {
 
-                switch ($tag) {
-                    //Acount problems
-                    case 'contact-form-user-tag-name':
-                        $to_admin = Config::get('mail.contact');
-                        $user_template=Template::CONTACT_AUTO_REPLY_ACCOUNT_PROBLEMS;
-                        break;
-                    // New project chance
-                    case 'contact-form-new-project-tag-name':
-                        $to_admin = Config::get('mail.contact');
-                        $user_template=Template::CONTACT_AUTO_REPLY_NEW_PROJECT;
-                        break;
-                    // Queries about the project form
-                    case 'contact-form-project-form-tag-name':
-                         $to_admin = Config::get('mail.contact');
-                         $user_template=Template::CONTACT_AUTO_REPLY_PROJECT_FORM;
-                        break;
-                    // Dev
-                    case 'contact-form-dev-tag-name':
-                         $to_admin = Config::get('mail.fail');
-                         $user_template=Template::CONTACT_AUTO_REPLY_DEV;
-                        break;
-                    // Relief
-                    case 'contact-form-relief-tag-name':
-                        $to_admin = Config::get('mail.donor');
-                        $user_template=Template::CONTACT_AUTO_REPLY_RELIEF;
-                        break;
-                    // Service
-                    case 'contact-form-service-tag-name':
-                         $to_admin = Config::get('mail.management');
-                        break;
-                    //Others
-                    default:
-                        $to_admin = Config::get('mail.contact');
-                        break;
-                }
+//                 switch ($tag) {
+//                     //Acount problems
+//                     case 'contact-form-user-tag-name':
+//                         $to_admin = Config::get('mail.contact');
+//                         $user_template=Template::CONTACT_AUTO_REPLY_ACCOUNT_PROBLEMS;
+//                         break;
+//                     // New project chance
+//                     case 'contact-form-new-project-tag-name':
+//                         $to_admin = Config::get('mail.contact');
+//                         $user_template=Template::CONTACT_AUTO_REPLY_NEW_PROJECT;
+//                         break;
+//                     // Queries about the project form
+//                     case 'contact-form-project-form-tag-name':
+//                          $to_admin = Config::get('mail.contact');
+//                          $user_template=Template::CONTACT_AUTO_REPLY_PROJECT_FORM;
+//                         break;
+//                     // Dev
+//                     case 'contact-form-dev-tag-name':
+//                          $to_admin = Config::get('mail.fail');
+//                          $user_template=Template::CONTACT_AUTO_REPLY_DEV;
+//                         break;
+//                     // Relief
+//                     case 'contact-form-relief-tag-name':
+//                         $to_admin = Config::get('mail.donor');
+//                         $user_template=Template::CONTACT_AUTO_REPLY_RELIEF;
+//                         break;
+//                     // Service
+//                     case 'contact-form-service-tag-name':
+//                          $to_admin = Config::get('mail.management');
+//                         break;
+//                     //Others
+//                     default:
+//                         $to_admin = Config::get('mail.contact');
+//                         break;
+//                 }
 
-                if($user_template)
-                {
-                    //Sent an automatic mail to the user depending on the tag
-                    $to_user=$email;
-                    $toName = Config::get('mail.contact_name');
-                    if(empty($toName)) $toName = 'Goteo';
-                    // Obtenemos la plantilla para asunto y contenido
-                    $mailHandler = Mail::createFromTemplate($to_user, $toName, $user_template);
+//                 if($user_template)
+//                 {
+//                     //Sent an automatic mail to the user depending on the tag
+//                     $to_user=$email;
+//                     $toName = Config::get('mail.contact_name');
+//                     if(empty($toName)) $toName = 'Goteo';
+//                     // Obtenemos la plantilla para asunto y contenido
+//                     $mailHandler = Mail::createFromTemplate($to_user, $toName, $user_template);
 
-                    $mailHandler->replyName = Config::get('transport.name');
-                    $mailHandler->reply = Config::get('transport.from');
+//                     $mailHandler->replyName = Config::get('transport.name');
+//                     $mailHandler->reply = Config::get('transport.from');
 
-                    if (!$mailHandler->send($errors))
-                        Message::error('Ha fallado al enviar el mensaje.');
-                }
-
+//                     if (!$mailHandler->send($errors))
+//                         Message::error('Ha fallado al enviar el mensaje.');
+//                 }
 
                 //Sent mail to manage the contact
-                $toName = Config::get('mail.contact_name');
-                if(empty($toName)) $toName = 'Goteo';
+                $toName = Config::get('mail.contact');
+                // if(empty($toName)) $toName = 'Goteo';
                 // Obtenemos la plantilla para asunto y contenido
                 $mailHandler = Mail::createFromTemplate($to_admin, $toName, Template::MESSAGE_CONTACT, [
                         '%TONAME%'     => $toName,
@@ -159,9 +164,10 @@ class ContactController extends \Goteo\Core\Controller {
                         '%USEREMAIL%'  => $name . ' ' . $email
                     ]);
                 // Custom subject
-                $subject = ($tag ? '[' . Text::get($tag) . '] ' : '') . $subject;
+                // $subject = ($tag ? '[' . Text::get($tag) . '] ' : '') . $subject;
 
-                $mailHandler->subject = $subject;
+                $mailHandler->subject = Text::get('new-email-from-contact');
+                $mailHandler->to = $toName;
 
                 $mailHandler->replyName = $name;
                 $mailHandler->reply = $email;
@@ -175,13 +181,13 @@ class ContactController extends \Goteo\Core\Controller {
             }
         }
 
-        $captcha = null;
-        // Generate a new captcha on non-logged users
-        if(!Session::isLogged()) {
-            $captcha = new CaptchaBuilder();
-            $captcha->build();
-            Session::store('captcha-phrase', $captcha->getPhrase());
-        }
+//         $captcha = null;
+//         // Generate a new captcha on non-logged users
+//         if(!Session::isLogged()) {
+//             $captcha = new CaptchaBuilder();
+//             $captcha->build();
+//             Session::store('captcha-phrase', $captcha->getPhrase());
+//         }
         // Generate a new form token
         $token = sha1(uniqid(mt_rand(), true));
         Session::store('form-token', $token);
@@ -192,7 +198,8 @@ class ContactController extends \Goteo\Core\Controller {
                 'tags'    => $tags,
                 'token'    => $token,
                 'page'    => Page::get('contact'),
-                'captcha' => $captcha,
+                //'captcha' => $captcha,
+                'captcha' => false,
                 'errors'  => $errors
             )
         );
