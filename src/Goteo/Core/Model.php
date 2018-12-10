@@ -149,6 +149,7 @@ abstract class Model {
         }
         return $value;
     }
+	
 	/**
 	 * insert to sql
 	 * @return [type] [description]
@@ -171,6 +172,30 @@ abstract class Model {
 		$res = self::query($sql, $values);
 		return $res;
 	}
+	
+	/**
+	 * insert to sql
+	 * @return [type] [description]
+	 */
+	public function dbReplace(array $fields) {
+		$values = $set = $keys = [];
+		foreach ($fields as $field) {
+			if (property_exists($this, $field)) {
+				$set[] = "`$field`";
+				$keys[] = ":$field";
+				$values[":$field"] = $this->transformFieldValue($this->$field);
+			}
+		}
+		if (empty($values)) {
+			throw new \PDOException("No fields specified!", 1);
+		}
+
+		$sql = 'REPLACE INTO `' . $this->Table . '` (' . implode(',', $set) . ') VALUES (' . implode(',', $keys) . ')';
+		
+		// echo \sqldbg($sql, $values);
+		$res = self::query($sql, $values);
+		return $res;
+	}	
 
 	/**
 	 * update to sql
@@ -199,6 +224,7 @@ abstract class Model {
 		}
 
 		$sql = 'UPDATE `' . $this->Table . '` SET ' . implode(',', $set) . ' WHERE ' . implode(' AND ', $clause);
+		
 		// die(\sqldbg($sql, $values));
 		return self::query($sql, $values);
 	}

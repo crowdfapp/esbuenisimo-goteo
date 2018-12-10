@@ -31,6 +31,9 @@ class ModelNormalizer {
         if($this->model instanceOf Model\User) {
             return new Transformer\UserTransformer($this->model);
         }
+        if($this->model instanceOf Model\ProjectRequest) {
+            return new Transformer\ProjectRequestTransformer($this->model);
+        }
         else return new Transformer\GenericTransformer($this->model);
     }
 }

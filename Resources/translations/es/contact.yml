@@ -18,6 +18,8 @@ contact-form-service-tag-name: Servicio
 contact-form-tags: "[usuario] Tengo problemas con mi cuenta; [nuevo impulsor] Tengo un posible proyecto; [nuevo impulsor 2] Tengo dudas sobre el formulario de proyecto; [desarrollo] Tengo dudas sobre cuestiones técnicas; [justificante] Deseo un justificante de mi donación; [servicio] Quiero contratar un servicio; [otros] Es otro tipo de consulta;"
 contact-form-user-tag-description: 'Tengo problemas con mi cuenta'
 contact-form-user-tag-name: 'Problemas cuenta'
+contact-title: Contacto
+contact-description: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 contact-message-field: Mensaje
 contact-name-field: Nombre
 contact-send_message-button: Enviar
@@ -25,9 +27,61 @@ contact-send_message-header: 'Envíanos un mensaje'
 contact-subject-field: Asunto
 contact-tag-field: 'Tipo de consulta'
 error-contact-captcha: 'The reCAPTCHA wasn''t entered correctly. Try it again.'
-error-contact-email-empty: 'No has añadido tu email'
-error-contact-message-empty: 'No has escrito ningún mensaje'
-error-contact-subject-empty: 'No has escrito el asunto'
+error-contact-email-empty: 'No has añadido tu email.'
+error-contact-message-empty: 'No has escrito ningún mensaje.'
+error-contact-subject-empty: 'No has escrito el asunto.'
 meta-description-contact: 'Contacta con el equipo de Es Buenisimo'
 meta-title-contact: 'Contáctanos :: Es Buenisimo'
 new-email-from-contact: 'Nuevo email desde el formulario de contacto'
+
+reset-filtering-criteria: 'Reiniciar búsqueda'
+
+#Ranking
+meta-title-ranking: 'Ranking :: Es Buenisimo'
+meta-description-ranking: 'Elije el proximo evento a financiar por Es Buenisimo'
+ranking-what-events-do-you-want: 'Qué evento quieres ver'
+ranking-vote-button: 'Votar'
+mandatory-project-request-name: 'Ingrese el nombre del evento a solicitar financiación.'
+project-request-save-sucess: 'El evento ha sido registrado para su futura aprobación.'
+project-request-save-fail: 'Error al registrar evento a solicitar financiación.'
+
+admin-title-position: 'Posición'
+admin-title-event: 'Evento'
+admin-title-status: 'Estado de la Solicitud'
+admin-title-vote: 'Votar'
+admin-title-votes: 'Votos'
+
+ranking-table-change-status-action-field: 'Cambiar status'
+no-exists-project-requests: 'No existen solicitudes de eventos.'
+ranking-status-all: 'Todos'
+
+#Ranking
+ranking-title: 'Vota por un evento que quieras ver'
+ranking-description: 'Lorem ipsum dolor sit amet, pri persius quaerendum ad. Salutatus democritum ad per, sit eu case ornatus noluisse. Te elitr commodo pro. Duo ullum paulo cu, magna minim voluptua cu est, ex has amet dicant instructior. Ullum persius verterem eum ne, mel et pertinax salutandi, graeci patrioque gloriatur eos id. In mea prompta commune cotidieque, ius an augue neglegentur.'
+
+project-request-save-duplicate-error: 'El evento ya se encuentra registrado.'
+project-request-save-error: 'Error al registrar solicitud de evento.'
+
+#Project Request Status
+project_request_status_pending: 'Pendiente'
+project_request_status_approved: 'Aprobado'
+project_request_status_rejected: 'Rechazado'
+
+project-request-can-vote-for-rejected: 'El evento ha sido rechazado.'
+project-request-can-vote-for-pending: 'El evento está en modo pendiente.'
+
+project-request-change-status-success: 'El evento %s ha sido cambiado a estado de %s.'
+project-request-change-status-error: 'Error al cambiar el estado del evento.'
+
+project-request-add-vote-success: 'Has agregado un voto para el evento %s.'
+project-request-add-vote-error: 'Error al votar por un evento.'
+
+project-request-already-voted: 'El usuario ya ha dado su voto a este evento.'
+
+project-request-delete-confirmation-title: 'Es Buenisimo - Eliminar evento'
+project-request-delete-confirmation-message: '¿Estas seguro de eliminar este evento?'
+
+project-request-delete-confirmation-confirm-button: 'OK'
+project-request-delete-confirmation-cancel-button: 'Cancelar'
+
+project-request-delete-success: 'El evento ha sido eliminado con éxito'

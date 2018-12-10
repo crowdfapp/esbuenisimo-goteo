@@ -254,4 +254,17 @@ $routes->add('remove-starting-slash', new Route(
         )
 ));
 
+//Ranking routes
+$routes->add('ranking', new Route(
+    '/ranking',
+    array('_controller' => 'Goteo\Controller\RankingController::indexAction',
+        )
+));
+
+$routes->add('ranking-add-request', new Route(
+    '/ranking/addRequest',
+    array('_controller' => 'Goteo\Controller\RankingController::addRequestAction',
+        )
+));
+
 return $routes;

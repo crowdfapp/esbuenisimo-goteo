@@ -517,5 +517,50 @@ $(function() {
             var t = $(this).data("geocoder-populate-radius");
             locator.trace("set radius", t, $(this).val()), t && $(t).val($(this).val())
         }
-    })
+    });
+  
+    // Manage GET forms with pronto as well in ranking content
+    $('#ranking-content').on('submit', 'form.pronto', function(e) {
+        e.preventDefault();
+
+        var action = $(this).attr('action');
+        var method = (!!$(this).attr('method') && $(this).attr('method').toLowerCase()) || 'get';
+        var query = decodeURIComponent($(this).serialize())
+                           .replace(/\+/g, " ");
+        console.log('submit', action, query, method, location, e);
+        if(method === 'get') {
+            if(location.hash) query += location.hash;
+            prontoLoad(action + '?' + query);
+        }
+    });
+  
+    $('.delete-request').on('click', function(e) {
+      
+        form = $(this).closest('form');
+        title = $(this).attr('popup-title');
+        message = $(this).attr('popup-message');
+        confirmBtn = $(this).attr('confirm-btn');
+        cancelBtn = $(this).attr('cancel-btn');
+
+        $.confirm({
+            title: title,
+            content: message,
+            buttons: {
+              
+                confirm: {
+                  text: confirmBtn,
+                  action: function () {
+                    form.submit();
+                  }
+                },
+                cancel: {
+                  text: cancelBtn,
+                  action: function() {
+                    //Close
+                  }
+                }
+            }
+        });      
+      
+    });
 });

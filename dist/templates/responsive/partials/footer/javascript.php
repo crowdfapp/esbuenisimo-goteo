@@ -11,6 +11,7 @@
 <script src="<?= SRC_URL ?>/assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="<?= SRC_URL ?>/assets/vendor/d3/d3.min.js"></script>
 <script src="<?= SRC_URL ?>/assets/vendor/footable/compiled/footable.min.js"></script>
+<script src="<?= SRC_URL ?>/assets/vendor/jquery-confirm/js/jquery-confirm.js"></script>
 <?php else: ?>
 <script src="<?= SRC_URL ?>/assets/vendor/jquery-1.12.4.min.js"></script>
 <script src="<?= SRC_URL ?>/assets/vendor/jquery.mobile.custom.min.js"></script>
@@ -23,6 +24,7 @@
 <script src="<?= SRC_URL ?>/assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
 <script src="<?= SRC_URL ?>/assets/vendor/d3/d3.min.js"></script>
 <script src="<?= SRC_URL ?>/assets/vendor/footable/compiled/footable.min.js"></script>
+<script src="<?= SRC_URL ?>/assets/vendor/jquery-confirm/js/jquery-confirm.js"></script>
 <?php endif ?>
 
 <!-- Goteo utils: Debug functions, some defaults -->
