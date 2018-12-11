@@ -1,7 +1,8 @@
 ---
-community-menu-activity: Actividad
-community-menu-main: Comunidad
-community-menu-sharemates: Compartiendo
+community-menu-activity: 'Actividad'
+community-menu-main: 'Comunidad'
+community-menu-sharemates: 'Compartiendo'
 dashboard-menu-main: 'Mi panel'
 menu-login: 'Iniciar sesión'
-menu-signup: Registrarse
+menu-signup: 'Registrarse'
+menu-ranking: 'Ranking'

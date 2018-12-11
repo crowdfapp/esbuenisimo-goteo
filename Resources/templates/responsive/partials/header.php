@@ -11,6 +11,7 @@
     </div><!--/.navbar-header -->
 
     <div class="navbar-always">
+        <a class="hidden-xs" href="/ranking"><?= $this->text('menu-ranking') ?></a>
       <?php if (!$this->get_user()) : ?>
         <a class="hidden-xs" href="/signup?return=<?= $this->get_uri() ?>"><?= $this->text('menu-signup') ?></a>
         <a title="<?= $this->text('menu-login') ?>" class="user-menu" href="/login?return=<?= $this->get_uri() ?>"><i class="icon icon-user"></i><span class="hidden-xs"> <?= $this->text('menu-login') ?></span></a>
