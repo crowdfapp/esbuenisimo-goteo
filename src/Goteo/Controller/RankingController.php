@@ -39,12 +39,7 @@ class RankingController extends \Goteo\Core\Controller {
     }
 
 	public function indexAction(Request $request) {
-    
-    if (!Session::isLogged()) {
-        Message::info(Text::get('user-login-required-ranking'));
-        return $this->redirect('/user/login?return='.urldecode('/ranking'));
-    }
-		
+    		
 		if($request->isMethod('post')) {
 						
 			// Add a new project request.
@@ -76,7 +71,12 @@ class RankingController extends \Goteo\Core\Controller {
 
 			//Vote for request
 			if($request->request->has('form-action') && $request->request->get('form-action') == 'vote-for-request') {
-
+				
+				if (!Session::isLogged()) {
+						Message::info(Text::get('user-login-required-ranking'));
+						return $this->redirect('/user/login?return='.urldecode('/ranking'));
+				}
+				
 				$projectRequest = ProjectRequest::get($request->request->get('request-id'));
 				
 				if($projectRequest->addVote(Session::getUser()->id)) {
