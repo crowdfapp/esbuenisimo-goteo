@@ -31,8 +31,8 @@ use Goteo\Application\Session;
 class ProjectRequestTransformer extends AbstractTransformer {
   
     public function getDefaultKeys() {
-        if(Session::isAdmin()) return ['position', 'event', 'status', 'vote', 'votes'];
-        return ['position', 'event', 'vote', 'votes'];
+        if(Session::isAdmin()) return ['position', 'event', 'ubication', 'status', 'vote', 'votes'];
+        return ['position', 'event', 'ubication', 'vote', 'votes'];
     } 
   
     public function getId() {
@@ -65,5 +65,9 @@ class ProjectRequestTransformer extends AbstractTransformer {
   
     public function getUserId() {
         return $this->model->user_id;
+    }
+  
+    public function getUbication() {
+        return $this->model->getUbication();
     }
 }

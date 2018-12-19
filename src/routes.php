@@ -267,4 +267,16 @@ $routes->add('ranking-add-request', new Route(
         )
 ));
 
+$routes->add('get-provinces', new Route(
+    '/ranking/getProvinces',
+    array('_controller' => 'Goteo\Controller\RankingController::getProvincesAction',
+        )
+));
+
+$routes->add('get-communes', new Route(
+    '/ranking/getCommunes',
+    array('_controller' => 'Goteo\Controller\RankingController::getCommunesAction',
+        )
+));
+
 return $routes;

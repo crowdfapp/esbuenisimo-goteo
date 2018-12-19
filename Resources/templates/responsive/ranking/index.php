@@ -105,6 +105,35 @@ $this->layout('layout', [
                        placeholder="<?= $this->text('ranking-what-events-do-you-want') ?>">
               </div>
             
+              <div class="form-group">
+
+                <select name="region_id" id="region_id" class="form-control">
+                    <option value=""><?= $this->text('ranking-select-region') ?></option>
+                    <?php foreach($this->regions as $region): ?>
+                      <option value="<?php echo $region->id; ?>">
+                        <?php echo $region->name; ?>
+                      </option>
+                    <?php endforeach; ?>                         
+                </select>                                         
+              </div>
+            
+              <div class="form-group">
+                <select name="province_id" id="province_id" class="form-control disabled" 
+                        loading-provinces-msg="<?= $this->text('loading-provinces-msg') ?>"
+                        ranking-select-province-msg="<?= $this->text('ranking-select-province') ?>">
+                  <option value=""><?= $this->text('ranking-no-provinces') ?></option>
+                </select>                                         
+              </div>
+
+              <div class="form-group">
+                <select name="commune_id" id="commune_id" class="form-control disabled"
+                        ranking-no-communes-msg="<?= $this->text('ranking-no-communes') ?>"
+                        loading-communes-msg="<?= $this->text('loading-communes-msg') ?>"
+                        ranking-select-commune-msg="<?= $this->text('ranking-select-commune') ?>">
+                  <option value=""><?= $this->text('ranking-no-communes') ?></option>
+                </select>                                         
+              </div>            
+            
               <input type="submit" class="btn btn-cyan" value="<?= $this->text('ranking-vote-button') ?>" />
           </form>
           

@@ -42,20 +42,26 @@ meta-description-ranking: 'Elije el proximo evento a financiar por Es Buenisimo'
 ranking-what-events-do-you-want: 'Qué evento quieres ver'
 ranking-vote-button: 'Votar'
 mandatory-project-request-name: 'Ingrese el nombre del evento a solicitar financiación.'
+mandatory-project-request-commune: 'Seleccione la comuna donde se realizará el evento.'
 project-request-save-sucess: 'El evento ha sido registrado para su futura aprobación.'
 project-request-save-fail: 'Error al registrar evento a solicitar financiación.'
 
 admin-title-position: 'Posición'
 admin-title-event: 'Evento'
+admin-title-ubication: 'Ubicación'
 admin-title-status: 'Estado de la Solicitud'
 admin-title-vote: 'Votar'
 admin-title-votes: 'Votos'
 
 ranking-table-change-status-action-field: 'Cambiar status'
 no-exists-project-requests: 'No existen solicitudes de eventos.'
-ranking-status-all: 'Todos'
+ranking-status-all: 'Todos los estados'
+ranking-select-region: 'Seleccione una región'
+ranking-select-province: 'Seleccione una provincia'
+ranking-select-commune: 'Seleccione una communa'
+ranking-no-provinces: 'Sin provincias'
+ranking-no-communes: 'Sin communas'
 
-#Ranking
 ranking-title: 'Vota por un evento que quieras ver'
 ranking-description: 'Lorem ipsum dolor sit amet, pri persius quaerendum ad. Salutatus democritum ad per, sit eu case ornatus noluisse. Te elitr commodo pro. Duo ullum paulo cu, magna minim voluptua cu est, ex has amet dicant instructior. Ullum persius verterem eum ne, mel et pertinax salutandi, graeci patrioque gloriatur eos id. In mea prompta commune cotidieque, ius an augue neglegentur.'
 
@@ -85,3 +91,8 @@ project-request-delete-confirmation-confirm-button: 'OK'
 project-request-delete-confirmation-cancel-button: 'Cancelar'
 
 project-request-delete-success: 'El evento ha sido eliminado con éxito'
+
+ubication-not-speficied: 'No especificada'
+
+loading-provinces-msg: 'Cargando provincias...'
+loading-communes-msg: 'Cargando communas...'

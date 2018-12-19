@@ -25,6 +25,7 @@ $ob = $this->raw('ob');
       break;
     case Goteo\Model\ProjectRequestStatus::STATUS_PENDING:
       echo $this->text('project-request-can-vote-for-pending');
+      break;
     default:
       echo $this->text('project-request-already-voted');
       break;

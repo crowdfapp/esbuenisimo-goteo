@@ -26,6 +26,9 @@ use Goteo\Library\Text;
 use Goteo\Library\Worth;
 use Goteo\Model\ProjectRequestStatus;
 use Goteo\Model\ProjectRequest;
+use Goteo\Model\Region;
+use Goteo\Model\Province;
+use Goteo\Model\Commune;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,14 +42,20 @@ class RankingController extends \Goteo\Core\Controller {
     }
 
 	public function indexAction(Request $request) {
-    		
+		    		
 		if($request->isMethod('post')) {
+			
+			if (!Session::isLogged()) {
+					Message::info(Text::get('user-login-required-ranking'));
+					return $this->redirect('/user/login?return='.urldecode('/ranking'));
+			}			
 						
 			// Add a new project request.
 			if($request->request->has('project_name')) {
 				
 				$projectRequest = new ProjectRequest();			
 				$projectRequest->project_name = $request->request->get('project_name');
+				$projectRequest->commune_id = $request->request->get('commune_id');
 
 				$errors = [];
 
@@ -71,12 +80,7 @@ class RankingController extends \Goteo\Core\Controller {
 
 			//Vote for request
 			if($request->request->has('form-action') && $request->request->get('form-action') == 'vote-for-request') {
-				
-				if (!Session::isLogged()) {
-						Message::info(Text::get('user-login-required-ranking'));
-						return $this->redirect('/user/login?return='.urldecode('/ranking'));
-				}
-				
+								
 				$projectRequest = ProjectRequest::get($request->request->get('request-id'));
 				
 				if($projectRequest->addVote(Session::getUser()->id)) {
@@ -129,15 +133,18 @@ class RankingController extends \Goteo\Core\Controller {
               ],
 					'success' => $success ? : null,
 					'errors' => !empty($errors) ? $errors : null,
+					'regions' => Region::getList(),
         )
     );
 	}
-      
-  public function addVoteAction() {
-    
-  }
-  
-  public function changeStatusAction() {
-    
-  }
+	
+	public function getProvincesAction(Request $request) {
+		return $this->jsonResponse(['provinces' => Province::getList([
+        'regionId' => (int) $request->request->get('regionId')])]);
+	}
+	
+	public function getCommunesAction(Request $request) {
+		return $this->jsonResponse(['communes' => Commune::getList([
+        'provinceId' => (int) $request->request->get('provinceId')])]);
+	}
 }

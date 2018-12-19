@@ -21,19 +21,15 @@ namespace Goteo\Model {
         public
             $id,
             $project_name,
+            $commune_id,
+            $commune_name,
+            $province_name,
+            $region_name,
             $status,
             $votes,
             $publish;
       
         public $user_id;
-      
-        public $labels = [
-          'position' => 'ranking-table-position-field',
-          'event' => 'ranking-table-project-name-field',
-          'status' => 'ranking-table-status-field',
-          'vote' => 'ranking-table-vote-action-field',
-          'votes' => 'ranking-table-votes-field',
-        ];
   
       /*
        *  Devuelve datos de un destacado
@@ -44,10 +40,16 @@ namespace Goteo\Model {
                 SELECT
                     project_requests.id as id,
                     project_requests.project_name as project_name,
+                    communes.name as commune_name,
+                    provinces.name as province_name,
+                    regions.name as region_name,
                     project_requests.status as status,
                     project_requests.votes as votes,
                     project_requests.modified as request_last_update
                 FROM project_requests
+                LEFT JOIN communes ON communes.id = project_requests.commune_id
+                LEFT JOIN provinces ON communes.province_id = provinces.id
+                LEFT JOIN regions ON provinces.region_id = regions.id
                 WHERE project_requests.id = :id
                 ", array(':id' => $id));
 
@@ -69,6 +71,10 @@ namespace Goteo\Model {
         $sqlJoin = [];
         $sqlFilter = [];
         $sqlOrder = [];
+          
+        $sqlJoin[] = 'LEFT JOIN communes ON communes.id = project_requests.commune_id';
+        $sqlJoin[] = 'LEFT JOIN provinces ON communes.province_id = provinces.id';
+        $sqlJoin[] = 'LEFT JOIN regions ON provinces.region_id = regions.id';
 
         if (!empty($filters['status'])) {
             $sqlFilter[] = "status = :status";
@@ -80,8 +86,26 @@ namespace Goteo\Model {
           $sqlExtraFields[] = 'user_votes.user_id AS user_id';
           $sqlJoin[] = " LEFT JOIN user_votes ON user_votes.project_request_id = project_requests.id AND user_id = :userId ";
           $values[':userId'] = $filters['userId'];
-        }            
+        }      
           
+        if(!empty($filters['regionId'])) {
+            $sqlFilter[] = "(regions.id = :regionId)";
+            $values[':regionId'] = $filters['regionId'];
+            $sqlOrder[] = " regions.name DESC";
+        }
+                    
+        if(!empty($filters['provinceId'])) {
+            $sqlFilter[] = "(provinces.id LIKE :provinceId)";
+            $values[':provinceId'] = $filters['provinceId'];
+            $sqlOrder[] = " provinces.name  DESC";
+        }
+          
+        if(!empty($filters['communeId'])) {
+            $sqlFilter[] = "(communes.id LIKE :communeId)";
+            $values[':communeId'] = $filters['communeId'];
+            $sqlOrder[] = " communes.name  DESC";
+        }          
+                    
         if (!empty($filters['query'])) {
             $sqlFilter[] = "(project_name LIKE :query)";
             $values[':query'] = '%' . $filters['query'] . '%';
@@ -99,7 +123,7 @@ namespace Goteo\Model {
           
           if ($count) {
               // Return count
-              $sql = "SELECT COUNT(id) as total FROM project_requests $sqlJoin $sqlFilter";
+              $sql = "SELECT COUNT(project_requests.id) as total FROM project_requests $sqlJoin $sqlFilter";
               return (int) self::query($sql, $values)->fetchColumn();
           }
 
@@ -112,6 +136,9 @@ namespace Goteo\Model {
           $sql = "SELECT
                       project_requests.id as id,
                       project_requests.project_name as project_name,
+                      communes.name as commune_name,
+                      provinces.name as province_name,
+                      regions.name as region_name,
                       project_requests.status as status,
                       project_requests.votes as votes,
                       project_requests.modified as request_last_update                    
@@ -122,9 +149,9 @@ namespace Goteo\Model {
                   $sqlOrder
                   LIMIT $offset, $limit
                   ";
-          
+                    
           $query = self::query($sql, $values);
-          
+         
           foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $key => &$request) {
               $request->position = $offset + $key + 1;
               $requests[] = $request;
@@ -136,7 +163,10 @@ namespace Goteo\Model {
         public function validate (&$errors = array()) {
             if (empty($this->project_name))
                 $errors[] = Text::get('mandatory-project-request-name');
-
+          
+            if(empty($this->commune_id)) 
+                $errors[] = Text::get('mandatory-project-request-commune');
+          
             if (empty($errors))
                 return true;
             else
@@ -149,6 +179,7 @@ namespace Goteo\Model {
             $fields = array(
                 'id',
                 'project_name',
+                'commune_id',
                 'status',
                 'votes',
                 );
@@ -224,6 +255,16 @@ namespace Goteo\Model {
       
       public function getStatusText() {
         return Text::get(ProjectRequestStatus::$statuses[$this->status]);
+      }
+      
+      public function getUbication() {
+        $ubication = [];
+        if(!empty($this->commune_name)) $ubication[] = $this->commune_name;
+        if(!empty($this->province_name)) $ubication[] = $this->province_name;
+        if(!empty($this->region_name)) $ubication[] = $this->region_name;
+                
+        if(!empty($ubication)) return implode(', ', $ubication);
+        else return Text::get('ubication-not-speficied');
       }
     }
 }
