@@ -53,6 +53,19 @@ $this->layout('layout', [
           <?php if($this->isAdmin): ?>
       
             <form class="form-inline form-section create-form margin-bottom-40-pixels pronto" action="<?= $filter['_action'] ?>">
+              
+                  <div class="form-group">
+
+                    <select name="project_request_type_id" id="project_request_type_id" class="form-control">
+                        <option value=""><?= $this->text('ranking-event-type-all') ?></option>
+                        <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
+                          <option value="<?php echo $index; ?>">
+                            <?php echo $projectRequestType ?>
+                          </option>
+                        <?php endforeach; ?>                         
+                    </select>                                         
+                  </div>                   
+              
                   <div class="form-group">
                     
                     <select name="status" id="status" class="form-control">
@@ -98,7 +111,21 @@ $this->layout('layout', [
               </div>
           </div>                          
           
-          <form class="form-inline form-section create-form margin-bottom-40-pixels" method="post">            
+          <form class="form-inline form-section create-form margin-bottom-40-pixels" method="post"> 
+            
+              <div class="form-group">
+
+                <select name="project_request_type_id" id="project_request_type_id" class="form-control">
+                    <option value=""><?= $this->text('ranking-select-request-type-id') ?></option>
+                    <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
+                      <option value="<?php echo $index; ?>">
+                        <?php echo $projectRequestType ?>
+                      </option>
+                    <?php endforeach; ?>                         
+                </select>                                         
+              </div>            
+            
+            
               <div class="form-group">
                 <input type="text" class="form-control" id="project_name" name="project_name" 
                        value="<?= $this->data['project_name'] ?>" 

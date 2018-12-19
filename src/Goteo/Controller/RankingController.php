@@ -29,6 +29,7 @@ use Goteo\Model\ProjectRequest;
 use Goteo\Model\Region;
 use Goteo\Model\Province;
 use Goteo\Model\Commune;
+use Goteo\Model\ProjectRequestType;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -54,7 +55,10 @@ class RankingController extends \Goteo\Core\Controller {
 			if($request->request->has('project_name')) {
 				
 				$projectRequest = new ProjectRequest();			
+				$projectRequest->request_type_id = $request->request->get('project_request_type_id');
 				$projectRequest->project_name = $request->request->get('project_name');
+				$projectRequest->region_id = $request->request->get('region_id');
+				$projectRequest->province_id = $request->request->get('province_id');
 				$projectRequest->commune_id = $request->request->get('commune_id');
 
 				$errors = [];
@@ -103,6 +107,8 @@ class RankingController extends \Goteo\Core\Controller {
     if(Session::isAdmin()) {
       $filters = [];
 			$filters['userId'] = Session::getUser()->id;
+			if(!empty($request->query->get('project_request_type_id'))) 
+				$filters['request_type_id'] = $request->query->get('project_request_type_id');
       if(!empty($request->query->get('status'))) $filters['status'] = $request->query->get('status');
       if(!empty($request->query->get('query'))) $filters['query'] = $request->query->get('query');
       
@@ -134,7 +140,8 @@ class RankingController extends \Goteo\Core\Controller {
 					'success' => $success ? : null,
 					'errors' => !empty($errors) ? $errors : null,
 					'regions' => Region::getList(),
-        )
+					'projectRequestTypes' => ProjectRequestType::getList(),
+        ) 
     );
 	}
 	
