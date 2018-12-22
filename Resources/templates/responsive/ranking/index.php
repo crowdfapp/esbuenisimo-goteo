@@ -161,7 +161,7 @@ $this->layout('layout', [
                 </select>                                         
               </div>            
             
-              <input type="submit" class="btn btn-cyan" value="<?= $this->text('ranking-vote-button') ?>" />
+              <input type="submit" class="btn btn-cyan" value="<?= $this->text('ranking-send-button') ?>" />
           </form>
           
           <div class="add_event_message"></div>

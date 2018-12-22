@@ -47,7 +47,8 @@ class RankingController extends \Goteo\Core\Controller {
 		if($request->isMethod('post')) {
 			
 			if (!Session::isLogged()) {
-					Message::info(Text::get('user-login-required-ranking'));
+					if($request->request->has('project_name')) Message::info(Text::get('user-login-required-send-ranking'));
+					else Message::info(Text::get('user-login-required-ranking'));
 					return $this->redirect('/user/login?return='.urldecode('/ranking'));
 			}			
 						
@@ -87,7 +88,7 @@ class RankingController extends \Goteo\Core\Controller {
 								
 				$projectRequest = ProjectRequest::get($request->request->get('request-id'));
 				
-				if($projectRequest->addVote(Session::getUser()->id)) {
+				if($projectRequest->addVote(Session::isAdmin() ? null : Session::getUser()->id)) {
 					Message::info(sprintf("" . Text::get('project-request-add-vote-success') . "",
 															 $projectRequest->project_name));
 				}
