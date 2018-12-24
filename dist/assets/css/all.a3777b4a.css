@@ -15183,6 +15183,8 @@ div.row.message.child.no-owner div.user-name {
     fill: #000
 }
 
+
+
 .chart-amount .axis .tick line {
     stroke: rgba(0, 0, 0, .1)
 }
@@ -15313,4 +15315,44 @@ div.row.message.child.no-owner div.user-name {
 
 .margin-right-15-pixels {
   margin-right: 15px;
+}
+
+
+/*  ///////////////////////////
+   /////////   NEW CODE //////  */
+
+
+.top-navbar {
+	background-color: transparent !important;
+	min-height: 0 !important;
+}
+
+ul.project-filters li.active{
+	background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
+	background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+	background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+	background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
+	color: #fff !important;
+	border-left-color: #cd5eb3 !important;
+	border-right-color: #ff3936 !important;
+}
+
+.project-widget.normal .floating{
+	background: radial-gradient(circle at 20% 50%, #e6e358, #e8ff05e6 60%, #f3e80c 90%) !important;
+	box-shadow: 2px 5px 12px -6px #b9b8b2e6 !important;
+}
+
+.project-widget.normal .floating:hover{
+	background: radial-gradient(circle at 20% 50%, #f5f3c1cc, #e8ff05e6 60%, #f3e80c 90%) !important;
+	box-shadow: 2px 5px 12px -6px #71706b !important;
+}
+
+.footer .social [class*="fa fa-"]:hover {
+	background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
+	background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+	background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+	background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
+	color: #fff !important;
+	border-left-color: #cd5eb3 !important;
+	border-right-color: #ff3936 !important;
 }
