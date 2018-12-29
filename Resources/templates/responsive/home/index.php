@@ -23,6 +23,18 @@
 
 <?php $this->section('home-content') ?>
 
+    <h1 class="titlevideo hidden-xs">#FanáticosDeVerdad</h1>
+    <video width="100%" height="auto" autoplay  loop style="    margin-top: -130px;">
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
+    <div class="width:80%; margin: 0 auto;">
+        <div class="col-md-3"><div>1 </div></div>
+        <div class="col-md-3"><div>2</div></div>
+        <div class="col-md-3"><div>3</div></div>
+        <div class="col-md-3"><div>4</div></div>
+    </div>
+
+
     <!-- Banner section -->
 
     <?= $this->insert('partials/components/main_slider', [

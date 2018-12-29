@@ -15324,7 +15324,6 @@ div.row.message.child.no-owner div.user-name {
 
 .top-navbar {
 	background-color: transparent !important;
-	min-height: 0 !important;
 }
 
 ul.project-filters li.active{
@@ -15355,4 +15354,8 @@ ul.project-filters li.active{
 	color: #fff !important;
 	border-left-color: #cd5eb3 !important;
 	border-right-color: #ff3936 !important;
+}
+
+#menu-item-langs, #menu-item-channels, #menu-item-about, #menu-item-currencies, #menu-item-faq{
+	display:none;
 }
