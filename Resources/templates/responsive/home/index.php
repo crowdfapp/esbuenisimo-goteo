@@ -22,18 +22,33 @@
 
 
 <?php $this->section('home-content') ?>
-
+    
     <h1 class="titlevideo hidden-xs">#FanáticosDeVerdad</h1>
     <video width="100%" height="auto" autoplay  loop style="    margin-top: -130px;">
         <source src="assets/video.mp4" type="video/mp4">
-    </video>
-    <div class="width:80%; margin: 0 auto;">
-        <div class="col-md-3"><div><img src="assets/img/fan.png" alt=""> </div></div>
-        <div class="col-md-3"><div><img src="assets/img/building.png" alt=""></div></div>
-        <div class="col-md-3"><div><img src="assets/img/microphone.png" alt=""></div></div>
+    </video>N
+    <div class="row col-md-12" style="    margin: 50px auto;">
+        <h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2>
+        <div class="col-md-3">
+            <div class="bx-promo"> 
+            <a href="#" >
+                <img src="assets/img/fan.png" alt="" style="width:150px;"> 
+                <h4>¿Eres un fanático?</h4>
+            </a>
+            </div>
+        </div>
+        <div class="col-md-3"><div class="bx-promo">
+            
+            <a href="#" >
+            <img src="assets/img/building.png" style="width:150px;"  alt="">
+            <h4> ¿Eres una marca sponsors?</h4>
+            </a>
+            </div></div>
+        <div class="col-md-3"><div class="bx-promo"><a href="#" ><img src="assets/img/microphone.png" style="width:150px;" alt="">
+         <h4> ¿Eres una productora?</h4>
+         </a></div></div>
         <div class="col-md-3"><div>4</div></div>
     </div>
-
 
     <!-- Banner section -->
 

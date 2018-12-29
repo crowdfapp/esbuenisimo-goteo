@@ -15359,3 +15359,36 @@ ul.project-filters li.active{
 #menu-item-langs, #menu-item-channels, #menu-item-about, #menu-item-currencies, #menu-item-faq{
 	display:none;
 }
+
+.titlevideo {
+z-index: 111;
+position: absolute;
+font-size: 80px;
+color: #fdfd55;
+margin-top: 17%;
+}
+
+.top-navbar .navbar-brand img.logo {
+    height: 90px !important;
+    margin: 10px !important;
+}
+
+.bx-promo{
+    width: 95%;
+    background: whitesmoke;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
+    box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
+    cursor: pointer;
+    transition: transform .5s;
+    padding: 10px 0;
+}
+
+.bx-promo:hover{
+      -ms-transform: scale(1.02); 
+  -webkit-transform: scale(1.02); 
+  transform: scale(1.02); 
+  box-shadow: 5px 5px 8px 0px rgba(206,212,186,1);
+}
