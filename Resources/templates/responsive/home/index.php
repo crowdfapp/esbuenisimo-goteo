@@ -28,9 +28,9 @@
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div class="width:80%; margin: 0 auto;">
-        <div class="col-md-3"><div>1 </div></div>
-        <div class="col-md-3"><div>2</div></div>
-        <div class="col-md-3"><div>3</div></div>
+        <div class="col-md-3"><div><img src="assets/img/fan.png" alt=""> </div></div>
+        <div class="col-md-3"><div><img src="assets/img/building.png" alt=""></div></div>
+        <div class="col-md-3"><div><img src="assets/img/microphone.png" alt=""></div></div>
         <div class="col-md-3"><div>4</div></div>
     </div>
 
