@@ -15323,7 +15323,8 @@ div.row.message.child.no-owner div.user-name {
 
 
 .top-navbar {
-	background-color: transparent !important;
+    background-color: transparent !important;
+    min-height: 100px !important;
 }
 
 ul.project-filters li.active{
