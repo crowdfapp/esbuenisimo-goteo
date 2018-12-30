@@ -26,7 +26,7 @@
     <h1 class="titlevideo hidden-xs">#FanáticosDeVerdad</h1>
     <video width="100%" height="auto" autoplay  loop style="    margin-top: -130px;">
         <source src="assets/video.mp4" type="video/mp4">
-    </video>N
+    </video>
     <div class="row col-md-12" style="    margin: 50px auto;">
         <h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2>
         <div class="col-md-3">
