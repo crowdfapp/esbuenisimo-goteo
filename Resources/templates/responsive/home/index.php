@@ -47,7 +47,7 @@
         <div class="col-md-3"><div class="bx-promo"><a href="#" ><img src="assets/img/microphone.png" style="width:150px;" alt="">
          <h4> ¿Eres una productora?</h4>
          </a></div></div>
-         <div class="col-md-3"><div class="bx-promo"><a href="#" ><img src="assets/img/Coffee.jpg" style="width:150px;" alt="">
+         <div class="col-md-3"><div class="bx-promo"><a href="#" ><img src="assets/img/Coffee.jpg" style="width:252px;" alt="">
          <h4> ¿eres influencer?</h4>
          </a></div></div>
     </div>
