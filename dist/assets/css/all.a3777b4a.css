@@ -15393,3 +15393,7 @@ margin-top: 17%;
   transform: scale(1.02); 
   box-shadow: 5px 5px 8px 0px rgba(206,212,186,1);
 }
+
+.navbar{
+    z-index: 1111;
+}
