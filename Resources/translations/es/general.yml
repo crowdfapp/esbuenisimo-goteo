@@ -36,18 +36,18 @@ error-user-id-exists: 'Ya hay un usuario registrado con este id'
 error-user-wrong-password: 'La contraseña no es correcta'
 explain-project-progress: 'Este gráfico explica de un modo visual el nivel de datos que has introducido junto con una evaluación básica que hace el sistema. Para poder enviar el proyecto tienes que superar el 80%. Los criterios que hacen subir este "termómetro"  tienen que ver con la información relevante que facilitas, los media, imágenes y links que introduces, si eliges una licencia más abierta que otra, la coherencia de tu presupuesto respecto a las tareas a desarrollar, etc. No pierdas de vista los consejos de la columna derecha, que guían durante todo el proceso.'
 fancybox: 'Texto fancybox'
-goteo-return-button: 'Volver a Goteo'
-guide-dashboard-user-access: 'Desde aquí puedes modificar los datos con que accedes a tu cuenta de Goteo.'
-guide-dashboard-user-personal: "Sólo debes cumplimentar estos datos si has creado un proyecto y quieres que sea cofinanciado y apoyado mediante Goteo. La información de este apartado es necesaria para contactarte en caso de que obtengas la financiación requerida, y que así se pueda efectuar el ingreso."
+goteo-return-button: 'Volver a esbuenisimo'
+guide-dashboard-user-access: 'Desde aquí puedes modificar los datos con que accedes a tu cuenta de esbuenisimo.'
+guide-dashboard-user-personal: "Sólo debes cumplimentar estos datos si has creado un proyecto y quieres que sea cofinanciado y apoyado mediante esbuenisimo. La información de este apartado es necesaria para contactarte en caso de que obtengas la financiación requerida, y que así se pueda efectuar el ingreso."
 guide-project-comment: guide-project-comment
 guide-project-contract-information: 'La información de este apartado es necesaria para contactarte durante la campaña y si obtienes la financiación requerida, para así poder efectuar el ingreso una vez finalice. Es importante tener en cuenta que quien impulse la iniciativa y firme el contrato (en caso de éxito de la campaña) debe ser la misma persona/entidad que reciba el dinero. En el caso de entidades, se recomienda que quien represente a la organización pueda luego acreditarlo formalmente (por ejemplo a través de los estatutos o de un certificado del secretario con el visto bueno del presidente, en el caso de asociaciones). Esta información completa so os requerirá una vez finalizada la primera ronda en caso de éxito.'
-guide-project-costs: "<strong>En esta sección debes elaborar un pequeño presupuesto basado en los costes que calcules va a tener la realización del proyecto.</strong><br><br>Debes especificar según tareas, infraestructura o materiales. Intenta ser realista en los costes y explicar brevemente por qué necesitas cubrir cada uno de ellos. Ten en cuenta que por norma general, la mayor parte del proyecto deberá ser realizado directamente por la persona o equipo que promueve el proyecto, y no subcontratado a terceros. En el cálculo también debes tener en cuenta las comisiones de prestación de servicios de Goteo y de transacción, que suman entre un 4'8% y aprox. un 6%, dependiendo de si activáis la opción de pago vía Paypal o no (<a href=\"/faq/sponsor#q98\" target=\"new\">+ info en nuestras FAQ</a>).<br><br><strong>Muy importante</strong>: En Goteo diferenciamos entre costes imprescindibles y costes adicionales. Los primeros deben lograrse en su totalidad para poder obtener la financiación, mientras que los segundos se solicitan y obtienen directamente en una ronda posterior, una vez está en marcha el proyecto, para poder cubrir costes de optimización del mismo (difusión, diseño, alcance, más unidades, etc). Es recomendable que estos costes adicionales no superen la mitad de los costes totales del proyecto.<br>En caso de que quieras que tu campaña sea más breve, de una sola ronda a “todo o nada”, puedes indicarlo marcando la casilla correspondiente, aunque el cálculo de costes debe ser el mismo. "
-guide-project-description: "<strong>Éste es el apartado donde explicar con detalle los aspectos conceptuales del proyecto. </strong><br><br>Es lo primero con lo que cualquier usuario de la red se encontrará, así que cuida la redacción y evita las faltas de ortografía. Verás que hay campos obligatorios como incluir un vídeo o subir imágenes. Esto es así porque los consideramos imprescindibles para empezar con éxito una campaña de recaudación de fondos mediante Goteo.<br><br>Ten en cuenta que lo más valorado en Goteo es: la información o conocimiento libre de interés general que tu proyecto aportará a la comunidad,  la originalidad, aspirar a resolver una demanda social,  el potencial para atraer a una comunidad amplia de personas interesadas, dejar claro que el equipo promotor posee las capacidades y experiencia para poder llevarlo a buen puerto. Así que no pierdas de vista informar sobre esos aspectos."
+guide-project-costs: "<strong>En esta sección debes elaborar un pequeño presupuesto basado en los costes que calcules va a tener la realización del proyecto.</strong><br><br>Debes especificar según tareas, infraestructura o materiales. Intenta ser realista en los costes y explicar brevemente por qué necesitas cubrir cada uno de ellos. Ten en cuenta que por norma general, la mayor parte del proyecto deberá ser realizado directamente por la persona o equipo que promueve el proyecto, y no subcontratado a terceros. En el cálculo también debes tener en cuenta las comisiones de prestación de servicios de esbuenisimo y de transacción, que suman entre un 4'8% y aprox. un 6%, dependiendo de si activáis la opción de pago vía Paypal o no (<a href=\"/faq/sponsor#q98\" target=\"new\">+ info en nuestras FAQ</a>).<br><br><strong>Muy importante</strong>: En esbuenisimo diferenciamos entre costes imprescindibles y costes adicionales. Los primeros deben lograrse en su totalidad para poder obtener la financiación, mientras que los segundos se solicitan y obtienen directamente en una ronda posterior, una vez está en marcha el proyecto, para poder cubrir costes de optimización del mismo (difusión, diseño, alcance, más unidades, etc). Es recomendable que estos costes adicionales no superen la mitad de los costes totales del proyecto.<br>En caso de que quieras que tu campaña sea más breve, de una sola ronda a “todo o nada”, puedes indicarlo marcando la casilla correspondiente, aunque el cálculo de costes debe ser el mismo. "
+guide-project-description: "<strong>Éste es el apartado donde explicar con detalle los aspectos conceptuales del proyecto. </strong><br><br>Es lo primero con lo que cualquier usuario de la red se encontrará, así que cuida la redacción y evita las faltas de ortografía. Verás que hay campos obligatorios como incluir un vídeo o subir imágenes. Esto es así porque los consideramos imprescindibles para empezar con éxito una campaña de recaudación de fondos mediante esbuenisimo.<br><br>Ten en cuenta que lo más valorado en esbuenisimo es: la información o conocimiento libre de interés general que tu proyecto aportará a la comunidad,  la originalidad, aspirar a resolver una demanda social,  el potencial para atraer a una comunidad amplia de personas interesadas, dejar claro que el equipo promotor posee las capacidades y experiencia para poder llevarlo a buen puerto. Así que no pierdas de vista informar sobre esos aspectos."
 guide-project-images: 'Éste es el apartado para añadir las imágenes del proyecto. Pueden ser esquemas, pantallazos, fotografías, ilustraciones, storyboards, etc. Recuerda que deben ser de tu autoría, o bien cumpliendo con una licencia que permita su reutilización. ¡Puedes subir tantas como quieras!'
 guide-project-rewards: "<strong>En este apartado debes establecer qué ofrece el proyecto a cambio a quienes lo apoyen.</strong>"
 guide-project-support: guide-project-support
 guide-project-supports: '<strong>En este apartado puedes especificar qué otras ayudas, aparte de donaciones, pueden ser necesarias para llevar a cabo el proyecto.</strong><br><br> Pueden ser tareas o acciones a cargo de otras personas (traducciones, gestiones, difusión, etc), o bien préstamos específicos (de material, transporte, hardware, etc).'
-guide-project-updates: "<b>Es muy importante que los proyectos mantengan informados a sus cofinanciadores y el resto de personas potencialmente interesadas sobre cómo avanza su campaña. Desde este apartado puedes publicar mensajes de actualización sobre el proyecto, como una especie de blog público.</b>En Goteo además, una vez se han logrado los fondos mínimos, para la segunda ronda de cofinanciación es crítico explicar regularmente cómo ha arrancado la producción, avances, problemas, etc que permitan la mayor transparencia posible y saber cómo evoluciona el inicio del proyecto, para así tratar de generar más interés y comunidad en torno al mismo."
+guide-project-updates: "<b>Es muy importante que los proyectos mantengan informados a sus cofinanciadores y el resto de personas potencialmente interesadas sobre cómo avanza su campaña. Desde este apartado puedes publicar mensajes de actualización sobre el proyecto, como una especie de blog público.</b>En esbuenisimo además, una vez se han logrado los fondos mínimos, para la segunda ronda de cofinanciación es crítico explicar regularmente cómo ha arrancado la producción, avances, problemas, etc que permitan la mayor transparencia posible y saber cómo evoluciona el inicio del proyecto, para así tratar de generar más interés y comunidad en torno al mismo."
 guide-project-invests: 'Desde este apartado podrás gestionar a tus cofinanciadores, las recompenses que han escogido y también ponerte en contacto con ellos si lo consideras necesario.'
 header-about-side: 'Lo que nos mueve'
 home-posts-header: Novedades
@@ -111,7 +111,7 @@ regular-getit: Consíguelo
 regular-go_up: Subir
 regular-google: Google+
 regular-header: Cabezera
-regular-header-about: 'Sobre Goteo'
+regular-header-about: 'Sobre esbuenisimo'
 regular-header-blog: Blog
 regular-header-faq: FAQ
 regular-header-glossary: 'Principios para una economía abierta'
@@ -134,7 +134,7 @@ regular-loading: Cargando...
 regular-login: Accede
 regular-logout: 'Cerrar sesión'
 regular-looks_for: 'busca:'
-regular-main-header: Goteo.org
+regular-main-header: esbuenisimo.org
 regular-male: Hombre
 regular-others: Otros
 regular-manage_board: 'Panel Gestoría'
@@ -171,7 +171,7 @@ regular-see_blog: Blog
 regular-see_details: 'Ver detalles'
 regular-see_more: 'Ver más'
 regular-send_message: 'Enviar mensaje'
-regular-share-facebook: 'Goteo en Facebook'
+regular-share-facebook: 'esbuenisimo en Facebook'
 regular-share-rss: RSS/BLOG
 regular-share-twitter: 'Síguenos en Twitter'
 regular-share_this: 'Compartir en:'
@@ -214,19 +214,19 @@ regular-remember-me: 'Recordar mis datos'
 regular-next: Siguiente
 regular-previous: Anterior
 session-about-to-expire: 'Tu sesión expirará en 10 minutos. ¿Quieres recargar la página para renovarla?'
-session-expired: 'Tu sesión en goteo ha expirado!'
+session-expired: 'Tu sesión en esbuenisimo ha expirado!'
 spread-about: 'Texto spread-about'
 stories-user-project: '%s, del proyecto: %s'
 support-our-mission: 'SUPPORT OUR MISSION'
 tooltip: 'Texto tooltip'
 tooltip-dashboard-user-access_data: 'Estos son tus datos actuales de acceso. Lo único que no se puede cambiar es el login de usuario.'
-tooltip-dashboard-user-change_email: 'Desde aquí puedes cambiar la dirección de correo electrónico en que recibes los mensajes de Goteo.'
-tooltip-dashboard-user-change_password: 'Desde aquí puedes cambiar la contraseña con que accedes a Goteo.'
-tooltip-dashboard-user-confirm_email: 'Confirma la nueva dirección de correo electrónico en que quieres recibir los mensajes de Goteo.'
-tooltip-dashboard-user-confirm_password: 'Confirma la nueva contraseña con que quieres acceder a Goteo.'
-tooltip-dashboard-user-new_email: 'Indica la nueva dirección de correo electrónico en que quieres recibir los mensajes de Goteo.'
-tooltip-dashboard-user-new_password: 'Escribe la nueva contraseña con que quieres acceder a Goteo.'
-tooltip-dashboard-user-user_password: 'Escribe la contraseña actual con que accedes a Goteo.'
+tooltip-dashboard-user-change_email: 'Desde aquí puedes cambiar la dirección de correo electrónico en que recibes los mensajes de esbuenisimo.'
+tooltip-dashboard-user-change_password: 'Desde aquí puedes cambiar la contraseña con que accedes a esbuenisimo.'
+tooltip-dashboard-user-confirm_email: 'Confirma la nueva dirección de correo electrónico en que quieres recibir los mensajes de esbuenisimo.'
+tooltip-dashboard-user-confirm_password: 'Confirma la nueva contraseña con que quieres acceder a esbuenisimo.'
+tooltip-dashboard-user-new_email: 'Indica la nueva dirección de correo electrónico en que quieres recibir los mensajes de esbuenisimo.'
+tooltip-dashboard-user-new_password: 'Escribe la nueva contraseña con que quieres acceder a esbuenisimo.'
+tooltip-dashboard-user-user_password: 'Escribe la contraseña actual con que accedes a esbuenisimo.'
 tooltip-project-schedule: 'Visualización de cómo queda la agenda de producción de tu proyecto. Recuerda que sólo debes señalar las nuevas tareas a realizar, no las que ya se hayan efectuado.'
 translate-home-guide: 'Mensaje para el traductor'
 user-account-inactive: 'La cuenta está desactivada. Debes recuperar la contraseña para activarla de nuevo'

@@ -13,7 +13,7 @@ tooltip-project-support: 'Consejo para editar colaboraciones existentes'
 tooltip-project-support-description: "Explica brevemente en qué consiste la ayuda que necesita el proyecto, para facilitar que la gente la reconozca y se anime a colaborar."
 tooltip-project-support-support: 'Título descriptivo sobre la colaboración necesaria.'
 tooltip-project-support-type: 'Selecciona si el proyecto necesita ayuda en tareas concretas  o bien préstamos (de material, infraestructura, etc).  '
-tooltip-project-supports: 'En Goteo los proyectos pueden recibir otro tipo de ayudas además de aportaciones monetarias. Hay gente que a lo mejor no puede ayudar económicamente pero sí con su talento, tiempo, energía, etc.'
+tooltip-project-supports: 'En esbuenisimo los proyectos pueden recibir otro tipo de ayudas además de aportaciones monetarias. Hay gente que a lo mejor no puede ayudar económicamente pero sí con su talento, tiempo, energía, etc.'
 support-sure-to-remove: 'Seguro que quieres borrar esta petición?'
 support-remove-error-messages: 'No se puede borrar esta petición porqué tiene respuestas.<br>Por favor, borra las respuestas antes!'
 support-removed: 'Petición borrada correctamente'

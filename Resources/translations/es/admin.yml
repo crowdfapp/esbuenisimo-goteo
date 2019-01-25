@@ -112,7 +112,7 @@ admin-project-to-publish-sure: 'El proyecto va a comenzar su campaña, ¿comenza
 admin-project-derivation-discard: 'Rechazo con derivación'
 admin-project-derivation-discard-desc: 'Pasa el proyecto a estado Descartado y manda un mail derivando a otra plataforma más adecuada'
 admin-project-derivation-discard-sure: 'Se va a enviar un mail automáticamente derivando a otra plataforma y pasará a estado descartado, ¿ok?'
-admin-home-title: Administrar Goteo
+admin-home-title: Administrar esbuenisimo
 admin-list: Listado
 admin-stats: Estadísticas
 admin-list-total: 'Total: <strong>%s</strong> resultados'
@@ -337,14 +337,14 @@ admin-invest-commissions-paypal-last_month: 'Comisión Paypal el mes pasado'
 admin-invest-commissions-paypal-year: 'Comisión Paypal este año'
 admin-invest-commissions-paypal-last_year: 'Comisión Paypal el año pasado'
 
-admin-invest-fees-today: 'Comisión Goteo hoy'
-admin-invest-fees-yesterday: 'Comisión Goteo ayer'
-admin-invest-fees-week: 'Comisión Goteo esta semana'
-admin-invest-fees-last_week: 'Comisión Goteo la semana pasada'
-admin-invest-fees-month: 'Comisión Goteo este mes'
-admin-invest-fees-last_month: 'Comisión Goteo el mes pasado'
-admin-invest-fees-year: 'Comisión Goteo este año'
-admin-invest-fees-last_year: 'Comisión Goteo el año pasado'
+admin-invest-fees-today: 'Comisión esbuenisimo hoy'
+admin-invest-fees-yesterday: 'Comisión esbuenisimo ayer'
+admin-invest-fees-week: 'Comisión esbuenisimo esta semana'
+admin-invest-fees-last_week: 'Comisión esbuenisimo la semana pasada'
+admin-invest-fees-month: 'Comisión esbuenisimo este mes'
+admin-invest-fees-last_month: 'Comisión esbuenisimo el mes pasado'
+admin-invest-fees-year: 'Comisión esbuenisimo este año'
+admin-invest-fees-last_year: 'Comisión esbuenisimo el año pasado'
 
 admin-invest-diff-yesterday: 'Diferencia con el día anterior'
 admin-invest-diff-last_week: 'Diferencia con la semana anterior'

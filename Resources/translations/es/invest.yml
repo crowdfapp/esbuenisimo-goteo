@@ -1,8 +1,8 @@
 ---
-bazar-spread-text: '%s - Esta Navidad, regala crowdfunding abierto y para el bien común con @goteofunding #openbazaar'
+bazar-spread-text: '%s - Esta Navidad, regala crowdfunding abierto y para el bien común con @esbuenisimofunding #openbazaar'
 bazar-thanks: 'Gracias por visitar nuestro bazaar, puedes ayudarnos a difundirlo.'
 currency-alert: "Por favor, ten en cuenta que la gestión es en EUR. Vas a pagar aproximadamente <span id=\"reminder_conversion\">%s</span> € <a href=\"/faq/investors#q115\" target=\"_blank\">Más info</a>"
-faq-payment-method: '<a href="/faq/investors#q2" target="_blank">¿Qué sistemas de pago ofrece Goteo? ¿Son seguros?</a>'
+faq-payment-method: '<a href="/faq/investors#q2" target="_blank">¿Qué sistemas de pago ofrece esbuenisimo? ¿Son seguros?</a>'
 imperative-register: Regístrate
 invest-address-address-field: Dirección
 invest-address-birthyear-field: 'Año de nacimiento'
@@ -52,10 +52,10 @@ invest-make-sure-save: Guardar
 invest-make-sure-title: Confirmar
 invest-method: 'Método de pago'
 invest-method-title: 'Realiza tu aporte'
-invest-modal-fiscal-description: 'Como ya debes saber, aportar en Goteo no sólo hace posibles un montón de proyectos que nos benefician a todxs, sino que ¡además desgrava! Al realizar una aportación a un proyecto, y gracias al incremento en los tipos de deducción aplicables desde 2015 para las donaciones puras y simples que se realicen en favor de la Fundación Goteo, como entidad acogida al régimen fiscal especial de la Ley 49/2002 de 23 de diciembre, podrás deducirte las cantidades que indicamos en nuestra <a href="https://goteo.org/faq/investors#q112" target="_blank">FAQ 18 para comecenas</a>.'
+invest-modal-fiscal-description: 'Como ya debes saber, aportar en esbuenisimo no sólo hace posibles un montón de proyectos que nos benefician a todxs, sino que ¡además desgrava! Al realizar una aportación a un proyecto, y gracias al incremento en los tipos de deducción aplicables desde 2015 para las donaciones puras y simples que se realicen en favor de la Fundación esbuenisimo, como entidad acogida al régimen fiscal especial de la Ley 49/2002 de 23 de diciembre, podrás deducirte las cantidades que indicamos en nuestra <a href="https://esbuenisimo.org/faq/investors#q112" target="_blank">FAQ 18 para comecenas</a>.'
 invest-modal-fiscal-title: 'Información fiscal'
-invest-modal-pool-description: 'El monedero virtual es un sistema de crédito de la plataforma Goteo, que podrás rellenar con tu dinero y usarlo como vía de pago siempre que quieras realizar aportes a proyectos en nuestra plataforma, sin necesidad de dar tus datos de tarjeta ni de paypal cada vez.'
-invest-modal-pool-title: 'Sobre el monedero virtual Goteo'
+invest-modal-pool-description: 'El monedero virtual es un sistema de crédito de la plataforma esbuenisimo, que podrás rellenar con tu dinero y usarlo como vía de pago siempre que quieras realizar aportes a proyectos en nuestra plataforma, sin necesidad de dar tus datos de tarjeta ni de paypal cada vez.'
+invest-modal-pool-title: 'Sobre el monedero virtual esbuenisimo'
 invest-more-info: 'Más información'
 invest-next_step: 'Paso siguiente'
 invest-payment-email: 'Introduce tu cuenta de PayPal'
@@ -65,7 +65,7 @@ invest-payment_method-header: 'Elige el método de pago'
 invest-payment-method: 'Método de pago'
 invest-paypal-method: Paypal
 invest-paypal_disabled: "Este proyecto tiene desactivada la opción de pago a través de PayPal. <a href=\"/faq/investors#q2\" target=\"_blank\">Más info</a>"
-invest-pool: 'Quiero que mi donación, en el caso de que el proyecto no llegue a su objetivo, permanezca en mi monedero virtual Goteo.'
+invest-pool: 'Quiero que mi donación, en el caso de que el proyecto no llegue a su objetivo, permanezca en mi monedero virtual esbuenisimo.'
 invest-pool-available: disponibles
 invest-pool-error: 'No tienes suficiente dinero en tu monedero virtual'
 invest-pool-method: 'Monedero virtual'

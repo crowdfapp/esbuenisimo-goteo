@@ -24,7 +24,7 @@ register-confirm_mail-fail: 'Ha habido algún error al enviar el email de activa
 register-confirm_mail-success: 'Mensaje de activación de cuenta enviado. Si no está en tu buzón de correo, revisa la carpeta de /Spam'
 review-ajax-alert: 'Los criterios y los campos de evaluación / mejoras se guardan automáticamente al modificarse'
 review-closed-alert: 'Has dado por terminada esta revisión, no puedes realizar más cambios'
-user-login-required: 'Debes <a href="/user/login">iniciar sesión</a> para interactuar con la comunidad de Goteo'
+user-login-required: 'Debes <a href="/user/login">iniciar sesión</a> para interactuar con la comunidad de esbuenisimo'
 user-login-required-access: 'Debes iniciar sesión o solicitar permisos para acceder a esa sección'
 user-login-required-to_create: 'Debes iniciar sesión para crear un proyecto'
 user-login-required-to_invest: 'Debes iniciar sesión para cofinanciar el proyecto'
