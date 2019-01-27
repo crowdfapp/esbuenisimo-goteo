@@ -15397,3 +15397,11 @@ margin-top: 17%;
 .navbar{
     z-index: 1111;
 }
+
+form.create-project-form div.form-group{
+    opacity: 1 !important;
+}
+
+.top-navbar .navbar-always > a, .top-navbar .navbar-always > button{
+    color: #c9c9c9 !important;
+}
