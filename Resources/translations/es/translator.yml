@@ -13,7 +13,6 @@ translator-delete: 'Borrar traducción al %s'
 translator-delete-sure: 'Seguro que quieres borrar la traducción al %s? Esto no se puede deshacer!'
 translator-deleted-ko: 'Error al borrar la traducción al %s!'
 translator-deleted-ok: 'Traducción al %s borrada correctamente'
-translator-faq: Faq
 translator-feed-translated-desc: '%LINK% traducido por %USER% a %LANGS%'
 translator-feed-translated-target: 'Traducción en %s'
 translator-field-blog: Blog
