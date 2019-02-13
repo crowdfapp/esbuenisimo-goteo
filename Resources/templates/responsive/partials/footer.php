@@ -3,16 +3,17 @@
       <div class="container">
         <div class="row">
             <div class="col-sm-12" style="text-align:center">
-              <ul class="list-inline footer-list">
+            <ul class="list-inline footer-list">
                 <li><a href="#">esBuenisimo</a></li>
                 <li><a href="#" target="_blank"><?= $this->text('footer-resources-stats') ?></a></li>
                 <li><a href="/user/login"><?= $this->text('regular-login')?></a></li>
                 <li><a href="/contact"><?= $this->text('regular-footer-contact')?></a></li>
                <!-- <li><a data-jslicense="1" href="/about/librejs">Licenses</a></li>
                 <li><a href="/faq"><? /*= $this->text('regular-header-faq') */?></a></li>-->
+                <li><a data-jslicense="1" href="https://www.esbuenisimo.com/blog/index.php">Blog</a></li>
                 <li><a data-jslicense="1" href="#">Licencia</a></li>
-                <li><a href="#"><?= $this->text('regular-header-faq')?></a></li>
-              </ul>
+               <!-- <li><a href="#"><? /*= $this->text('regular-header-faq')*/?></a></li> -->
+              </ul> 
             </div>
 <!--
             <div class="col-sm-4 hidden-xs">
