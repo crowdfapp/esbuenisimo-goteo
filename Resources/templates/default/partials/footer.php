@@ -44,7 +44,7 @@ $sponsors = $this->model_static('Sponsor', 'getList', 'goteo');
         <div class="block resources">
             <h6 class="title"><?=$this->text('footer-header-resources') ?></h6>
             <ul class="scroll-pane">
-                <li><a href="/faq"><?=$this->text('regular-header-faq') ?></a></li>
+                <!--<li><a href="/faq"><? //=$this->text('regular-header-faq') ?></a></li> -->
                 <li><a href="/glossary"><?=$this->text('footer-resources-glossary') ?></a></li>
                 <?php foreach ($posts as $id => $title) : ?>
                 <li><a href="/blog/<?php echo $id ?>"><?=$this->text_truncate($title, 50)?></a></li>

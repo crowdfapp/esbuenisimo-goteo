@@ -59,7 +59,7 @@ $sponsors   = Sponsor::getList();
                 <ul class="scroll-pane">
                     <li><a href="http://developers.goteo.org" target="_blank"><?php echo Text::get('footer-resources-api') ?></a></li>
                     <li><a href="http://stats.goteo.org" target="_blank"><?php echo Text::get('footer-resources-stats') ?></a></li>
-                    <li><a href="/faq"><?php echo Text::get('regular-header-faq') ?></a></li>
+                    <!-- <li><a href="/faq"><? //php echo Text::get('regular-header-faq') ?></a></li> -->
                     <li><a href="/glossary"><?php echo Text::get('footer-resources-glossary') ?></a></li>
                     <li><a href="/press"><?php echo Text::get('footer-resources-press') ?></a></li>
                     <?php foreach ($posts as $id=>$title) : ?>
