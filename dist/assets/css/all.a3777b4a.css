@@ -15183,8 +15183,6 @@ div.row.message.child.no-owner div.user-name {
     fill: #000
 }
 
-
-
 .chart-amount .axis .tick line {
     stroke: rgba(0, 0, 0, .1)
 }
@@ -15270,103 +15268,106 @@ div.row.message.child.no-owner div.user-name {
 }
 
 .border-0-pixels-important {
-  border: 0px !important;
+    border: 0px !important;
 }
 
 .color-red {
-  color: #FF0000;
+    color: #FF0000;
 }
 
 .margin-top-0-pixels-important {
-  margin-top: 0px !important;
+    margin-top: 0px !important;
 }
 
 .margin-top-20-pixels-important {
-  margin-top: 20px !important;
+    margin-top: 20px !important;
 }
 
 .margin-bottom-10-pixels {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .margin-bottom-20-pixels {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .margin-bottom-40-pixels {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .width-100-percent {
-  width: 100%;
+    width: 100%;
 }
 
 .text-center-important {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .padding-bottom-25-pixels {
-  padding-bottom: 25px;
+    padding-bottom: 25px;
 }
 
 .float-left {
-  float: left;
+    float: left;
 }
 
 .margin-right-15-pixels {
-  margin-right: 15px;
+    margin-right: 15px;
 }
 
 
 /*  ///////////////////////////
    /////////   NEW CODE //////  */
 
-
 .top-navbar {
     background-color: transparent !important;
     min-height: 100px !important;
 }
 
-ul.project-filters li.active{
-	background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
-	background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
-	background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
-	background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
-	color: #fff !important;
-	border-left-color: #cd5eb3 !important;
-	border-right-color: #ff3936 !important;
+ul.project-filters li.active {
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
+    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
+    color: #fff !important;
+    border-left-color: #cd5eb3 !important;
+    border-right-color: #ff3936 !important;
 }
 
-.project-widget.normal .floating{
-	background: radial-gradient(circle at 20% 50%, #e6e358, #e8ff05e6 60%, #f3e80c 90%) !important;
-	box-shadow: 2px 5px 12px -6px #b9b8b2e6 !important;
+.project-widget.normal .floating {
+    background: radial-gradient(circle at 20% 50%, #e6e358, #e8ff05e6 60%, #f3e80c 90%) !important;
+    box-shadow: 2px 5px 12px -6px #b9b8b2e6 !important;
 }
 
-.project-widget.normal .floating:hover{
-	background: radial-gradient(circle at 20% 50%, #f5f3c1cc, #e8ff05e6 60%, #f3e80c 90%) !important;
-	box-shadow: 2px 5px 12px -6px #71706b !important;
+.project-widget.normal .floating:hover {
+    background: radial-gradient(circle at 20% 50%, #f5f3c1cc, #e8ff05e6 60%, #f3e80c 90%) !important;
+    box-shadow: 2px 5px 12px -6px #71706b !important;
 }
 
 .footer .social [class*="fa fa-"]:hover {
-	background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
-	background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
-	background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
-	background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
-	color: #fff !important;
-	border-left-color: #cd5eb3 !important;
-	border-right-color: #ff3936 !important;
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936)) !important;
+    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%) !important;
+    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%) !important;
+    color: #fff !important;
+    border-left-color: #cd5eb3 !important;
+    border-right-color: #ff3936 !important;
 }
 
-#menu-item-langs, #menu-item-channels, #menu-item-about, #menu-item-currencies, #menu-item-faq{
-	display:none;
+#menu-item-langs,
+#menu-item-channels,
+#menu-item-about,
+#menu-item-currencies,
+#menu-item-faq {
+    display: none;
 }
 
 .titlevideo {
-z-index: 111;
-position: absolute;
-font-size: 80px;
-color: #fdfd55;
-margin-top: 17%;
+    z-index: 111;
+    position: absolute;
+    font-size: 80px;
+    color: #fdfd55;
+    margin-top: 17%;
 }
 
 .top-navbar .navbar-brand img.logo {
@@ -15374,34 +15375,43 @@ margin-top: 17%;
     margin: 10px !important;
 }
 
-.bx-promo{
+.bx-promo {
     width: 95%;
     background: whitesmoke;
     text-align: center;
     margin: 0 auto;
-    -webkit-box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
-    -moz-box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
-    box-shadow: 3px 3px 5px 0px rgba(206,212,186,1);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(206, 212, 186, 1);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(206, 212, 186, 1);
+    box-shadow: 3px 3px 5px 0px rgba(206, 212, 186, 1);
     cursor: pointer;
     transition: transform .5s;
     padding: 10px 0;
 }
 
-.bx-promo:hover{
-      -ms-transform: scale(1.02); 
-  -webkit-transform: scale(1.02); 
-  transform: scale(1.02); 
-  box-shadow: 5px 5px 8px 0px rgba(206,212,186,1);
+.bx-promo:hover {
+    -ms-transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+    box-shadow: 5px 5px 8px 0px rgba(206, 212, 186, 1);
 }
 
-.navbar{
+.navbar {
     z-index: 1111;
 }
 
-form.create-project-form div.form-group{
+form.create-project-form div.form-group {
     opacity: 1 !important;
 }
 
-.top-navbar .navbar-always > a, .top-navbar .navbar-always > button{
+.top-navbar .navbar-always>a,
+.top-navbar .navbar-always>button {
     color: #c9c9c9 !important;
+}
+
+.search {
+    display: none;
+}
+
+.alert-success {
+    display: none;
 }
