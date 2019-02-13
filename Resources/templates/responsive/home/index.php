@@ -31,7 +31,7 @@
         <!--<h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2> -->
 
         <img src="assets/img/comofunciona.png" style="width: 100%; margin: 30px 0px;" alt="">
-      
+        <h2 class="title text-center" style="margin-bottom: 40px;">Quienes pueden colaborar</h2>
         <div class="col-md-3">
             <div class="bx-promo"> 
             <a href="#" >
