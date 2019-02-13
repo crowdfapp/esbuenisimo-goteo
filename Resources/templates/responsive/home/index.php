@@ -28,7 +28,10 @@
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div class="row col-md-12" style="    margin: 50px auto;">
-        <h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2>
+        <!--<h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2> -->
+
+        <img src="assets/img/comofunciona.png" style="width: 100%; margin: 30px 0px;" alt="">
+      
         <div class="col-md-3">
             <div class="bx-promo"> 
             <a href="#" >
