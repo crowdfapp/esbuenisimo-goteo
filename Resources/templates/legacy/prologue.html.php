@@ -21,7 +21,7 @@ use Goteo\Library\Text,
 <?php if (isset($ogmeta)) : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:type" content="activity" />
-        <meta property="og:site_name" content="Goteo.org" />
+        <meta property="og:site_name" content="esbuenisimo" />
         <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
         <?php if (is_array($ogmeta['image'])) :
             foreach ($ogmeta['image'] as $ogimg) : ?>
@@ -32,7 +32,7 @@ use Goteo\Library\Text,
         <?php endif; ?>
         <meta property="og:url" content="<?php echo $ogmeta['url'] ?>" />
 <?php else : ?>
-        <meta property="og:title" content="Goteo.org" />
+        <meta property="og:title" content="esbuenisimo" />
         <meta property="og:description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
         <meta property="og:image" content="<?php echo SRC_URL ?>/goteo_logo.png" />
         <meta property="og:url" content="<?php echo SITE_URL ?>" />

@@ -4,7 +4,7 @@ $title= $this->section ? $this->text($this->blog_sections[$this->section]) : $th
 
 $this->layout('blog/layout', [
 	'bodyClass' => 'blog',
-    'title' => $title ? ucfirst($title).' :: Goteo.org' : 'Blog',
+    'title' => $title ? ucfirst($title).' :: esbuenisimo' : 'Blog',
     'meta_description' => ''
     ]);
 

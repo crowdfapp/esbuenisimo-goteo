@@ -12,7 +12,7 @@ $amount=0;
 
 <div class="login-widget-form register">
 
-	<h5 class="login-widget-title">Crea un nuevo usuario en Goteo: </h5>
+	<h5 class="login-widget-title">Crea un nuevo usuario en esbuenisimo: </h5>
 		<input class="login-widget-input" type="text" id="username" name="username" placeholder="Nombre completo" value="" />
 		<input class="login-widget-input" type="password" id="password" name="password" placeholder="Email" value="" />
 

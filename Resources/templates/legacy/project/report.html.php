@@ -141,7 +141,7 @@ $cName = "P-{$cNum}-{$cDate}";
             <th style="text-align:left;">1) Resumen de recaudación</th>
         </tr>
         <tr>
-            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Máximo mostrado en el termómetro de Goteo.org al cerrar la campaña (<?php echo ($project->success) ? date('d/m/Y', strtotime($project->success)) : 'fecha'; ?>): <strong><?php echo \amount_format($sumData['shown'], 2); ?></strong>
+            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Máximo mostrado en el termómetro de esbuenisimo al cerrar la campaña (<?php echo ($project->success) ? date('d/m/Y', strtotime($project->success)) : 'fecha'; ?>): <strong><?php echo \amount_format($sumData['shown'], 2); ?></strong>
             <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(Puede que no se haya llegado nunca a esta cifra si han devuelto aportes antes del cierre de campaña)</em></td>
         </tr>
         <tr>
@@ -187,10 +187,10 @@ $cName = "P-{$cNum}-{$cDate}";
             <th style="text-align:left;">2) Gastos derivados de la financiación del proyecto</th>
         </tr>
         <tr>
-            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Comisiones cobradas a Goteo por cada transferencia de tarjeta (0,8&#37;) y PayPal (3,4&#37; + 0,35 por transacción/usuario/a): <strong>total <?php echo \amount_format($sumData['fee_goteo'], 2); ?></strong></td>
+            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Comisiones cobradas a esbuenisimo por cada transferencia de tarjeta (0,8&#37;) y PayPal (3,4&#37; + 0,35 por transacción/usuario/a): <strong>total <?php echo \amount_format($sumData['fee_goteo'], 2); ?></strong></td>
         </tr>
         <tr>
-            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Comisión del <?php echo $account->fee; ?>&#37; de Goteo.org <?= $account->vat ? '(Incluye un '.$account->vat.'&#37; de IVA para el 50&#37; de la cantidad)' : '' ?>:  <strong><?php echo \amount_format($sumData['goteo'], 2); ?></strong>
+            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Comisión del <?php echo $account->fee; ?>&#37; de esbuenisimo <?= $account->vat ? '(Incluye un '.$account->vat.'&#37; de IVA para el 50&#37; de la cantidad)' : '' ?>:  <strong><?php echo \amount_format($sumData['goteo'], 2); ?></strong>
                 <?php if($project->called): ?>
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>(<?= \amount_format($sumData['drop_goteo']) .' de comisión en la parte correspondiente a capital riego al aplicar un '.$called->fee_projects_drop .'%)' ?></em>
                 <?php endif; ?>
@@ -205,19 +205,19 @@ $cName = "P-{$cNum}-{$cDate}";
 <?php if ($admin) : ?>
         <!--
         <tr>
-            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Desglose calculo Comisión del 8&#37; de Goteo.org: <?php $aportes = $Data['tpv']['total']['amount'] + $Data['paypal']['total']['amount'] + $Data['cash']['total']['amount']; $comisionaportes = $aportes * 0.08; $comisionriego = $Data['drop']['total']['amount'] * 0.08; echo "Aportes usuarios: {$Data['tpv']['total']['amount']}(tpv) + {$Data['paypal']['total']['amount']}(paypal) + {$Data['cash']['total']['amount']}(cash) = {$aportes} -> {$comisionaportes} Capital Riego: {$Data['drop']['total']['amount']} -> {$comisionriego}"; ?></td>
+            <td>-&nbsp;&nbsp;&nbsp;&nbsp;Desglose calculo Comisión del 8&#37; de esbuenisimo: <?php $aportes = $Data['tpv']['total']['amount'] + $Data['paypal']['total']['amount'] + $Data['cash']['total']['amount']; $comisionaportes = $aportes * 0.08; $comisionriego = $Data['drop']['total']['amount'] * 0.08; echo "Aportes usuarios: {$Data['tpv']['total']['amount']}(tpv) + {$Data['paypal']['total']['amount']}(paypal) + {$Data['cash']['total']['amount']}(cash) = {$aportes} -> {$comisionaportes} Capital Riego: {$Data['drop']['total']['amount']} -> {$comisionriego}"; ?></td>
         </tr>
         -->
 <?php endif; ?>
         <tr>
-            <td>Por el total de estas comisiones  la Fundación Goteo ha emitido la factura <strong>[N&uacute;mero de factura]</strong> por importe de <strong><?php echo \amount_format($sumData['total_fee_project'], 2); ?></strong>, a nombre de la persona o entidad que firma el contrato</td>
+            <td>Por el total de estas comisiones  la Fundación esbuenisimo ha emitido la factura <strong>[N&uacute;mero de factura]</strong> por importe de <strong><?php echo \amount_format($sumData['total_fee_project'], 2); ?></strong>, a nombre de la persona o entidad que firma el contrato</td>
         </tr>
     </table>
 <br />
 
     <table>
         <tr>
-            <th style="text-align:left;">3) Transferencias de la Fundación Goteo (Goteo.org) a los/as  impulsores/as</th>
+            <th style="text-align:left;">3) Transferencias de la Fundación esbuenisimo (esbuenisimo.com) a los/as  impulsores/as</th>
         </tr>
         <tr>
             <td>-&nbsp;&nbsp;&nbsp;&nbsp;Envío a través de PayPal (sin descontar comisiones de PayPal  de 3,4&#37;+ 0,35  por transacción/usuario/a, cobradas automáticamente al receptor del dinero): <strong><?php echo \amount_format($sumData['pp_project'], 2); ?> ([fecha transferencia])</strong></td>

@@ -2,7 +2,7 @@
 
 if($this->is_pronto()) {
     echo json_encode([
-        'title' => 'Goteo.org :: Admin :: ' . $this->module_label,
+        'title' => 'esbuenisimo :: Admin :: ' . $this->module_label,
         'content' => $this->supply('admin-messages', $this->insert("partials/header/messages")) . $this->supply('admin-content')
         ]);
     return;
@@ -12,7 +12,7 @@ $this->layout('layout', [
     'bodyClass' => 'admin',
     'navClass' => 'yellow',
     'sidebarClass' => 'yellow',
-    'title' => 'Goteo.org :: Admin :: ' . $this->module_label,
+    'title' => 'esbuenisimo :: Admin :: ' . $this->module_label,
     'meta_description' => $this->text('meta-description-admin')
     ]);
 

@@ -57,17 +57,12 @@ $sponsors   = Sponsor::getList();
             <div class="block resources">
                 <h6 class="title"><?php echo Text::get('footer-header-resources') ?></h6>
                 <ul class="scroll-pane">
-                    <li><a href="http://developers.goteo.org" target="_blank"><?php echo Text::get('footer-resources-api') ?></a></li>
-                    <li><a href="http://stats.goteo.org" target="_blank"><?php echo Text::get('footer-resources-stats') ?></a></li>
-                    <!-- <li><a href="/faq"><? //php echo Text::get('regular-header-faq') ?></a></li> -->
-                    <li><a href="/glossary"><?php echo Text::get('footer-resources-glossary') ?></a></li>
                     <li><a href="/press"><?php echo Text::get('footer-resources-press') ?></a></li>
                     <?php foreach ($posts as $id=>$title) : ?>
                     <li><a href="/blog/<?php echo $id ?>"><?php echo Text::recorta($title, 50) ?></a></li>
                     <?php endforeach; ?>
                     <li><a href="/newsletter" target="_blank">Newsletter</a></li>
-                    <li><a href="https://github.com/GoteoFoundation/goteo" target="_blank"><?php echo Text::get('footer-resources-source_code') ?></a></li>
-                    <li><a rel="jslicense" href="/about/librejs">Licenses</a></li>
+                   <li><a rel="jslicense" href="/about/librejs">Licenses</a></li>
                 </ul>
             </div>
 
@@ -96,8 +91,6 @@ $sponsors   = Sponsor::getList();
                     <li><a href="/service/workshop"><img class="icon" src="<?= SRC_URL . '/view/css/services/workshops_icon.png' ?>" height="20" /><?= Text::get('footer-service-workshop') ?></a></li>
                     <li><a href="/calculadora-fiscal"><img class="icon calculator" src="<?= SRC_URL . '/view/css/services/calculator_icon.png' ?>" height="20" /><?= Text::get('footer-service-calculator') ?></a></li>
                     <li><a href="/pool"><img class="icon pool" src="<?= SRC_URL . '/view/css/services/pool_icon.png' ?>" height="20" /><?= Text::get('footer-service-pool') ?></a></li>
-                    <li><a href="http://stats.goteo.org" target="_blank"><img class="icon stats" src="<?= SRC_URL . '/view/css/services/stats.png' ?>" height="20" /><?= Text::get('footer-resources-stats') ?></a></li>
-
                 </ul>
 
             </div>
@@ -131,13 +124,6 @@ $sponsors   = Sponsor::getList();
                     <li><a href="/legal/terms"><?php echo Text::get('regular-footer-terms'); ?></a></li>
                     <li><a href="/legal/privacy"><?php echo Text::get('regular-footer-privacy'); ?></a></li>
                 </ul>
-
-                <div class="platoniq">
-                   <span class="text"><a href="#" class="poweredby"><?php echo Text::get('footer-platoniq-iniciative') ?></a></span>
-                   <span class="logo"><a href="http://fundacion.goteo.org/" target="_blank" class="foundation">Fundación Goteo</a></span>
-                   <span class="logo"><a href="http://www.platoniq.net" target="_blank" class="growby">Platoniq</a></span>
-                </div>
-
 
         </div>
 

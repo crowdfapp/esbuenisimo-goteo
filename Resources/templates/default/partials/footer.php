@@ -109,19 +109,10 @@ $sponsors = $this->model_static('Sponsor', 'getList', 'goteo');
                 <li><a href="/about"><?=$this->text('regular-header-about')?></a></li>
                 <li><a href="/user/login"><?=$this->text('regular-login')?></a></li>
                 <li><a href="/contact"><?=$this->text('regular-footer-contact')?></a></li>
-<!--                    <li><a href="/blog"><?=$this->text('regular-header-blog')?></a></li> -->
 <!--                    <li><a href="/about/legal"><?=$this->text('regular-footer-legal')?></a></li> -->
                 <li><a href="/legal/terms"><?=$this->text('regular-footer-terms')?></a></li>
                 <li><a href="/legal/privacy"><?=$this->text('regular-footer-privacy')?></a></li>
             </ul>
-
-            <div class="platoniq">
-               <span class="text"><a href="#" class="poweredby"><?=$this->text('footer-platoniq-iniciative') ?></a></span>
-               <span class="logo"><a href="http://fundacion.goteo.org" target="_blank" class="foundation">Fundación Goteo</a></span>
-               <span class="logo"><a href="http://www.platoniq.net" target="_blank" class="growby">Platoniq</a></span>
-            </div>
-
-
     </div>
 
 </div>

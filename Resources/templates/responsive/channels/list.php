@@ -1,8 +1,8 @@
 <?php
 $this->layout('layout', [
     'bodyClass' => '',
-    'title' =>  'Canales :: Goteo.org',
-    'meta_description' => "Canales de Goteo"
+    'title' =>  'Canales :: esbuenisimo',
+    'meta_description' => "Canales de esbuenisimo"
     ]);
 
 $this->section('content');
@@ -12,7 +12,7 @@ $this->section('content');
 <div class="container">
 
      <div class="jumbotron channels">
-        <h1>Canales de Goteo</h1>
+        <h1>Canales de esbuenisimo</h1>
         <p>Te presentamos a las instituciones que apoyan a nuestra plataforma con un canal propio</p>
     </div>
 

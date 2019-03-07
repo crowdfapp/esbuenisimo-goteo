@@ -23,7 +23,6 @@
             <?= $this->form_form($this->raw('form')) ?>
         </div>
 
-        <h4 class="spacer"><a href="//developers.goteo.org" target="_blank"><i class="fa fa-book"></i> <?= $this->text('api-key-documentation')?></a></h4>
     </div>
 
 

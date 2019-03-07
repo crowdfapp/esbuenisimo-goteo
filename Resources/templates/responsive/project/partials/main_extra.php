@@ -17,7 +17,7 @@ $author = !empty($author_twitter) ? ' '.$this->text('regular-by').' @'.$author_t
 $share_title = $project->name . $author;
 
 $facebook_url = 'http://facebook.com/sharer.php?u=' . urlencode($share_url) . '&t=' . urlencode($share_title);
-$twitter_url = 'http://twitter.com/intent/tweet?text=' . urlencode($share_title . ': ' . $share_url . ' #Goteo');
+$twitter_url = 'http://twitter.com/intent/tweet?text=' . urlencode($share_title . ': ' . $share_url . ' #esbuenisimo');
 
 $langs = $project->getLangs();
 

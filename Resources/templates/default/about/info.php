@@ -18,7 +18,7 @@ $this->section('content');
 
 	<div id="sub-header-secondary">
 		<div class="clearfix">
-			<h2><a href="/about">GOTEO<span class="red">INFO</span></a></h2>
+			<h2><a href="/about">Esbuenisimo<span class="red">INFO</span></a></h2>
             <?php echo View::get('header/share.html.php') ?>
 		</div>
 	</div>

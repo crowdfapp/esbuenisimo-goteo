@@ -1,7 +1,7 @@
 <?php
 $this->layout('layout', [
     'bodyClass' => '',
-    'title' => ($this->alt_title ? $this->alt_title : $this->text('invest-method-title')). ' :: Goteo.org',
+    'title' => ($this->alt_title ? $this->alt_title : $this->text('invest-method-title')). ' :: esbuenisimo',
     'meta_description' => $this->alt_description ? $this->alt_description : $this->text('invest-method-title')
     ]);
 

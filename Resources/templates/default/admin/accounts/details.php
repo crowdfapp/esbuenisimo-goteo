@@ -76,7 +76,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
         <td>
 
             <?php if ($invest->issue) : ?>
-            <a href="/admin/accounts/solve/<?php echo $invest->id ?>" onclick="return confirm('Esta incidencia se dará por resuelta: se va a cancelar el preaproval, el aporte pasará a ser de tipo Cash y en estado Cobrado por goteo, seguimos?')" class="button"><?= $this->text('admin-account-issue-solved') ?></a><br>
+            <a href="/admin/accounts/solve/<?php echo $invest->id ?>" onclick="return confirm('Esta incidencia se dará por resuelta: se va a cancelar el preaproval, el aporte pasará a ser de tipo Cash y en estado Cobrado por esbuenisimo, seguimos?')" class="button"><?= $this->text('admin-account-issue-solved') ?></a><br>
             <?php endif; ?>
 
             <?php if ($this->poolable) : ?>

@@ -39,7 +39,7 @@ $go_up = Text::get('regular-go_up');
 
 		<div id="sub-header-secondary">
             <div class="clearfix">
-                <h2>GOTEO<span class="red">FAQ</span></h2>
+                <h2>esbuenisimo<span class="red">FAQ</span></h2>
                 <?php echo View::get('header/share.html.php') ?>
             </div>
         </div>

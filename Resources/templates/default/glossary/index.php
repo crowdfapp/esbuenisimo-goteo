@@ -26,7 +26,7 @@ $this->section('content');
 ?>
 	<div id="sub-header-secondary">
 		<div class="clearfix">
-            <h2><a href="/glossary">GOTEO<span class="red"><?=$this->text('footer-resources-glossary') ?></span></a></h2>
+            <h2><a href="/glossary">esbuenisimo<span class="red"><?=$this->text('footer-resources-glossary') ?></span></a></h2>
             <?=$this->insert('partials/header/share')?>
 		</div>
 	</div>

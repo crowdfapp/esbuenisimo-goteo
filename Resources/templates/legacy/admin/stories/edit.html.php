@@ -49,7 +49,7 @@ $status = Model\Project::status();
     </p>
 
     <p>
-        <label for="story-review">Review de Goteo: (Subtítulo)</label><br />
+        <label for="story-review">Review de esbuenisimo: (Subtítulo)</label><br />
         <textarea id="story-review" name="review" cols="60" rows="2"><?php echo $story->review; ?></textarea>
     </p>
 

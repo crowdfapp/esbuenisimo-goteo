@@ -14,12 +14,12 @@ if(empty($this->og_url)) $this->og_url = $this->url;
     <meta property="og:title" content="<?= $this->og_title?>">
     <meta property="og:description" content="<?= $this->og_description?>">
     <meta property="og:type" content="activity">
-    <meta property="og:site_name" content="Goteo.org">
+    <meta property="og:site_name" content="esbuenisimo">
     <meta property="og:url" content="<?= $this->og_url?>">
 
     <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:site" content="@goteofunding" />
+<meta name="twitter:site" content="@esbuenisimo" />
 
 <meta name="twitter:title" content="<?= $this->title ?>" />
 

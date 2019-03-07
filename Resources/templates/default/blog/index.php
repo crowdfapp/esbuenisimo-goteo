@@ -27,7 +27,7 @@ if ($this->show == 'list') {
     $title=$this->text('meta-title-blog');
     $description=$this->text('meta-description-blog');
     $ogmeta = array(
-        'title' => 'Goteo Blog',
+        'title' => 'esbuenisimo Blog',
         'description' => Text::get('regular-by').' Goteo',
         'url' => SITE_URL . '/blog'
     );
@@ -79,7 +79,7 @@ $this->section('content');
 ?>
 	<div id="sub-header-secondary">
 		<div class="clearfix">
-			<h2><a href="/blog">GOTEO<span class="red">BLOG</span></a></h2>
+			<h2><a href="/blog">esbuenisimo<span class="red">BLOG</span></a></h2>
             <?php echo View::get('header/share.html.php') ?>
 		</div>
 	</div>

@@ -16,7 +16,7 @@ if(empty($this->og_image)) $this->og_image = $this->image;
     <meta property="og:title" content="<?=$this->og_title?>" />
     <meta property="og:description" content="<?=$this->og_description?>" />
     <meta property="og:type" content="activity" />
-    <meta property="og:site_name" content="Goteo.org" />
+    <meta property="og:site_name" content="esbuenisimo.com" />
     <meta property="og:url" content="<?=$this->og_url?>" />
 <?php
 

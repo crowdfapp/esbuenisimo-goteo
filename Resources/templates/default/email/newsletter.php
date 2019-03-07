@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Goteo Newsletter<?= $this->subject ? ' :: ' . $this->subject : ''  ?></title>
+<title>esbuenisimo Newsletter<?= $this->subject ? ' :: ' . $this->subject : ''  ?></title>
 <style type="text/css">
 /* Defaults */
 h1 {
@@ -90,7 +90,7 @@ img a {
 
 <div style="font-size:11px; color:#20B3B2; padding-bottom:10px; padding-top:10px; border-bottom: 1px solid #20B3B2; border-top: 1px solid #20B3B2;"><?= $this->text('mailer-disclaimer') ?></div>
 
-<div style="font-size:12px; color:#20B3B2; padding-top:10px; padding-bottom:10px;"><a href="<?= $this->get_config('url.main') ?>" style="color:#20B3B2; text-decoration:none;">www.goteo.org</a></div>
+<div style="font-size:12px; color:#20B3B2; padding-top:10px; padding-bottom:10px;"><a href="<?= $this->get_config('url.main') ?>" style="color:#20B3B2; text-decoration:none;">www.esbuenisimo.com</a></div>
 
 <a class="btn-support" style="background: #16A5A3; background-image: -webkit-linear-gradient(top, #16A5A3, #24837F); background-image: -moz-linear-gradient(top, #16A5A3, #24837F); background-image: -ms-linear-gradient(top, #16A5A3, #24837F); background-image: -o-linear-gradient(top, #16A5A3, #24837F); background-image: linear-gradient(to bottom, #16A5A3, #24837F); -webkit-border-radius: 11; -moz-border-radius: 11; border-radius: 6px; font-family: Arial; color: #ffffff; font-size: 15px; padding: 10px 20px 10px 20px; text-decoration: none; float:right; margin-top: 48px;" href="https://fundacion.goteo.org/donaciones/">
   <?= $this->text('support-our-mission') ?>

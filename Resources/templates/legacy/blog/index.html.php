@@ -23,8 +23,8 @@ $bodyClass = 'blog';
 // metas og: para que al compartir en facebook coja bien el nombre y las imagenes del blog
 if ($vars['show'] == 'list') {
     $ogmeta = array(
-        'title' => 'Goteo Blog',
-        'description' => Text::get('regular-by').' Goteo',
+        'title' => 'esbuenisimo Blog',
+        'description' => Text::get('regular-by').' esbuenisimo',
         'url' => SITE_URL . '/blog'
     );
 
@@ -65,7 +65,7 @@ include __DIR__ . '/../header.html.php';
 ?>
 	<div id="sub-header-secondary">
 		<div class="clearfix">
-			<h2><a href="/blog">GOTEO<span class="red">BLOG</span></a></h2>
+			<h2><a href="/blog">esbuenisimo<span class="red">BLOG</span></a></h2>
             <?php echo View::get('header/share.html.php') ?>
 		</div>
 	</div>
