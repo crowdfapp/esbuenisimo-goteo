@@ -28,9 +28,37 @@
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div class="row col-md-12" style="    margin: 50px auto;">
+         <h2 class="title text-center" style="margin-bottom: 40px;">¿Cómo funciona?</h2>
         <!--<h2 class="title text-center" style="margin-bottom: 40px;">Como funciona</h2> -->
 
-        <img src="assets/img/comofunciona.png" style="width: 100%; margin: 30px 0px;" alt="">
+        <!--<img src="assets/img/comofunciona.png" style="width: 100%; margin: 30px 0px;" alt="">-->
+        <div class="col-md-12 bg">
+            <div class="col-md-2 col-md-offset-1 box-public">
+                <img src="assets/img/Registro.png" class="wdt-img" alt="">
+                <h3 class="txt-red">Registro</h3>
+                <p>Te registras en <b>esbuenisimo.com</b> a través de tu mail</p>
+            </div>
+            <div class="col-md-2 box-public">
+                <img src="assets/img/Proyecto.png" class="wdt-img" alt="">
+                <h3 class="txt-red">Proyecto</h3>
+                <p>Navegas y buscas tus proyectos o eventos favoritos</p>
+            </div>
+            <div class="col-md-2 box-public">
+                <img src="assets/img/Recompensa.png" class="wdt-img" alt="">
+                <h3 class="txt-red">Recompensa</h3>
+                <p>Eliges la recompensa o experiencia que más te gusta</p>
+            </div>
+            <div class="col-md-2 box-public">
+                <img src="assets/img/Aporte.png" class="wdt-img" alt="">
+                <h3 class="txt-red">Aporte</h3>
+                <p>Realizas el aporte a través de cualquiera de los medios de pago disponible</p>
+            </div>
+            <div class="col-md-2 box-public">
+                <img src="assets/img/Entrega.png" class="wdt-img" alt="">
+                <h3 class="txt-red">Entrega</h3>
+                <p>Al finalizar la campaña del proyecto la productora o los encargados del proyecto se contactaran contigo para entregarte tu recompensa</p>
+            </div>
+        </div>
         <h2 class="title text-center" style="margin-bottom: 40px;">Quienes pueden colaborar</h2>
         <div class="col-md-3">
             <div class="bx-promo"> 
