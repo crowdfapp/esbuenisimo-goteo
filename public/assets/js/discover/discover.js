@@ -54,6 +54,7 @@ $(function(){
 
             // console.log('end reached, loading more. total', total, 'query', query);
             $.getJSON('/discover/ajax', query, function(result) {
+                                         
                 total = result.total;
                 query.limit = result.limit;
                 result.items.forEach(function(html, index) {

@@ -34,7 +34,8 @@ class IndexController extends DiscoverController
     public function indexAction(Request $request)
     {
         $limit = 24;
-        $filters = $this->getProjectFilters('promoted');
+        $filter = 'promoted';
+        $filters = $this->getProjectFilters($filter);
         $projects = Project::getList($filters, null, 0, $limit);
         $total_projects = Project::getList($filters, null, 0, 0, true);
 
@@ -55,7 +56,8 @@ class IndexController extends DiscoverController
             'limit_add' => 12, // Limit for javascript on addSlick
             'stories'   => $stories,
             'channels'  => $channels,
-            'stats'     => $stats
+            'stats'     => $stats,
+            'filter'    => $filter,
         ]);
     }
 

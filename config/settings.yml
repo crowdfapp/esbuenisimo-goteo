@@ -34,11 +34,11 @@ timezone: Europe/Madrid
 
 # url
 url:
-    main: http://localhost/esbuenisimo/
+    main: //esbuenisimo-dev-josebayona951841.codeanyapp.com/
     # static resources url if you use a different assets server
-    assets: http://localhost/esbuenisimo/dist
+    assets: //esbuenisimo-dev-josebayona951841.codeanyapp.com/dist
     #optional, configure this as hostname only (ex: example.com) if you want languages to be selected as subdomains (es.example.com, en.example.com)
-    url_lang: http://localhost/esbuenisimo/
+    url_lang: //esbuenisimo-dev-josebayona951841.codeanyapp.com/
 
     # If you want to use a CDN or another web server to serve the cached images
     # You can define this constants. All cached images links will point to this
@@ -153,9 +153,9 @@ db:
     host:     localhost # Database host
     port:     3306      # Database port
     charset:  utf8     # Database charset
-    database: esbuenisimo     # Database schema (database name)
+    database: es_buenisimo_db     # Database schema (database name)
     username: root     # Database user for the goteo database
-    password: root  # Password for the goteo database
+    password: ''  # Password for the goteo database
 
     # SELECT queries caching
     # set it as 'files' to enable sql cache

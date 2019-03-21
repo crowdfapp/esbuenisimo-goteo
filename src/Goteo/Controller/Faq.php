@@ -23,6 +23,9 @@ namespace Goteo\Controller {
         }
 
         public function index ($current = 'node') {
+          
+            // Redireccionar to home mientras se construye el faq.
+            return $this->redirect('/');
 
             // si llega una pregunta  ?q=70
             if (isset($_GET['q'])) {

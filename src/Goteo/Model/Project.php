@@ -3919,7 +3919,7 @@ namespace Goteo\Model {
                         LIMIT $offset, $limit";
             }
 
-            // echo "\n".\sqldbg($sql, $values)."\n";print_r($filters);die;
+            //echo "\n".\sqldbg($sql, $values)."\n";print_r($filters);die;
 
             $query = self::query($sql, $values);
             foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $proj) {

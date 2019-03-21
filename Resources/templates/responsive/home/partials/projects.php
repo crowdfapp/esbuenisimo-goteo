@@ -1,4 +1,4 @@
-<div class="section projects auto-update-projects" >
+<div class="section projects" >
     <div id="projects-container-title" class="container">
         <h2 class="title text-center">
             <?= $this->text('home-projects-title') ?>
@@ -9,9 +9,11 @@
     </div>
     <div class="container" id="projects-container">
         <?php if($this->projects): ?>
-            <?= $this->insert('home/partials/projects_list', [
+            <?= $this->insert('discover/partials/projects_list', [
                 'projects' => $this->projects,
-                'total_projects' => $this->total_projects
+                'total' => $this->total_projects,
+                'limit' => $this->limit,
+                'filter' => $this->filter,
             ]) ?>
         <?php endif ?>
     </div>

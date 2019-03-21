@@ -24,7 +24,7 @@
 <?php $this->section('home-content') ?>
     
     <h1 class="titlevideo hidden-xs">#FanáticosDeVerdad</h1>
-    <video width="100%" height="auto" autoplay  loop style="    margin-top: -130px;">
+    <video width="100%" height="auto" playsinline autoplay muted loop style="    margin-top: -130px;">
         <source src="assets/video.mp4" type="video/mp4">
     </video>
     <div class="row col-md-12" style="    margin: 50px auto;">

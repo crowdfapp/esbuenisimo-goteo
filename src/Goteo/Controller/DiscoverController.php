@@ -91,7 +91,7 @@ class DiscoverController extends \Goteo\Core\Controller {
             // $filters['published_since'] = (new \DateTime('-24 month'))->format('Y-m-d');
             unset($filters['published_since']);
         } elseif($filter === 'recent') {
-            $filters['type'] = 'recent';
+            $filters['type'] = 'recent'; 
         }
 
         if($vars['review']) {
@@ -154,8 +154,14 @@ class DiscoverController extends \Goteo\Core\Controller {
             'status' => [Project::STATUS_IN_CAMPAIGN, Project::STATUS_FUNDED],
             'published_since' => (new \DateTime('-6 month'))->format('Y-m-d')
         ];
-        $filters = $this->getProjectFilters($filter, ['q' => $q, 'category' => $category, 'location' => $location, 'latitude' => $latitude, 'longitude' => $longitude]);
-
+      
+        $vars = ['q' => $q, 'category' => $category, 'location' => $location, 'latitude' => $latitude, 'longitude' => $longitude];
+        if(Session::isAdmin()) {
+            $vars['review'] = $request->query->get('review') !== '0';
+        }        
+      
+        $filters = $this->getProjectFilters($filter, $vars);
+      
         $offset = $pag * $limit;
         $total_projects = 0;
         $projects = Project::getList($filters, null, $offset, $limit);

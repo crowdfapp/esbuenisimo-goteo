@@ -8,7 +8,6 @@
 !/extend/invest-return
 
 /vendor/
-/config/
 /config/settings.yml
 /public/assets/vendor/footable/releases/
 /bower_components/

@@ -116,6 +116,7 @@ $(function(){
           query.strict = true; // do not give default projects if current filter returns empty
           $container.addClass('loading-container');
           $.getJSON('/discover/ajax', query, function(result) {
+            
             total = result.total;
             var items = '';
             result.items.forEach(function(html, index) {
@@ -158,6 +159,7 @@ $(function(){
 
     // console.log('drawProjects', params)
     $.getJSON('/discover/ajax', params, function(result) {
+            
       // console.log(result);
       destroySlickProjects();
       total = result.total;
