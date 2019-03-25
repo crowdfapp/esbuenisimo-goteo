@@ -175,8 +175,8 @@ db:
 
 # HTML Metas
 meta:
-    title:       Es Buenisimo - Crowdfounding para financiar eventos # Html default <title>
-    description: --meta-description-- # Html default <meta description>
+    title:       Es Buenisimo - Crowdfounding para financiar eventos y experiencias extraordinarias.
+    description:  esbuenisimo.com es un crowdfunding para financiar eventos y experiencias entretenidas para fanáticos de un área o simplemente para pasar un momento especial.
     keywords:    --keywords--         # Html default <meta keywords>
     author:      --author--           # Html default <meta author>
     copyright:   --copyright--        # Html default <meta copyright>
