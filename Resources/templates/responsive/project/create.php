@@ -42,6 +42,7 @@ $terms=$this->terms;
                         <?= $this->text('project-create-minimum-calculated-alert') ?>
                         </div>
                     </div>
+                    <!--
                     <div class="row">
                         <div class="col-sm-4">
                             <label><?= $this->text('project-create-minimum-field') ?></label>
@@ -57,6 +58,7 @@ $terms=$this->terms;
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
                 <div tabindex="0" class="form-group col-sm-12" id="calendar-group" style="outline:none">
                     <label><?= $this->text('project-create-publishing-date-field') ?></label>

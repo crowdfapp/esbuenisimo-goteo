@@ -964,12 +964,39 @@
 }
 
 .btn-cyan {
-    background-color: #2bbbb7;
-    color: #fff!important
+    background: #cd5eb3;
+
+background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
+
+background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+
+background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+
+background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
+
+color: #fff !important;
+
+border-left-color: #cd5eb3 !important;
+
+border-right-color: #ff3936 !important;
 }
 
 .btn-cyan:hover {
-    background-color: #21928e
+    border-left-color: #bd3b9f !important;
+
+border-right-color: #ff0703 !important;
+
+background: #bd3b9f;
+
+background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
+
+background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+
+background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+
+background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
+
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-cyan .icon {
@@ -1030,12 +1057,39 @@
 }
 
 .btn-cyan {
-    background-color: #2bbbb7;
-    color: #fff!important
+    background: #cd5eb3;
+
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
+    
+    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
+    
+    color: #fff !important;
+    
+    border-left-color: #cd5eb3 !important;
+    
+    border-right-color: #ff3936 !important;
 }
 
 .btn-cyan:hover {
-    background-color: #21928e
+    border-left-color: #bd3b9f !important;
+
+    border-right-color: #ff0703 !important;
+    
+    background: #bd3b9f;
+    
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
+    
+    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
+    
+        background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-cyan .icon {
@@ -3939,12 +3993,39 @@ button.pink:hover {
 }
 
 .btn-cyan {
-    background-color: #2bbbb7;
-    color: #fff!important
+    background: #cd5eb3;
+
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
+    
+    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
+    
+    color: #fff !important;
+    
+    border-left-color: #cd5eb3 !important;
+    
+    border-right-color: #ff3936 !important;
 }
 
 .btn-cyan:hover {
-    background-color: #21928e
+    border-left-color: #bd3b9f !important;
+
+    border-right-color: #ff0703 !important;
+    
+    background: #bd3b9f;
+    
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
+    
+    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
+    
+        background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-cyan .icon {
@@ -4005,12 +4086,39 @@ button.pink:hover {
 }
 
 .btn-cyan {
-    background-color: #2bbbb7;
-    color: #fff!important
+    background: #cd5eb3;
+
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
+    
+    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
+    
+    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
+    
+    color: #fff !important;
+    
+    border-left-color: #cd5eb3 !important;
+    
+    border-right-color: #ff3936 !important;
 }
 
 .btn-cyan:hover {
-    background-color: #21928e
+    border-left-color: #bd3b9f !important;
+
+    border-right-color: #ff0703 !important;
+    
+    background: #bd3b9f;
+    
+    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
+    
+    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
+    
+    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
+    
+        background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-cyan .icon {
