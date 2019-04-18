@@ -53,38 +53,46 @@ $this->layout('layout', [
           <?php if($this->isAdmin): ?>
       
             <form class="form-inline form-section create-form margin-bottom-40-pixels pronto" action="<?= $filter['_action'] ?>">
-              
-                  <div class="form-group">
-
-                    <select name="project_request_type_id" id="project_request_type_id" class="form-control">
-                        <option value=""><?= $this->text('ranking-event-type-all') ?></option>
-                        <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
-                          <option value="<?php echo $index; ?>">
-                            <?php echo $projectRequestType ?>
-                          </option>
-                        <?php endforeach; ?>                         
-                    </select>                                         
-                  </div>                   
-              
-                  <div class="form-group">
-                    
-                    <select name="status" id="status" class="form-control">
-                        <option value=""><?= $this->text('ranking-status-all') ?></option>
-                        <?php foreach($this->statuses as $index => $status): ?>
-                          <option value="<?php echo $index; ?>" 
-                                  <?php if($this->get_query('status') == $index): ?> selected <?php endif; ?>>
-                            <?php echo $status; ?>
-                          </option>
-                        <?php endforeach; ?>                         
-                    </select>                                         
+                  <div class="col-md-12 row" style="margin:10px;">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                      <select name="project_request_type_id" id="project_request_type_id" class="form-control" style="margin: 10px 0px;">
+                          <option value=""><?= $this->text('ranking-event-type-all') ?></option>
+                          <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
+                            <option value="<?php echo $index; ?>">
+                              <?php echo $projectRequestType ?>
+                            </option>
+                          <?php endforeach; ?>                         
+                      </select>                                         
+                      </div>         
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        
+                        <select name="status" id="status" class="form-control" style="margin: 10px 0px;">
+                            <option value=""><?= $this->text('ranking-status-all') ?></option>
+                            <?php foreach($this->statuses as $index => $status): ?>
+                              <option value="<?php echo $index; ?>" 
+                                      <?php if($this->get_query('status') == $index): ?> selected <?php endif; ?>>
+                                <?php echo $status; ?>
+                              </option>
+                            <?php endforeach; ?>                         
+                        </select>                                         
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 row" style="margin:10px;">
+                    <div class="col-md-10">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="query" id="query" placeholder="buscar" 
+                              value="<?= $this->get_query('query') ?>">
+                      </div>
+                    </div>
+                    <div class="col-md-2" style="text-align:center">
+                      <button type="submit" class="btn btn-cyan" title=""><i class="fa fa-search"></i></button>
+                    </div>
                   </div>
 
-              <div class="form-group">
-                <input type="text" class="form-control" name="query" id="query" placeholder="" 
-                       value="<?= $this->get_query('query') ?>">
-              </div>
-              <button type="submit" class="btn btn-cyan" title=""><i class="fa fa-search"></i></button>
-              
               <!-- 
               <button type="button" class="btn btn-cyan reset" title="<?= $this->text('reset-filtering-criteria'); ?>">
                 <i class="fa fa-undo"></i>
@@ -112,56 +120,57 @@ $this->layout('layout', [
           </div>                          
           
           <form class="form-inline form-section create-form margin-bottom-40-pixels" method="post"> 
-            
-              <div class="form-group">
+            <div class="col-md-12 row">
+                <div class="form-group col-md-6">
+                  <select name="project_request_type_id" id="project_request_type_id" class="form-control" style="margin: 10px 0px;">
+                      <option value=""><?= $this->text('ranking-select-request-type-id') ?></option>
+                      <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
+                        <option value="<?php echo $index; ?>">
+                          <?php echo $projectRequestType ?>
+                        </option>
+                      <?php endforeach; ?>                         
+                  </select>                                         
+                </div>            
+              
+                <div class="form-group col-md-6">
+                  <input type="text" class="form-control" style="margin: 10px 0px;" id="project_name" name="project_name" 
+                        value="<?= $this->data['project_name'] ?>" 
+                        placeholder="<?= $this->text('ranking-what-events-do-you-want') ?>">
+                </div>
+            </div>
+              <div class="col-md-12 row">
+                <div class="form-group col-md-4">
 
-                <select name="project_request_type_id" id="project_request_type_id" class="form-control">
-                    <option value=""><?= $this->text('ranking-select-request-type-id') ?></option>
-                    <?php foreach($this->projectRequestTypes as $index => $projectRequestType): ?>
-                      <option value="<?php echo $index; ?>">
-                        <?php echo $projectRequestType ?>
-                      </option>
-                    <?php endforeach; ?>                         
-                </select>                                         
-              </div>            
-            
-            
-              <div class="form-group">
-                <input type="text" class="form-control" id="project_name" name="project_name" 
-                       value="<?= $this->data['project_name'] ?>" 
-                       placeholder="<?= $this->text('ranking-what-events-do-you-want') ?>">
-              </div>
-            
-              <div class="form-group">
+                  <select name="region_id" id="region_id" class="form-control" style="margin: 10px 0px;" >
+                      <option value=""><?= $this->text('ranking-select-region') ?></option>
+                      <?php foreach($this->regions as $region): ?>
+                        <option value="<?php echo $region->id; ?>">
+                          <?php echo $region->name; ?>
+                        </option>
+                      <?php endforeach; ?>                         
+                  </select>                                         
+                </div>
+              
+                <div class="form-group col-md-4">
+                  <select name="province_id" id="province_id" class="form-control disabled" 
+                          loading-provinces-msg="<?= $this->text('loading-provinces-msg') ?>"
+                          ranking-select-province-msg="<?= $this->text('ranking-select-province') ?>">
+                    <option value=""><?= $this->text('ranking-no-provinces') ?></option>
+                  </select>                                         
+                </div>
 
-                <select name="region_id" id="region_id" class="form-control">
-                    <option value=""><?= $this->text('ranking-select-region') ?></option>
-                    <?php foreach($this->regions as $region): ?>
-                      <option value="<?php echo $region->id; ?>">
-                        <?php echo $region->name; ?>
-                      </option>
-                    <?php endforeach; ?>                         
-                </select>                                         
-              </div>
-            
-              <div class="form-group">
-                <select name="province_id" id="province_id" class="form-control disabled" 
-                        loading-provinces-msg="<?= $this->text('loading-provinces-msg') ?>"
-                        ranking-select-province-msg="<?= $this->text('ranking-select-province') ?>">
-                  <option value=""><?= $this->text('ranking-no-provinces') ?></option>
-                </select>                                         
-              </div>
-
-              <div class="form-group">
-                <select name="commune_id" id="commune_id" class="form-control disabled"
-                        ranking-no-communes-msg="<?= $this->text('ranking-no-communes') ?>"
-                        loading-communes-msg="<?= $this->text('loading-communes-msg') ?>"
-                        ranking-select-commune-msg="<?= $this->text('ranking-select-commune') ?>">
-                  <option value=""><?= $this->text('ranking-no-communes') ?></option>
-                </select>                                         
-              </div>            
-            
+                <div class="form-group col-md-4">
+                  <select name="commune_id" id="commune_id" class="form-control disabled"
+                          ranking-no-communes-msg="<?= $this->text('ranking-no-communes') ?>"
+                          loading-communes-msg="<?= $this->text('loading-communes-msg') ?>"
+                          ranking-select-commune-msg="<?= $this->text('ranking-select-commune') ?>">
+                    <option value=""><?= $this->text('ranking-no-communes') ?></option>
+                  </select>                                         
+                </div>  
+              </div>          
+              <div class="col-md-12 row" style="text-align:center; margin: 10px 0px;">
               <input type="submit" class="btn btn-cyan" value="<?= $this->text('ranking-send-button') ?>" />
+              </div>
           </form>
           
           <div class="add_event_message"></div>

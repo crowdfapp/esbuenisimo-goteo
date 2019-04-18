@@ -2783,7 +2783,7 @@ button.pink:hover {
 }
 
 .project-widget.normal .content a {
-    color: #2bbbb7
+    color: #e14f82;
 }
 
 .project-widget.normal .categories {
@@ -5871,7 +5871,7 @@ button.pink:hover {
 }
 
 .project-widget.normal .percent p {
-    color: #2bbbb7;
+    color: #e14f82;
     text-align: center;
     margin: 0 0 1em 0
 }
@@ -10291,7 +10291,7 @@ body #sidebar-menu-toggle i.fa-angle-double-left {
 }
 
 #sidebar-menu .sidebar-nav li.sidebar {
-    border-left: 6px solid #2bbbb7;
+    border-left: 6px solid #e14f82;
     margin-top: 3px
 }
 
@@ -10340,7 +10340,7 @@ body #sidebar-menu-toggle i.fa-angle-double-left {
 #sidebar-menu .sidebar-nav li.active .submenu>li.active,
 #sidebar-menu .sidebar-nav li.selected .submenu>li.active {
     padding-left: 5px;
-    border-left: 6px solid #2bbbb7
+    border-left: 6px solid #e14f82
 }
 
 #sidebar-menu .sidebar-nav li.admin a .fa {
