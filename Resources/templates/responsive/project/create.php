@@ -86,7 +86,7 @@ $terms=$this->terms;
                         <div class="col-xs-6 col-sm-4 col-md-4 social-commitment-option text-center<?= ($key+1)%3==0 ? ' clear-both-md clear-both-sm' : '' ?><?= ($key+1)%2==0 ? ' clear-both-xs' : '' ?>">
                             <label class="category" for="<?= $key ?>-social">
                                 <input class="social-category" name="social" id="<?= $key ?>-social" value="<?= $social->id ?>" type="radio" required>
-                                <img class="img-responsive img-method align-center-margin" alt="<?= $social->name ?>" title="<?= $social->description ?>" src="<?= $social->image->getLink(60, 60, false) ?>">
+                                <img class="img-responsive img-method align-center-margin" alt="<?= $social->name ?>" title="<?= $social->description ?>" src="<?= $social->image->getLink("http://www.esbuenisimo.com/assets/img/logo-esbuenisimo-01.png", false) ?>">
                                  <span class="method-text">
                                 <?= $social->name ?>
                                 </span>
