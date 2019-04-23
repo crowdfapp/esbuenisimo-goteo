@@ -8556,6 +8556,10 @@ blockquote {
     text-align: left!important
 }
 
+.text-center{
+    text-align:center;
+}
+
 .align-center-margin {
     margin: 0 auto
 }
@@ -8838,9 +8842,9 @@ label.label-disabled {
 
 .img-method {
     display: block;
-    max-width: 100%;
-    height: auto;
-    padding: 4% 10% 10%
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
 }
 
 .method-caption {
@@ -9064,7 +9068,7 @@ div.create-form {
 div.create-form h1 {
     font-size: 36px;
     font-weight: 700;
-    color: #149290;
+    color: #e14f82;
     margin-top: 60px
 }
 
@@ -9082,9 +9086,10 @@ form.create-project-form div#calculated-msg {
 }
 
 form.create-project-form label.category {
-    margin-top: 30px;
     cursor: pointer;
-    font-weight: 400
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
 }
 
 form.create-project-form .datepicker {

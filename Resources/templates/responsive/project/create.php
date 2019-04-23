@@ -73,7 +73,7 @@ $terms=$this->terms;
                     </div>
                     <label><?= $this->text('project-create-social-select-field') ?></label>
                     <div class="row">
-                        <div class="col-xs-6 col-sm-4 social-commitment-option text-left-important">
+                        <div class="col-xs-6 col-sm-4 col-md-4 social-commitment-option text-center">
                             <label class="category" for="no-social">
                                 <input tabindex="0" class="social-category" id="no-social" name="social" value="0" type="radio" required>
                                 <img class="img-responsive img-method align-center-margin" alt="<?= $category->name ?>" title="none" src="/assets/img/project/create/none.png">
@@ -83,7 +83,7 @@ $terms=$this->terms;
                             </label>
                         </div>
                         <?php foreach($this->social_commitments as $key => $social): ?>
-                        <div class="col-xs-6 col-sm-4 social-commitment-option text-left-important<?= ($key+1)%3==0 ? ' clear-both-md clear-both-sm' : '' ?><?= ($key+1)%2==0 ? ' clear-both-xs' : '' ?>">
+                        <div class="col-xs-6 col-sm-4 col-md-4 social-commitment-option text-center<?= ($key+1)%3==0 ? ' clear-both-md clear-both-sm' : '' ?><?= ($key+1)%2==0 ? ' clear-both-xs' : '' ?>">
                             <label class="category" for="<?= $key ?>-social">
                                 <input class="social-category" name="social" id="<?= $key ?>-social" value="<?= $social->id ?>" type="radio" required>
                                 <img class="img-responsive img-method align-center-margin" alt="<?= $social->name ?>" title="<?= $social->description ?>" src="<?= $social->image->getLink(60, 60, false) ?>">
