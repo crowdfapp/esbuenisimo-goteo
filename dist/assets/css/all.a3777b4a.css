@@ -964,39 +964,12 @@
 }
 
 .btn-cyan {
-    background: #cd5eb3;
-
-background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
-
-background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-
-background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-
-background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
-
-color: #fff !important;
-
-border-left-color: #cd5eb3 !important;
-
-border-right-color: #ff3936 !important;
+    background-color: #2bbbb7;
+    color: #fff!important
 }
 
 .btn-cyan:hover {
-    border-left-color: #bd3b9f !important;
-
-border-right-color: #ff0703 !important;
-
-background: #bd3b9f;
-
-background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
-
-background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-
-background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-
-background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
-
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #21928e
 }
 
 .btn-cyan .icon {
@@ -1057,39 +1030,12 @@ background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
 }
 
 .btn-cyan {
-    background: #cd5eb3;
-
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
-    
-    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
-    
-    color: #fff !important;
-    
-    border-left-color: #cd5eb3 !important;
-    
-    border-right-color: #ff3936 !important;
+    background-color: #2bbbb7;
+    color: #fff!important
 }
 
 .btn-cyan:hover {
-    border-left-color: #bd3b9f !important;
-
-    border-right-color: #ff0703 !important;
-    
-    background: #bd3b9f;
-    
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
-    
-    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
-    
-        background-color: rgba(0, 0, 0, 0);
+    background-color: #21928e
 }
 
 .btn-cyan .icon {
@@ -2783,7 +2729,7 @@ button.pink:hover {
 }
 
 .project-widget.normal .content a {
-    color: #e14f82; 
+    color: #2bbbb7
 }
 
 .project-widget.normal .categories {
@@ -3027,7 +2973,7 @@ button.pink:hover {
     filter: hue-rotate(-106deg) grayscale(40%)
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Open+Sans+Condensed:300);
+.project-wi@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Open+Sans+Condensed:300);
 .animated.slideInLeft,
 .animated.slideInRight {
     -moz-animation-duration: .4s;
@@ -3993,39 +3939,12 @@ button.pink:hover {
 }
 
 .btn-cyan {
-    background: #cd5eb3;
-
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
-    
-    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
-    
-    color: #fff !important;
-    
-    border-left-color: #cd5eb3 !important;
-    
-    border-right-color: #ff3936 !important;
+    background-color: #2bbbb7;
+    color: #fff!important
 }
 
 .btn-cyan:hover {
-    border-left-color: #bd3b9f !important;
-
-    border-right-color: #ff0703 !important;
-    
-    background: #bd3b9f;
-    
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
-    
-    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
-    
-        background-color: rgba(0, 0, 0, 0);
+    background-color: #21928e
 }
 
 .btn-cyan .icon {
@@ -4086,39 +4005,12 @@ button.pink:hover {
 }
 
 .btn-cyan {
-    background: #cd5eb3;
-
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #cd5eb3), color-stop(100%, #ff3936));
-    
-    background: -moz-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: -webkit-linear-gradient(left, #cd5eb3 28%, #ff3936 100%);
-    
-    background: linear-gradient(to right, #cd5eb3 28%, #ff3936 100%);
-    
-    color: #fff !important;
-    
-    border-left-color: #cd5eb3 !important;
-    
-    border-right-color: #ff3936 !important;
+    background-color: #2bbbb7;
+    color: #fff!important
 }
 
 .btn-cyan:hover {
-    border-left-color: #bd3b9f !important;
-
-    border-right-color: #ff0703 !important;
-    
-    background: #bd3b9f;
-    
-    background: -webkit-gradient(linear, 0 50%, 100% 50%, color-stop(28%, #bd3b9f), color-stop(100%, #ff0703));
-    
-    background: -moz-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: -webkit-linear-gradient(left, #bd3b9f 28%, #ff0703 100%);
-    
-    background: linear-gradient(to right, #bd3b9f 28%, #ff0703 100%);
-    
-        background-color: rgba(0, 0, 0, 0);
+    background-color: #21928e
 }
 
 .btn-cyan .icon {
@@ -5871,7 +5763,7 @@ button.pink:hover {
 }
 
 .project-widget.normal .percent p {
-    color: #e14f82;
+    color: #2bbbb7;
     text-align: center;
     margin: 0 0 1em 0
 }
@@ -8556,11 +8448,6 @@ blockquote {
     text-align: left!important
 }
 
-.text-center{
-    text-align:center;
-    margin:10px 0px;
-}
-
 .align-center-margin {
     margin: 0 auto
 }
@@ -8843,9 +8730,9 @@ label.label-disabled {
 
 .img-method {
     display: block;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    padding: 4% 10% 10%
 }
 
 .method-caption {
@@ -9069,7 +8956,7 @@ div.create-form {
 div.create-form h1 {
     font-size: 36px;
     font-weight: 700;
-    color: #e14f82;
+    color: #149290;
     margin-top: 60px
 }
 
@@ -9087,10 +8974,9 @@ form.create-project-form div#calculated-msg {
 }
 
 form.create-project-form label.category {
+    margin-top: 30px;
     cursor: pointer;
-    font-weight: 400;
-    text-align: center;
-    font-size: 16px;
+    font-weight: 400
 }
 
 form.create-project-form .datepicker {
@@ -10297,7 +10183,7 @@ body #sidebar-menu-toggle i.fa-angle-double-left {
 }
 
 #sidebar-menu .sidebar-nav li.sidebar {
-    border-left: 6px solid #e14f82;
+    border-left: 6px solid #2bbbb7;
     margin-top: 3px
 }
 
@@ -10346,7 +10232,7 @@ body #sidebar-menu-toggle i.fa-angle-double-left {
 #sidebar-menu .sidebar-nav li.active .submenu>li.active,
 #sidebar-menu .sidebar-nav li.selected .submenu>li.active {
     padding-left: 5px;
-    border-left: 6px solid #e14f82
+    border-left: 6px solid #2bbbb7
 }
 
 #sidebar-menu .sidebar-nav li.admin a .fa {
@@ -15529,4 +15415,8 @@ form.create-project-form div.form-group {
 
 .alert-success {
     display: none;
+}
+
+.selectize-control {
+  padding: 0px !important;
 }

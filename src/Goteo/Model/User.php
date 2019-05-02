@@ -45,6 +45,11 @@ class User extends \Goteo\Core\Model {
     $gender,
     $entity_type,
     $legal_entity,
+        $rut,
+        $business_name,
+        $address,
+        $telephone,
+        $business_objective,
     $name,
     $location,
     $avatar = null, // Always a Image class
@@ -268,6 +273,26 @@ class User extends \Goteo\Core\Model {
                 if (isset($this->legal_entity)) {
                     $data[':legal_entity'] = $this->legal_entity;
                 }
+                            
+                                if(isset($this->rut)) {
+                                        $data[':rut'] = $this->rut;
+                                }
+                            
+                                if(isset($this->business_name)) {
+                                        $data[':business_name'] = $this->business_name;
+                                }
+                            
+                                if(isset($this->address)) {
+                                        $data[':address'] = $this->address;
+                                }
+                            
+                                if(isset($this->telephone)) {
+                                        $data[':telephone'] = $this->telephone;
+                                }
+                                
+                                if(isset($this->business_objective)) {
+                                        $data[':business_objective'] = $this->business_objective;
+                                }
 
                 // Interests
                 static::query('DELETE FROM user_interest WHERE user= ?', $this->id);
@@ -772,7 +797,12 @@ class User extends \Goteo\Core\Model {
                     user.birthyear as birthyear,
                     user.entity_type as entity_type,
                     user.legal_entity as legal_entity,
+                    user.rut as rut,
                     user.gender as gender,
+                    user.business_name as business_name,
+                    user.address as address,
+                    user.telephone as telephone,
+                    user.business_objective as business_objective,
                     user.rememberme as rememberme
                 FROM user
                 LEFT JOIN user_lang
@@ -1884,14 +1914,14 @@ class User extends \Goteo\Core\Model {
      */
     public function getLocation() {
         return UserLocation::get($this->id);
-	}
+    }
 
-	/**
-	 * Return if a project is favourite for a user
-	 * @return True if is favoruite false otherwise
-	 */
-	public function isFavouriteProject($project) {
-		return Favourite::isFavouriteProject($project, $this->id);
+    /**
+     * Return if a project is favourite for a user
+     * @return True if is favoruite false otherwise
+     */
+    public function isFavouriteProject($project) {
+        return Favourite::isFavouriteProject($project, $this->id);
     }
 
 

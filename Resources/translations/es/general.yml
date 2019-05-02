@@ -104,7 +104,8 @@ regular-email: Email
 regular-join: 'Únete'
 regular-facebook: Facebook
 regular-faq: 'Preguntas frecuentes'
-regular-female: Mujer
+regular-female: Femenino
+regular-not-specify: 'Prefiero no especificar'
 regular-first: Primera
 regular-from: desde
 regular-getit: Consíguelo
@@ -135,8 +136,8 @@ regular-login: Accede
 regular-logout: 'Cerrar sesión'
 regular-looks_for: 'busca:'
 regular-main-header: esbuenisimo.org
-regular-male: Hombre
-regular-others: Otros
+regular-male: Masculino
+regular-others: Otro
 regular-manage_board: 'Panel Gestoría'
 regular-mandatory: 'Campo obligatorio!'
 regular-matchfunding: 'Match funding'

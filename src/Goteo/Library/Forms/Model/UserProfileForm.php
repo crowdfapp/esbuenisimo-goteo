@@ -29,11 +29,44 @@ class UserProfileForm extends AbstractFormProcessor {
         if($field === 'name') {
             $constraints[] = new Constraints\NotBlank();
         }
+        if($field === 'rut') {
+                $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
+                    $data = $context->getRoot()->getData();
+                    $rut = $data['rut']; $valid = true;
+                  
+                    if(empty($rut) || !is_string($rut)) $valid *= 0;
+                    if(!preg_match('/^0*(\d{1,3}(\.?\d{3})*)-?([\dkK])$/', $rut)) $valid *= 0;
+
+                    //Clean RUT
+                    $rut = is_string($rut) ? strtoupper(preg_replace('/^0+|[^0-9kK]+/', '', $rut)) : ''; 
+                    $t = (int) substr($rut, 0, -1);
+
+
+                    $m = 0; $s = 1;
+
+                    while($t > 0) {
+                        $s = ($s + ($t % 10) * (9 - $m++ % 6)) % 11;
+                        $t = floor($t / 10);
+                    }
+
+                    $v = $s > 0 ? '' . ($s - 1) : 'K';
+                    if($v === substr($rut, -1)) $valid *= 1;
+                    else $valid *= 0;
+                  
+                    $valid = (bool) $valid;
+                  
+                    if(!$valid) {
+                        $context->buildViolation(Text::get('validate-user-profile-rut'))
+                        ->atPath($field)
+                        ->addViolation();
+                    }                  
+                });
+        }
         elseif($this->getFullValidation()) {
             if(in_array($field, ['gender', 'about'])) {
                 $constraints[] = new Constraints\NotBlank();
             }
-          
+                    
             if(in_array($field, ['about'])) {
                   // Minimal 10 words
                   $constraints[] = new Constraints\Regex([
@@ -54,6 +87,7 @@ class UserProfileForm extends AbstractFormProcessor {
                 });
             }
         }
+           
         return $constraints;
     }
 
@@ -97,15 +131,15 @@ class UserProfileForm extends AbstractFormProcessor {
                 'required' => false,
                 'pre_addon' => '<i class="fa fa-globe"></i>'
             ])
-            ->add('locable', 'boolean', [
-                'label' => 'dashboard-user-location-locate',
-                'constraints' => $this->getConstraints('unlocable'),
-                'disabled' => $this->getReadonly(),
-                'data' => !$user->unlocable,
-                'attr' => ['help' => Text::get('dashboard-user-location-help')],
-                'required' => false,
-                'color' => 'cyan'
-            ])
+//             ->add('locable', 'boolean', [
+//                 'label' => 'dashboard-user-location-locate',
+//                 'constraints' => $this->getConstraints('unlocable'),
+//                 'disabled' => $this->getReadonly(),
+//                 'data' => !$user->unlocable,
+//                 'attr' => ['help' => Text::get('dashboard-user-location-help')],
+//                 'required' => false,
+//                 'color' => 'cyan'
+//             ])
             // ->add('avatar', 'dropfiles', [
             //     'label' => 'profile-fields-image-title',
             //     'constraints' => $this->getConstraints('avatar'),
@@ -126,7 +160,7 @@ class UserProfileForm extends AbstractFormProcessor {
         }
 
         $builder
-            ->add('birthyear', 'year', [
+            ->add('birthyear', 'datepicker', [
                 'label' => 'invest-address-birthyear-field',
                 'constraints' => $this->getConstraints('birthyear'),
                 'disabled' => $this->getReadonly(),
@@ -139,11 +173,12 @@ class UserProfileForm extends AbstractFormProcessor {
                 'disabled' => $this->getReadonly(),
                 'attr' =>['info' => $non_public],
                 'choices' => [
-                    'F' => Text::get('regular-female'),
                     'M' => Text::get('regular-male'),
-                    'X' => Text::get('regular-others')
+                    'F' => Text::get('regular-female'),
+                    'X' => Text::get('regular-others'),
+                    'N' => Text::get('regular-not-specify'),
                 ],
-                'required' => false
+                //'required' => false
             ])
             ->add('legal_entity', 'choice', [
                 'label' => 'profile-field-legal-entity',
@@ -151,22 +186,49 @@ class UserProfileForm extends AbstractFormProcessor {
                 'disabled' => $this->getReadonly(),
                 'choices' => [
                     '0' => Text::get('profile-field-legal-entity-person'),
-                    '1' => Text::get('profile-field-legal-entity-self-employed'),
-                    '2' => Text::get('profile-field-legal-entity-ngo'),
                     '3' => Text::get('profile-field-legal-entity-company'),
-                    '4' => Text::get('profile-field-legal-entity-cooperative'),
-                    '5' => Text::get('profile-field-legal-entity-asociation'),
-                    '6' => Text::get('profile-field-legal-entity-others')
+                    '2' => Text::get('profile-field-legal-entity-ngo'),
+                    '7' => Text::get('profile-field-legal-entity-government'),
+                    '6' => Text::get('profile-field-legal-entity-others'),
+//                     '1' => Text::get('profile-field-legal-entity-self-employed'),
+//                     '4' => Text::get('profile-field-legal-entity-cooperative'),
+//                     '5' => Text::get('profile-field-legal-entity-asociation'),
+                    
                 ],
-                'required' => false
+                //'required' => false
             ])
-            ->add('entity_type', 'boolean', [
-                'label' => 'profile-field-entity-type-checkbox-public',
-                'constraints' => $this->getConstraints('entity_type'),
+            ->add('rut', 'text', [
                 'disabled' => $this->getReadonly(),
-                'required' => false,
-                'color' => 'cyan'
+                'constraints' => $this->getConstraints('rut'),
+                'label' => 'profile-field-rut',
             ])
+            ->add('business_name', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('business_name'),
+                'label' => 'profile-field-business-name',
+            ])
+            ->add('address', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('address'),
+                'label' => 'profile-field-address',
+            ])
+            ->add('telephone', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('telephone'),
+                'label' => 'profile-field-telephone',
+            ])
+            ->add('business_objective', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('business_objective'),
+                'label' => 'profile-field-business-objective',
+            ])
+//             ->add('entity_type', 'boolean', [
+//                 'label' => 'profile-field-entity-type-checkbox-public',
+//                 'constraints' => $this->getConstraints('entity_type'),
+//                 'disabled' => $this->getReadonly(),
+//                 'required' => false,
+//                 'color' => 'cyan'
+//             ])
             ->add('about', 'markdown', [
                 'label' => 'profile-field-about',
                 'constraints' => $this->getConstraints('about'),
@@ -183,14 +245,14 @@ class UserProfileForm extends AbstractFormProcessor {
                 'choices' => Interest::getAll(),
                 'required' => false
             ])
-            ->add('keywords', 'tags', [
-                'label' => 'profile-field-keywords',
-                'constraints' => $this->getConstraints('keywords'),
-                'disabled' => $this->getReadonly(),
-                'attr' => ['help' => Text::get('tooltip-user-keywords')],
-                'required' => false,
-                'url' => '/api/keywords?q=%QUERY'
-            ])
+//             ->add('keywords', 'tags', [
+//                 'label' => 'profile-field-keywords',
+//                 'constraints' => $this->getConstraints('keywords'),
+//                 'disabled' => $this->getReadonly(),
+//                 'attr' => ['help' => Text::get('tooltip-user-keywords')],
+//                 'required' => false,
+//                 'url' => '/api/keywords?q=%QUERY'
+//             ])
             // ->add('contribution', 'textarea', [
             //     'label' => 'profile-field-contribution',
             //     'constraints' => $this->getConstraints('contribution'),
@@ -198,7 +260,7 @@ class UserProfileForm extends AbstractFormProcessor {
             //     'attr' => ['help' => Text::get('tooltip-user-contribution')],
             //     'required' => false
             // ])
-            ->add('webs', 'textarea', [
+            ->add('webs', 'text', [
                 'label' => 'profile-field-websites',
                 'constraints' => $this->getConstraints('webs'),
                 'disabled' => $this->getReadonly(),

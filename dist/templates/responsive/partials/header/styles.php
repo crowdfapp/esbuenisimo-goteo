@@ -10,3 +10,4 @@
 
 <link href="<?= SRC_URL ?>/assets/css/all.a3777b4a.css" type="text/css" rel="stylesheet" />
 
+<link href="<?= SRC_URL ?>/assets/css/selectize.css" type="text/css" rel="stylesheet" />

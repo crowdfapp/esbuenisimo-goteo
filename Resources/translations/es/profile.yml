@@ -13,10 +13,17 @@ profile-field-entity-type-private: Privado
 profile-field-entity-type-public: Público
 profile-field-interests: 'Qué tipo de proyecto te motiva más'
 profile-field-keywords: 'Temas que te interesan'
+profile-field-rut: R.U.T.
+profile-field-rut-company: 'R.U.T. Empresa'
+profile-field-business-name: 'Razón Social'
+profile-field-address: 'Dirección'
+profile-field-telephone: Teléfono
+profile-field-business-objective: 'Giro del Negocio'
 profile-field-legal-entity: 'Forma jurídica'
 profile-field-legal-entity-asociation: Asociación
 profile-field-legal-entity-choose: 'Selecciona una forma jurídica'
 profile-field-legal-entity-company: Empresa
+profile-field-legal-entity-government: Estado
 profile-field-legal-entity-cooperative: Cooperativa
 profile-field-legal-entity-ngo: ONG
 profile-field-legal-entity-others: Otros

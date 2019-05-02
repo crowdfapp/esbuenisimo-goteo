@@ -698,3 +698,13 @@ $(function() {
         t()
     })
 });
+
+$(window).load(function(e) {
+          $('#autoform_webs').selectize({
+            delimiter: ';',
+            plugins: ['restore_on_backspace', 'remove_button'],
+            persist: false,
+            createOnBlur: true,
+            create: true
+          })
+});
