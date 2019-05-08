@@ -216,8 +216,9 @@ class AuthController extends \Goteo\Core\Controller {
                 if ($id = $query->fetchColumn()) {
                     // el token coincide con el email y he obtenido una id
                     // Activamos y dejamos de esconder el usuario
-                    User::query('UPDATE user SET active = 1, hide = 0, confirmed = 1 WHERE id = ?', array($id));
+                    User::query('UPDATE user SET active = 1, hide = 0, confirmed = 1 WHERE id = ?', array($id));                  
                     $user = User::get($id);
+                  
                     Session::setUser($user, true);
                     return $this->redirect('/password-reset?' . $request->getQueryString());
                 }

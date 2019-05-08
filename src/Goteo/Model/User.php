@@ -813,6 +813,7 @@ class User extends \Goteo\Core\Model {
 
             $values = array(':id' => $id, ':lang' => $lang);
             // echo \sqldbg($sql, $values);
+          
             $query = static::query($sql, $values);
             $user = $query->fetchObject(__CLASS__);
 
