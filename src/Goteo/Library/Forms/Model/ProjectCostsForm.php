@@ -82,6 +82,9 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 // 'constraints' => array(new Constraints\NotBlank()),
                 'constraints' => $this->getConstraints("amount$suffix"),
                 'required' => false,
+                'attr' => [
+                    'class' => 'form-control number-format',
+                ],
             ])
             ->add("type$suffix", 'choice', [
                 'label' => 'costs-field-type',
@@ -101,6 +104,10 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 ],
                 'required' => true,
             ])
+//             ->add("required$suffix", 'hidden', [
+//                 'data' => 1,
+//                 'required' => true,
+//             ])
             ->add("cost$suffix", 'text', [
                 // 'label' => 'costs-field-cost',
                 'label' => 'regular-title',
@@ -161,7 +168,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
             $cost = $this->costs[$id];
             $cost->{$field} = $val;
         }
-
+      
         // Check if we want to remove a cost
         // $validate = true;
         // foreach($ids as $id) {

@@ -2471,10 +2471,10 @@ namespace Goteo\Model {
             } else {
                 $res->costs = 0;
             }
-            if($requireds == $total || $requireds == 0) {
-                $errors['costs'][] = 'costs_required';
-                $res->costs /= 2;
-            }
+//             if($requireds == $total || $requireds == 0) {
+//                 $errors['costs'][] = 'costs_required';
+//                 $res->costs /= 2;
+//             }
             // 6. rewards
             $rewards = ['reward', 'description', 'amount', 'type'];
             $count1 = 0;

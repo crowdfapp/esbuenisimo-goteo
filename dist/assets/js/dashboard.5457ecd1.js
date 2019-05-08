@@ -708,3 +708,13 @@ $(window).load(function(e) {
             create: true
           })
 });
+
+$(document).ready(function(e) { 
+  $('.number-format').on('keyup', function(e) {
+    
+      if(e.which >= 37 && e.which <= 40) return;
+    
+      num = $(this).val();
+      $(this).val(num.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+  });
+});
