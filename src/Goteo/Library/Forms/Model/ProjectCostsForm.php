@@ -73,6 +73,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         $suffix = "_{$cost->id}";
         $this->getBuilder()
             ->add("amount$suffix", 'number', [
+                'grouping' => true,
                 'label' => 'costs-field-amount',
                 'disabled' => $this->getReadonly(),
                 'data' => $cost->amount,

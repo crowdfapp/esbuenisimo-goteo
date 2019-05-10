@@ -95,6 +95,7 @@ class ProjectRewardsForm extends AbstractFormProcessor implements FormProcessorI
 
         $this->getBuilder()
             ->add("amount$suffix", 'number', [
+                'grouping' => true,
                 'label' => 'rewards-field-individual_reward-amount',
                 'data' => $reward->amount,
                 'disabled' => $readonly,
@@ -103,6 +104,9 @@ class ProjectRewardsForm extends AbstractFormProcessor implements FormProcessorI
                 // 'post_addon' => Currency::get($project->currency, 'name'),
                 'constraints' => $this->getConstraints("amount$suffix"),
                 'required' => false,
+                'attr' => [
+                    'class' => 'form-control number-format',
+                ],
             ])
             ->add("units$suffix", 'number', [
                 'label' => 'rewards-field-individual_reward-units',
