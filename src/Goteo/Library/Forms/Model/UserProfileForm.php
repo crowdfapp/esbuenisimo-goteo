@@ -122,15 +122,16 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'regular-name'
             ])
 // ;return $this;$builder
-            ->add('location', 'location', [
-                'label' => 'profile-field-location',
-                'constraints' => $this->getConstraints('location'),
-                'disabled' => $this->getReadonly(),
-                'attr' =>['info' => $non_public],
-                'type' => 'user',
-                'required' => false,
-                'pre_addon' => '<i class="fa fa-globe"></i>'
-            ])
+//             ->add('location', 'location', [
+//                 'label' => 'profile-field-location',
+//                 'constraints' => $this->getConstraints('location'),
+//                 'disabled' => $this->getReadonly(),
+//                 'attr' =>['info' => $non_public],
+//                 'type' => 'user',
+//                 'required' => false,
+//                 'pre_addon' => '<i class="fa fa-globe"></i>'
+//             ])
+                    
 //             ->add('locable', 'boolean', [
 //                 'label' => 'dashboard-user-location-locate',
 //                 'constraints' => $this->getConstraints('unlocable'),
@@ -207,11 +208,53 @@ class UserProfileForm extends AbstractFormProcessor {
                 'constraints' => $this->getConstraints('business_name'),
                 'label' => 'profile-field-business-name',
             ])
+          
+            ->add('region_id', 'choice', [
+                'label' => 'profile-field-region',
+                'constraints' => $this->getConstraints('gender'),
+                'disabled' => $this->getReadonly(),
+                'choices' => [
+                    'M' => Text::get('regular-male'),
+                    'F' => Text::get('regular-female'),
+                    'X' => Text::get('regular-others'),
+                    'N' => Text::get('regular-not-specify'),
+                ],
+                //'required' => false
+            ])
+          
+            ->add('province_id', 'choice', [
+                'label' => 'profile-field-province',
+                'constraints' => $this->getConstraints('gender'),
+                'disabled' => $this->getReadonly(),
+                'choices' => [
+                    'M' => Text::get('regular-male'),
+                    'F' => Text::get('regular-female'),
+                    'X' => Text::get('regular-others'),
+                    'N' => Text::get('regular-not-specify'),
+                ],
+                //'required' => false
+            ])
+          
+            ->add('commune_id', 'choice', [
+                'label' => 'profile-field-commune',
+                'constraints' => $this->getConstraints('gender'),
+                'disabled' => $this->getReadonly(),
+                'choices' => [
+                    'M' => Text::get('regular-male'),
+                    'F' => Text::get('regular-female'),
+                    'X' => Text::get('regular-others'),
+                    'N' => Text::get('regular-not-specify'),
+                ],
+                'required' => false
+            ])
+          
             ->add('address', 'text', [
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('address'),
                 'label' => 'profile-field-address',
-            ])
+                'required' => false
+            ])          
+
             ->add('telephone', 'text', [
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('telephone'),

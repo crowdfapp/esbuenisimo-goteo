@@ -16,6 +16,9 @@ profile-field-keywords: 'Temas que te interesan'
 profile-field-rut: R.U.T.
 profile-field-rut-company: 'R.U.T. Empresa'
 profile-field-business-name: 'Razón Social'
+profile-field-region: 'Region'
+profile-field-province: 'Provincia'
+profile-field-commune: 'Comuna'
 profile-field-address: 'Dirección'
 profile-field-telephone: Teléfono
 profile-field-business-objective: 'Giro del Negocio'
