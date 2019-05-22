@@ -41,7 +41,7 @@ namespace Goteo\Model {
         /*
          * Lista de provincias
          */      
-        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false) {
+        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false, $forSelect = false) {
           
         $values = [];
 
@@ -91,6 +91,14 @@ namespace Goteo\Model {
           foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $key => $province) {
               $provinces[] = $province;
           }
+          
+          if($forSelect) {
+              $select = [];
+              foreach($provinces as $province) {
+                  $select[$province->id] = $province->name;
+              }
+              $provinces = $select;
+          }          
           
           return $provinces;          
         }   

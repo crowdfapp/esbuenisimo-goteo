@@ -64,7 +64,7 @@ ranking-event-type-all: 'Todos los tipos de evento'
 
 ranking-select-region: 'Seleccione una región'
 ranking-select-province: 'Seleccione una provincia'
-ranking-select-commune: 'Seleccione una communa'
+ranking-select-commune: 'Seleccione una comuna'
 ranking-no-provinces: 'Sin provincias'
 ranking-no-communes: 'Sin communas'
 

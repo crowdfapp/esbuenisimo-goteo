@@ -22,6 +22,10 @@ use Goteo\Model\User\Interest;
 use Goteo\Model\User\UserLocation;
 use Goteo\Library\Forms\FormModelException;
 
+use Goteo\Model\Region;
+use Goteo\Model\Province;
+use Goteo\Model\Commune;
+
 class UserProfileForm extends AbstractFormProcessor {
 
     public function getConstraints($field) {
@@ -108,6 +112,7 @@ class UserProfileForm extends AbstractFormProcessor {
 
 
     public function createForm() {
+            
         $non_public = '<i class="fa fa-eye-slash"></i> '. Text::get('project-non-public-field');
         $user = $this->getModel();
 
@@ -211,40 +216,31 @@ class UserProfileForm extends AbstractFormProcessor {
           
             ->add('region_id', 'choice', [
                 'label' => 'profile-field-region',
-                'constraints' => $this->getConstraints('gender'),
+                'constraints' => $this->getConstraints('region_id'),
                 'disabled' => $this->getReadonly(),
-                'choices' => [
-                    'M' => Text::get('regular-male'),
-                    'F' => Text::get('regular-female'),
-                    'X' => Text::get('regular-others'),
-                    'N' => Text::get('regular-not-specify'),
-                ],
+                'choices' => Region::getList([], 0, 100, false, true),
+                'empty_value'       => 'ranking-select-region',
+                'empty_data'        => null,
                 //'required' => false
             ])
           
             ->add('province_id', 'choice', [
                 'label' => 'profile-field-province',
-                'constraints' => $this->getConstraints('gender'),
-                'disabled' => $this->getReadonly(),
-                'choices' => [
-                    'M' => Text::get('regular-male'),
-                    'F' => Text::get('regular-female'),
-                    'X' => Text::get('regular-others'),
-                    'N' => Text::get('regular-not-specify'),
-                ],
+                'constraints' => $this->getConstraints('province_id'),
+                'disabled' => true,
+                'choices' => Province::getList([], 0, 100, false, true),
+                'empty_value'       => 'ranking-select-province',
+                'empty_data'        => null,
                 //'required' => false
             ])
           
             ->add('commune_id', 'choice', [
                 'label' => 'profile-field-commune',
-                'constraints' => $this->getConstraints('gender'),
-                'disabled' => $this->getReadonly(),
-                'choices' => [
-                    'M' => Text::get('regular-male'),
-                    'F' => Text::get('regular-female'),
-                    'X' => Text::get('regular-others'),
-                    'N' => Text::get('regular-not-specify'),
-                ],
+                'constraints' => $this->getConstraints('commune_id'),
+                'disabled' => true,
+                'choices' => Commune::getList([], 0, 100, false, true),
+                'empty_value'       => 'ranking-select-commune',
+                'empty_data'        => null,
                 'required' => false
             ])
           

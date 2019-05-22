@@ -43,7 +43,7 @@ namespace Goteo\Model {
         /*
          * Lista de regiones
          */      
-        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false) {
+        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false, $forSelect = false) {
           
         $values = [];
 
@@ -87,6 +87,14 @@ namespace Goteo\Model {
           
           foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $key => $region) {
               $regions[] = $region;
+          }
+          
+          if($forSelect) {
+              $select = [];
+              foreach($regions as $region) {
+                  $select[$region->id] = $region->name;
+              }
+              $regions = $select;
           }
           
           return $regions;          
