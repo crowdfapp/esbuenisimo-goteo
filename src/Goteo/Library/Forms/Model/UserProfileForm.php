@@ -66,6 +66,12 @@ class UserProfileForm extends AbstractFormProcessor {
                     }                  
                 });
         }
+      if($field === 'region_id') {
+          $constraints[] = new Constraints\NotBlank();
+      }
+      if($field === 'province_id') {
+          $constraints[] = new Constraints\NotBlank();
+      }      
         elseif($this->getFullValidation()) {
             if(in_array($field, ['gender', 'about'])) {
                 $constraints[] = new Constraints\NotBlank();
@@ -231,16 +237,27 @@ class UserProfileForm extends AbstractFormProcessor {
                 'choices' => Province::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-province',
                 'empty_data'        => null,
+                'attr' => [
+                    'loading-provinces-msg' => Text::get('loading-provinces-msg'),
+                    'ranking-select-province-msg' => Text::get('ranking-select-province'),
+                    'class' => 'form-control disabled',
+                ],
                 //'required' => false
             ])
           
             ->add('commune_id', 'choice', [
                 'label' => 'profile-field-commune',
                 'constraints' => $this->getConstraints('commune_id'),
-                'disabled' => true,
+                'disabled' => $this->getReadonly(),
                 'choices' => Commune::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-commune',
                 'empty_data'        => null,
+                'attr' => [
+                    'ranking-no-communes-msg' => Text::get('ranking-no-communes'),
+                    'loading-communes-msg' => Text::get('loading-communes-msg'),
+                    'ranking-select-commune-msg' => Text::get('ranking-select-commune'),
+                    'class' => 'form-control disabled',
+                ],
                 'required' => false
             ])
           
@@ -373,6 +390,7 @@ class UserProfileForm extends AbstractFormProcessor {
 
         $errors = [];
         $data = $form->getData();
+      
         $user = $this->getModel();
         // var_dump($data);die;
         // Process main image

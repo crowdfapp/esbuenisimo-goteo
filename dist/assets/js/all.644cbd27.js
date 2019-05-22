@@ -630,4 +630,74 @@ $(function() {
      }
     
   });
+  
+  
+
+  $('#autoform_region_id').on('change', function() {
+    
+    $provinceSelect = $('#autoform_province_id');
+    
+    $provinceSelect.find('option')
+    .remove()
+    .end()
+    .append($("<option />").val('').text($provinceSelect.attr('loading-provinces-msg')))
+    .attr('disabled', 'disabled');
+    
+    $.post('/ranking/getProvinces', {regionId: $(this).val()}, function(data) {
+      
+      $provinceSelect.find('option')
+      .remove()
+      .end()
+      .append($("<option />").val('').text($provinceSelect.attr('ranking-select-province-msg')));
+      
+      $.each(data.provinces, function() {        
+          $provinceSelect.append($("<option />").val(this.id).text(this.name));
+      });
+      $provinceSelect.removeAttr('disabled');
+      $provinceSelect.removeClass('disabled');
+      
+      $provinceSelect.trigger('change');
+      
+    }, 'json');
+  });
+  
+  $('#autoform_province_id').on('change', function() {
+    
+    $communeSelect = $('#autoform_commune_id');
+    
+    $communeSelect.find('option')
+    .remove()
+    .end()
+    .append($("<option />").val(0).text($communeSelect.attr('loading-communes-msg')))
+    .attr('disabled', 'disabled');
+  
+     if($(this).val() > 0) {
+       
+      $.post('/ranking/getCommunes', {provinceId: $(this).val()}, function(data) {
+
+        $communeSelect.find('option')
+        .remove()
+        .end()
+        .append($("<option />").val('').text($communeSelect.attr('ranking-select-commune-msg')));
+
+        $.each(data.communes, function() {        
+            $communeSelect.append($("<option />").val(this.id).text(this.name));
+        });
+        
+        $communeSelect.removeAttr('disabled');
+        $communeSelect.removeClass('disabled');
+        
+      }, 'json');       
+       
+     } else {
+       
+      $communeSelect.find('option')
+      .remove()
+      .end()
+      .append($("<option />").val('').text($communeSelect.attr('ranking-no-communes-msg')))
+      .attr('disabled', 'disabled');       
+       
+     }
+    
+  });  
 });

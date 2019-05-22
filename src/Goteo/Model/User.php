@@ -45,11 +45,14 @@ class User extends \Goteo\Core\Model {
     $gender,
     $entity_type,
     $legal_entity,
-        $rut,
-        $business_name,
-        $address,
-        $telephone,
-        $business_objective,
+    $rut,
+    $business_name,
+    $region_id,
+    $province_id,
+    $commune_id,
+    $address,
+    $telephone,
+    $business_objective,
     $name,
     $location,
     $avatar = null, // Always a Image class
@@ -274,25 +277,37 @@ class User extends \Goteo\Core\Model {
                     $data[':legal_entity'] = $this->legal_entity;
                 }
                             
-                                if(isset($this->rut)) {
-                                        $data[':rut'] = $this->rut;
-                                }
-                            
-                                if(isset($this->business_name)) {
-                                        $data[':business_name'] = $this->business_name;
-                                }
-                            
-                                if(isset($this->address)) {
-                                        $data[':address'] = $this->address;
-                                }
-                            
-                                if(isset($this->telephone)) {
-                                        $data[':telephone'] = $this->telephone;
-                                }
-                                
-                                if(isset($this->business_objective)) {
-                                        $data[':business_objective'] = $this->business_objective;
-                                }
+                if(isset($this->rut)) {
+                        $data[':rut'] = $this->rut;
+                }
+
+                if(isset($this->business_name)) {
+                        $data[':business_name'] = $this->business_name;
+                }
+
+                if(isset($this->region_id)) {
+                        $data[':region_id'] = $this->region_id;
+                }              
+
+                if(isset($this->province_id)) {
+                        $data[':province_id'] = $this->province_id;
+                }          
+              
+                if(isset($this->commune_id)) {
+                        $data[':commune_id'] = $this->commune_id;
+                }                
+              
+                if(isset($this->address)) {
+                        $data[':address'] = $this->address;
+                }
+
+                if(isset($this->telephone)) {
+                        $data[':telephone'] = $this->telephone;
+                }
+
+                if(isset($this->business_objective)) {
+                        $data[':business_objective'] = $this->business_objective;
+                }
 
                 // Interests
                 static::query('DELETE FROM user_interest WHERE user= ?', $this->id);
@@ -800,6 +815,9 @@ class User extends \Goteo\Core\Model {
                     user.rut as rut,
                     user.gender as gender,
                     user.business_name as business_name,
+                    user.region_id as region_id,
+                    user.province_id as province_id,
+                    user.commune_id as commune_id,
                     user.address as address,
                     user.telephone as telephone,
                     user.business_objective as business_objective,
