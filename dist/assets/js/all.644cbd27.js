@@ -631,73 +631,67 @@ $(function() {
     
   });
   
-  
-
   $('#autoform_region_id').on('change', function() {
     
-    $provinceSelect = $('#autoform_province_id');
+      $provinceSelect = $('#autoform_province_id');
     
-    $provinceSelect.find('option')
-    .remove()
-    .end()
-    .append($("<option />").val('').text($provinceSelect.attr('loading-provinces-msg')))
-    .attr('disabled', 'disabled');
+      $provinceSelect.attr('disabled', 'disabled');
+      $provinceSelect.addClass('disabled');
     
-    $.post('/ranking/getProvinces', {regionId: $(this).val()}, function(data) {
-      
-      $provinceSelect.find('option')
-      .remove()
-      .end()
-      .append($("<option />").val('').text($provinceSelect.attr('ranking-select-province-msg')));
-      
-      $.each(data.provinces, function() {        
-          $provinceSelect.append($("<option />").val(this.id).text(this.name));
-      });
-      $provinceSelect.removeAttr('disabled');
-      $provinceSelect.removeClass('disabled');
-      
-      $provinceSelect.trigger('change');
-      
-    }, 'json');
+      $provinceSelect.children('option').each(function() {
+          if($(this).val() > 0) $(this).hide();
+      }); 
+      $provinceSelect.val('');
+    
+      $.post('/ranking/getProvinces', {regionId: $(this).val()}, function(data) {
+            $.each(data.provinces, function() {              
+                for(i = 0; i < $provinceSelect.children('option').length; i++) {
+                    var option = $provinceSelect.children('option')[i];
+                    if($(option).val() == this.id) $(option).show();
+                }
+            });
+        
+          $provinceSelect.removeAttr('disabled');
+          $provinceSelect.removeClass('disabled');
+        
+          //$('#autoform_province_id').trigger('change');
+        
+      $communeSelect = $('#autoform_commune_id');
+    
+      $communeSelect.attr('disabled', 'disabled');
+      $communeSelect.addClass('disabled');
+    
+      $communeSelect.children('option').each(function() {
+          if($(this).val() > 0) $(this).hide();
+      }); 
+      $communeSelect.val('');        
+        
+        
+      }, 'json');
   });
   
   $('#autoform_province_id').on('change', function() {
     
-    $communeSelect = $('#autoform_commune_id');
+      $communeSelect = $('#autoform_commune_id');
     
-    $communeSelect.find('option')
-    .remove()
-    .end()
-    .append($("<option />").val(0).text($communeSelect.attr('loading-communes-msg')))
-    .attr('disabled', 'disabled');
-  
-     if($(this).val() > 0) {
-       
+//       $communeSelect.attr('disabled', 'disabled');
+//       $communeSelect.addClass('disabled');
+    
+//       $communeSelect.children('option').each(function() {
+//           if($(this).val() > 0) $(this).hide();
+//       }); 
+//       $communeSelect.val('');
+    
       $.post('/ranking/getCommunes', {provinceId: $(this).val()}, function(data) {
-
-        $communeSelect.find('option')
-        .remove()
-        .end()
-        .append($("<option />").val('').text($communeSelect.attr('ranking-select-commune-msg')));
-
-        $.each(data.communes, function() {        
-            $communeSelect.append($("<option />").val(this.id).text(this.name));
-        });
+            $.each(data.communes, function() {              
+                for(i = 0; i < $communeSelect.children('option').length; i++) {
+                    var option = $communeSelect.children('option')[i];
+                    if($(option).val() == this.id) $(option).show();
+                }
+            });
         
-        $communeSelect.removeAttr('disabled');
-        $communeSelect.removeClass('disabled');
-        
-      }, 'json');       
-       
-     } else {
-       
-      $communeSelect.find('option')
-      .remove()
-      .end()
-      .append($("<option />").val('').text($communeSelect.attr('ranking-no-communes-msg')))
-      .attr('disabled', 'disabled');       
-       
-     }
-    
+          $communeSelect.removeAttr('disabled');
+          $communeSelect.removeClass('disabled');
+      }, 'json');
   });  
 });

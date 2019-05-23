@@ -234,15 +234,14 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'profile-field-province',
                 'constraints' => $this->getConstraints('province_id'),
                 'disabled' => $this->getReadonly(),
-                'choices' => !empty($user->region_id) ? 
-              Province::getList(['regionId' => $user->region_id], 0, 100, false, true) : 
-              Province::getList([], 0, 100, false, true),
+                'choices' => Province::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-province',
                 'empty_data'        => null,
                 'attr' => [
                     'loading-provinces-msg' => Text::get('loading-provinces-msg'),
                     'ranking-select-province-msg' => Text::get('ranking-select-province'),
-                    'class' => 'form-control ' . ((empty($user->province_id) && empty($user->region_id)) ? 'disabled' : ''),
+//                     'class' => 'form-control ' . ((empty($user->province_id) && empty($user->region_id)) ? 'disabled' : ''),
+                    'class' => 'form-control',
                 ],
                 //'required' => false
             ])
@@ -251,16 +250,15 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'profile-field-commune',
                 'constraints' => $this->getConstraints('commune_id'),
                 'disabled' => $this->getReadonly(),
-                'choices' => !empty($user->province_id) ? 
-              Commune::getList(['provinceId' => $user->province_id], 0, 100, false, true) : 
-              Commune::getList([], 0, 100, false, true),
+                'choices' => Commune::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-commune',
                 'empty_data'        => null,
                 'attr' => [
                     'ranking-no-communes-msg' => Text::get('ranking-no-communes'),
                     'loading-communes-msg' => Text::get('loading-communes-msg'),
                     'ranking-select-commune-msg' => Text::get('ranking-select-commune'),
-                    'class' => 'form-control ' . ((empty($user->commune_id) && empty($user->province_id)) ? 'disabled' : ''),
+//                     'class' => 'form-control ' . ((empty($user->commune_id) && empty($user->province_id)) ? 'disabled' : ''),
+                    'class' => 'form-control',
                 ],
                 'required' => false
             ])
