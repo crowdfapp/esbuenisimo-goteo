@@ -142,8 +142,7 @@ class User extends \Goteo\Core\Model {
      */
     public function save(&$errors = array(), $skip_validations = array()) {
         $data = array();
-
-
+      
         if ($this->validate($errors, $skip_validations)) {
             // Nuevo usuario.
             if (empty($this->id)) {
@@ -151,7 +150,7 @@ class User extends \Goteo\Core\Model {
                 $this->id = static::idealiza($this->userid);
                 $data[':id'] = $this->id;
                 $data[':name'] = $this->name;
-                $data[':location'] = $this->location;
+                $data[':address'] = $this->address;
                 $data[':email'] = $this->email;
                 $data[':token'] = $token = md5(uniqid());
 
