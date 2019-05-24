@@ -102,6 +102,9 @@ class SettingsDashboardController extends DashboardController {
                 'label' => $submit_label ? $submit_label : 'regular-submit'
             ]);
         $form = $processor->getForm();
+      
+        $postData = $request->request->all()['autoform'];
+            
         $form->handleRequest($request);
         if ($form->isSubmitted() && $request->isMethod('post')) {
             try {

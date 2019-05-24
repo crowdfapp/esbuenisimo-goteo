@@ -66,7 +66,7 @@ ranking-select-region: 'Seleccione una región'
 ranking-select-province: 'Seleccione una provincia'
 ranking-select-commune: 'Seleccione una comuna'
 ranking-no-provinces: 'Sin provincias'
-ranking-no-communes: 'Sin communas'
+ranking-no-communes: 'Sin comunas'
 
 ranking-title: 'Vota por un evento que quieras ver'
 ranking-description: 'Lorem ipsum dolor sit amet, pri persius quaerendum ad. Salutatus democritum ad per, sit eu case ornatus noluisse. Te elitr commodo pro. Duo ullum paulo cu, magna minim voluptua cu est, ex has amet dicant instructior. Ullum persius verterem eum ne, mel et pertinax salutandi, graeci patrioque gloriatur eos id. In mea prompta commune cotidieque, ius an augue neglegentur.'
@@ -102,7 +102,7 @@ request-type-not-speficied: 'Tipo de evento no especificado'
 ubication-not-speficied: 'No especificada'
 
 loading-provinces-msg: 'Cargando provincias...'
-loading-communes-msg: 'Cargando communas...'
+loading-communes-msg: 'Cargando comunas...'
 
 ranking-select-request-type-id: 'Seleccione un tipo de evento'
 project-request-type-entertainment: 'Entretenimiento'
