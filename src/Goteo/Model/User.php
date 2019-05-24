@@ -48,7 +48,7 @@ class User extends \Goteo\Core\Model {
     $rut,
     $business_name,
     $region_id,
-    $province,
+    $province_id,
     $commune_id,
     $address,
     $telephone,

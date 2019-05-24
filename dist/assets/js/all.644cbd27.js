@@ -661,8 +661,6 @@ $(function() {
   
   $('#autoform_province_id').on('change', function() {
     
-    $('#autoform_province_temp_id').val($(this).val());
-    
     $communeSelect = $('#autoform_commune_id');
     
     $communeSelect.find('option')
@@ -698,9 +696,4 @@ $(function() {
      }
     
   });  
-  
-  $('#autoform_commune_id').on('change', function() {
-      $('#autoform_commune_temp_id').val($(this).val());
-  });
-
 });

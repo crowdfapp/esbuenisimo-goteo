@@ -41,7 +41,7 @@ namespace Goteo\Model {
         /*
          * Lista de provincias
          */      
-        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false, $forSelect = false) {
+        public static function getList($filters = array(), $offset = 0, $limit = 100, $count = false, $forSelect = false, $forSelectAttr = false) {
           
         $values = [];
 
@@ -51,7 +51,8 @@ namespace Goteo\Model {
         $sqlOrder = [];
           
         if(!empty($filters['regionId'])) {
-            $sqlFilter[] = "(provinces.region_id LIKE :regionId)";
+            if($forSelectAttr) $sqlFilter[] = "(provinces.region_id NOT LIKE :regionId)";
+            else $sqlFilter[] = "(provinces.region_id LIKE :regionId)";
             $values[':regionId'] = $filters['regionId'];
         }
                               
@@ -99,6 +100,15 @@ namespace Goteo\Model {
               }
               $provinces = $select;
           }          
+          
+          if($forSelectAttr) {
+            
+              $select = [];
+              foreach($provinces as $province) {
+                  $select[$province->id] = ['class' => 'hidden'];
+              }
+              $provinces = $select;
+          }            
           
           return $provinces;          
         }   

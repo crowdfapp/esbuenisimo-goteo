@@ -243,6 +243,7 @@ class UserProfileForm extends AbstractFormProcessor {
                     'ranking-select-province-msg' => Text::get('ranking-select-province'),
                     'class' => 'form-control ' . ((empty($defaults['province_id']) && empty($defaults['region_id'])) ? 'disabled' : ''),
                 ],
+                'choice_attr' =>  Province::getList(['regionId' => $defaults['region_id']], 0, 100, false, false, true),
                 //'required' => false
             ])
           
@@ -250,7 +251,7 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'profile-field-commune',
                 'constraints' => $this->getConstraints('commune_id'),
                 'disabled' => $this->getReadonly(),
-                'choices' => Commune::getList([], 0, 100, false, true),
+                'choices' => Commune::getList([], 0, 400, false, true),
                 'empty_value'       => 'ranking-select-commune',
                 'empty_data'        => null,
                 'attr' => [
@@ -259,7 +260,8 @@ class UserProfileForm extends AbstractFormProcessor {
                     'ranking-select-commune-msg' => Text::get('ranking-select-commune'),
                     'class' => 'form-control ' . ((empty($defaults['commune_id']) && empty($defaults['province_id'])) ? 'disabled' : ''),
                 ],
-                'required' => false
+                'required' => false,
+                'choice_attr' =>  Commune::getList(['provinceId' => $defaults['province_id']], 0, 400, false, false, true),
             ])
 
             ->add('address', 'text', [
