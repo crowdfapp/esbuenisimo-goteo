@@ -126,6 +126,7 @@ class UserProfileForm extends AbstractFormProcessor {
         $options = $builder->getOptions();
         $defaults = $options['data'];
         // print_r($defaults);die;
+
         $builder
             ->add('name', 'text', [
                 'disabled' => $this->getReadonly(),
@@ -234,9 +235,6 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'profile-field-province',
                 'constraints' => $this->getConstraints('province_id'),
                 'disabled' => $this->getReadonly(),
-//                 'choices' => !empty($defaults['region_id']) 
-//                 ? Province::getList(['regionId' => (int) $defaults['region_id']], 0, 100, false, true)
-//                 : Province::getList([], 0, 100, false, true),
                 'choices' => Province::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-province',
                 'empty_data'        => null,
@@ -252,9 +250,6 @@ class UserProfileForm extends AbstractFormProcessor {
                 'label' => 'profile-field-commune',
                 'constraints' => $this->getConstraints('commune_id'),
                 'disabled' => $this->getReadonly(),
-//                 'choices' => !empty($defaults['province_id']) 
-//                 ? Commune::getList(['provinceId' => (int) $defaults['province_id']], 0, 100, false, true)
-//                 : Commune::getList([], 0, 100, false, true),
                 'choices' => Commune::getList([], 0, 100, false, true),
                 'empty_value'       => 'ranking-select-commune',
                 'empty_data'        => null,
