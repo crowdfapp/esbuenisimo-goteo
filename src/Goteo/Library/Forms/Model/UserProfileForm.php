@@ -247,6 +247,8 @@ class UserProfileForm extends AbstractFormProcessor {
                 //'required' => false
             ])
           
+            ->add('province_temp_id', 'hidden')
+          
             ->add('commune_id', 'choice', [
                 'label' => 'profile-field-commune',
                 'constraints' => $this->getConstraints('commune_id'),
@@ -263,6 +265,8 @@ class UserProfileForm extends AbstractFormProcessor {
                 'required' => false,
                 'choice_attr' =>  Commune::getList(['provinceId' => $defaults['province_id']], 0, 400, false, false, true),
             ])
+          
+            ->add('commune_temp_id', 'hidden')
 
             ->add('address', 'text', [
                 'disabled' => $this->getReadonly(),

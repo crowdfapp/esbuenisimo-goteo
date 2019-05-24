@@ -654,6 +654,11 @@ $(function() {
       $provinceSelect.removeAttr('disabled');
       $provinceSelect.removeClass('disabled');
       
+      if($('#autoform_province_temp_id').val() != '') {
+          $provinceSelect.val($('#autoform_province_temp_id').val());
+          $('#autoform_province_temp_id').val('');
+      } 
+      
       $provinceSelect.trigger('change');
       
     }, 'json');
@@ -683,6 +688,12 @@ $(function() {
         });
         $communeSelect.removeAttr('disabled');
         $communeSelect.removeClass('disabled');
+        
+      if($('#autoform_commune_temp_id').val() != '') {
+          $communeSelect.val($('#autoform_commune_temp_id').val());
+          $('#autoform_commune_temp_id').val('');
+      }         
+        
       }, 'json');       
        
      } else {
@@ -696,4 +707,8 @@ $(function() {
      }
     
   });  
+  
+  $(window).load(function() {
+      $('#autoform_region_id').trigger('change');
+  });
 });
