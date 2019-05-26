@@ -66,7 +66,6 @@ $terms=$this->terms;
                     </div>
                     <input type="hidden" name="publishing_date" id="publishing-date" value="" required>
                 </div>
-
                 <div class="form-group col-sm-12" id="social-group">
                     <div class="alert alert-success">
                         <?= $this->text('project-create-social-select-alert') ?>

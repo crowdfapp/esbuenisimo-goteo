@@ -26,7 +26,7 @@ mandatory-cost-field-task_dates: 'Es obligatorio especificar las fechas aproxima
 mandatory-project-field-resource: 'Es obligatorio especificar si cuentas con otros recursos o no'
 mandatory-project-resource: 'Es obligatorio especificar si cuentas con otros recursos o no'
 mandatory-project-total-costs: 'Es obligatorio especificar algún coste'
-step-4: Costes
+step-4: Costos
 step-costs: 'Paso: Proyecto / Costes'
 tooltip-project-cost-amount: 'Especifica el importe en la moneda elegida de lo que consideras que implica este coste. No utilices puntos para las cifras de miles ok?'
 tooltip-project-cost-cost: 'Introduce un título lo más descriptivo posible de este coste.'

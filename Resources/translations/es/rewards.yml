@@ -4,7 +4,7 @@ mandatory-individual_reward-field-icon: 'Es obligatorio seleccionar el tipo de r
 mandatory-individual_reward-field-name: 'Es obligatorio poner la recompensa'
 mandatory-social_reward-field-description: 'Es obligatorio poner alguna descripción al retorno'
 mandatory-social_reward-field-icon: 'Es obligatorio seleccionar el tipo de retorno'
-mandatory-social_reward-field-name: 'Es obligatorio especificar el compromiso social'
+mandatory-social_reward-field-name: 'Es obligatorio especificar el tipo de evento'
 mandatory-social_reward-field-category: 'Es obligatorio especificar el comprimiso social'
 rewards-field-individual_reward-amount: 'Importe'
 rewards-field-individual_reward-description: Descripción
@@ -19,7 +19,7 @@ rewards-field-social_reward-reward: Retorno
 rewards-field-social_reward-type: 'Tipo de retorno'
 rewards-field-social_reward-url: Url
 rewards-fields-individual_reward-title: 'Recompensas individuales'
-rewards-fields-social_reward-title: 'Compromiso social'
+rewards-fields-social_reward-title: 'Tipos de evento'
 rewards-main-header: 'Recompensas'
 step-5: 'Recompensas'
 step-rewards: 'Paso: Proyecto / Recompensas'
