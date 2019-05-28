@@ -73,17 +73,21 @@ class UserProfileForm extends AbstractFormProcessor {
           $constraints[] = new Constraints\NotBlank();
       }      
         elseif($this->getFullValidation()) {
-            if(in_array($field, ['gender', 'about'])) {
+//             if(in_array($field, ['gender', 'about'])) {
+//                 $constraints[] = new Constraints\NotBlank();
+//             }
+          
+            if(in_array($field, ['gender'])) {
                 $constraints[] = new Constraints\NotBlank();
-            }
+            }          
                     
-            if(in_array($field, ['about'])) {
-                  // Minimal 10 words
-                  $constraints[] = new Constraints\Regex([
-                      'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
-                      'message' => Text::get('validate-user-profile-about')
-                  ]);
-            }
+//             if(in_array($field, ['about'])) {
+//                   // Minimal 10 words
+//                   $constraints[] = new Constraints\Regex([
+//                       'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
+//                       'message' => Text::get('validate-user-profile-about')
+//                   ]);
+//             }
           
             if(in_array($field, ['webs', 'facebook', 'twitter'] )) {
                 $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
