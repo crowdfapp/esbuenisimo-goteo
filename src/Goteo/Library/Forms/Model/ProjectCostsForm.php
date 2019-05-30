@@ -141,8 +141,36 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
     public function createForm() {
         $project = $this->getModel();
         $builder = $this->getBuilder()
-            ->add('title-costs', 'title', ['label' => 'costs-fields-main-title'])
-            ;
+            ->add('capacity', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('capacity'),
+                'label' => 'total-capacity-question',
+                'attr' => [
+                    'class' => 'form-control number-format',
+                ],
+            ]) 
+            ->add('tickets-to-support', 'choice', [
+                'label' => 'tickets-to-support-label',
+                'constraints' => $this->getConstraints('tickets-to-support'),
+                'disabled' => $this->getReadonly(),
+                'expanded' => true,
+                'wrap_class' => '',
+                'choices' => [
+                    '1' => Text::get('tickets-to-support-option-completed-event'),
+                    '2' => Text::get('tickets-to-support-option-part-of-event'),
+                ],
+                //'required' => false,
+            ])     
+            ->add('supported-tickets-number', 'text', [
+                'disabled' => $this->getReadonly(),
+                'constraints' => $this->getConstraints('supported-tickets-number'),
+                'label' => 'supported-tickets-number-label',
+                'attr' => [
+                    'class' => 'form-control number-format',
+                ],
+            ]) 
+            ->add('title-supported-tickets-percentage', 'title', ['label' => 'title-supported-tickets-percentage-label'])
+            ->add('title-costs', 'title', ['label' => 'costs-fields-main-title']);
         foreach($project->costs as $cost) {
             $this->addCost($cost);
         }

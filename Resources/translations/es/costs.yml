@@ -16,6 +16,12 @@ costs-field-resoure: 'Otros recursos'
 costs-field-schedule: 'Agenda de trabajo'
 costs-field-type: Tipo
 costs-fields-main-title: 'Desglose de costes'
+total-capacity-question: '1. Capacidad Total del Evento: Cuál es la capacidad de tu evento?'
+tickets-to-support-label: '¿Cuántas entradas pondrás a la venta con el sistema de Crowdfunding'
+tickets-to-support-option-completed-event: 'Quiero que todo mi evento se financie a través de EsBuenisimo'
+tickets-to-support-option-part-of-event: 'Quiero que solo una parte de mi evento se financie a través de EsBuenisimo'
+supported-tickets-number-label: 'Cantidad de tickets a financiar'
+title-supported-tickets-percentage-label: 'EsBuenisimo financiará el 0% de tu proyecto'
 costs-fields-metter-title: 'Visualización de costes'
 costs-fields-resources-title: Recurso
 costs-main-header: 'Aspectos económicos'

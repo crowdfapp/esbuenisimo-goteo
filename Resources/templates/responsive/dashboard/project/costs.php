@@ -15,7 +15,9 @@
     <?= $this->supply('dashboard-content-form', function() {
         $form = $this->raw('form');
         echo $this->form_start($form);
-
+  
+        echo $this->insert('dashboard/project/partials/capacity', ['form' => $form]);
+  
         echo $this->form_row($form['title-costs']);
 
         $submit = $form['submit'] ? $this->form_row($form['submit']) : '';
