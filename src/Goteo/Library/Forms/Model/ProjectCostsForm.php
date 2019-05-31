@@ -142,6 +142,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         $project = $this->getModel();
         $builder = $this->getBuilder()
             ->add('capacity', 'text', [
+                'data' => $project->capacity,
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('capacity'),
                 'label' => 'total-capacity-question',
@@ -150,6 +151,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 ],
             ]) 
             ->add('tickets-to-support', 'choice', [
+                'data' => $project->tickets_to_support,
                 'label' => 'tickets-to-support-label',
                 'constraints' => $this->getConstraints('tickets-to-support'),
                 'disabled' => $this->getReadonly(),
@@ -162,6 +164,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 //'required' => false,
             ])     
             ->add('supported-tickets-number', 'text', [
+                'data' => $project->supported_tickets_number,
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('supported-tickets-number'),
                 'label' => 'supported-tickets-number-label',
