@@ -717,4 +717,12 @@ $(document).ready(function(e) {
       num = $(this).val();
       $(this).val(num.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
   });
+  
+  $('.hide-tickets-number').click(function(e) {
+      $('.supported-tickets-section').fadeIn('slow');
+  });
+  
+  $('.show-tickets-number').click(function(e) {
+      $('.supported-tickets-section').fadeOut('slow');
+  });
 });

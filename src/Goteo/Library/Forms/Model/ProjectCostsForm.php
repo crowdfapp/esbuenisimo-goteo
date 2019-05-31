@@ -161,6 +161,13 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                     '1' => Text::get('tickets-to-support-option-completed-event'),
                     '2' => Text::get('tickets-to-support-option-part-of-event'),
                 ],
+                'choice_attr' => function($choice) {
+                    if($choice == 2) {
+                      return ['class' => 'form-control hide-tickets-number'];
+                    } else {
+                      return ['class' => 'form-control show-tickets-number'];
+                    }
+                }
                 //'required' => false,
             ])     
             ->add('supported-tickets-number', 'text', [
@@ -171,6 +178,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'attr' => [
                     'class' => 'form-control number-format',
                 ],
+                'required' => false,
             ]) 
             ->add('title-supported-tickets-percentage', 'title', ['label' => 'title-supported-tickets-percentage-label'])
             ->add('title-costs', 'title', ['label' => 'costs-fields-main-title']);
