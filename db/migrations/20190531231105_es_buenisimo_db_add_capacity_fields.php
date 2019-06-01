@@ -32,7 +32,7 @@ class EsBuenisimoDbAddCapacityFields
   public function getUpSQL()
   {
      return "ALTER TABLE project ADD COLUMN capacity INT(11) NULL;
-            ALTER TABLE project ADD COLUMN tickets_to_support TINYINT(1) NULL;
+            ALTER TABLE project ADD COLUMN tickets_to_support TINYINT(1) NULL DEFAULT 1;
             ALTER TABLE project ADD COLUMN supported_tickets_number INT(11) NULL;"; 
   }
 

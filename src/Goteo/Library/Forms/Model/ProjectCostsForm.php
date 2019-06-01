@@ -36,6 +36,8 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
                 'message' => Text::get('validate-project-cost-description')
             ]);
+        }elseif(strpos($field, 'capacity') !== 0) {
+            $constraints[] = new Constraints\NotBlank();
         }
         return $constraints;
     }
@@ -150,10 +152,10 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                     'class' => 'form-control number-format',
                 ],
             ]) 
-            ->add('tickets-to-support', 'choice', [
+            ->add('tickets_to_support', 'choice', [
                 'data' => $project->tickets_to_support,
                 'label' => 'tickets-to-support-label',
-                'constraints' => $this->getConstraints('tickets-to-support'),
+                'constraints' => $this->getConstraints('tickets_to_support'),
                 'disabled' => $this->getReadonly(),
                 'expanded' => true,
                 'wrap_class' => '',
@@ -168,12 +170,11 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                       return ['class' => 'form-control show-tickets-number'];
                     }
                 }
-                //'required' => false,
             ])     
-            ->add('supported-tickets-number', 'text', [
+            ->add('supported_tickets_number', 'text', [
                 'data' => $project->supported_tickets_number,
                 'disabled' => $this->getReadonly(),
-                'constraints' => $this->getConstraints('supported-tickets-number'),
+                'constraints' => $this->getConstraints('supported_tickets_number'),
                 'label' => 'supported-tickets-number-label',
                 'attr' => [
                     'class' => 'form-control number-format',

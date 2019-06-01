@@ -177,9 +177,10 @@ namespace Goteo\Model {
             $one_round = 0,
             $help_cost = 0,
             $help_license= 0,
-            $callInstance = null // si está en una convocatoria
-
-
+            $callInstance = null, // si está en una convocatoria
+            $capacity,
+            $tickets_to_support,
+            $supported_tickets_number
         ;
 
 
@@ -548,6 +549,9 @@ namespace Goteo\Model {
                     project.execution_plan_url,
                     project.sustainability_model,
                     project.sustainability_model_url,
+                    project.capacity,
+                    project.tickets_to_support,
+                    project.supported_tickets_number,
                     project.id REGEXP '[0-9a-f]{32}' as draft,
                     node.name as node_name,
                     node.url as node_url,
@@ -1702,7 +1706,10 @@ namespace Goteo\Model {
                     'analytics_id',
                     'facebook_pixel',
                     'social_commitment',
-                    'social_commitment_description'
+                    'social_commitment_description',
+                    'capacity',
+                    'tickets_to_support',
+                    'supported_tickets_number',
                     );
 
                 try {
