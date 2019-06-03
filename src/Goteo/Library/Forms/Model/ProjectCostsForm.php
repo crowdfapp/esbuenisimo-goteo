@@ -143,8 +143,9 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
     public function createForm() {
         $project = $this->getModel();
         $builder = $this->getBuilder()
-            ->add('capacity', 'text', [
+            ->add('capacity', 'number', [
                 'data' => $project->capacity,
+                'grouping' => true,
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('capacity'),
                 'label' => 'total-capacity-question',
@@ -194,6 +195,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         if(!$form) $form = $this->getBuilder()->getForm();
 
         $data = array_intersect_key($form->getData(), $form->all());
+      
         // print_r($data);die;
         $project = $this->getModel();
         // $project->one_round = (bool) $data['one_round'];
@@ -229,7 +231,11 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         //     }
         //     $this->addCost($cost);
         // }
-
+      
+        $project->capacity = $data['capacity'];
+        $project->tickets_to_support = $data['tickets_to_support'];
+        $project->supported_tickets_number = $data['supported_tickets_number'];
+          
         $project->costs = $this->costs;
         // var_dump($project->costs);die;
         if (!$project->save($errors)) {
