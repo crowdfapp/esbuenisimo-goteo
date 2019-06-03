@@ -36,9 +36,32 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'pattern' => '/^\s*\S+(?:\s+\S+){9,}\s*$/',
                 'message' => Text::get('validate-project-cost-description')
             ]);
-        }elseif(strpos($field, 'capacity') !== 0) {
+        }
+        elseif($field ==  'capacity') {
             $constraints[] = new Constraints\NotBlank();
         }
+        elseif($field == 'supported_tickets_number') {
+            $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
+              $data = $context->getRoot()->getData();
+              
+              $capacity = $data['capacity'];
+              $tickets_to_support = $data['tickets_to_support'];
+              $supported_tickets_number = $data['supported_tickets_number'];
+              
+              if($tickets_to_support == 2 && $supported_tickets_number == '') {
+                  $context->buildViolation(Text::get('validate-supported-tickets-number-not-blank'))
+                    ->atPath($field)
+                    ->addViolation();
+              }
+              elseif($capacity <= $supported_tickets_number) {
+                  $context->buildViolation(Text::get('validate-supported-tickets-less-than-capacity'))
+                    ->atPath($field)
+                    ->addViolation();
+              }              
+             
+            });
+        } 
+      
         return $constraints;
     }
 
