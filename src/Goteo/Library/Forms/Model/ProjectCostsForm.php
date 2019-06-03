@@ -43,7 +43,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
         elseif($field == 'supported_tickets_number') {
             $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
               $data = $context->getRoot()->getData();
-              
+
               $capacity = $data['capacity'];
               $tickets_to_support = $data['tickets_to_support'];
               $supported_tickets_number = $data['supported_tickets_number'];

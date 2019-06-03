@@ -12,7 +12,7 @@
 
     <?= $this->form_row($form['tickets_to_support']) ?>      
     
-    <div class="supported-tickets-section" <?php if(empty($project->supported_tickets_number)): ?>style="display: none;"<?php endif; ?>>
+    <div class="supported-tickets-section" <?php if($project->tickets_to_support == 1): ?>style="display: none;"<?php endif; ?>>
       
       <div class="amount">
         <?= $this->form_row($form['supported_tickets_number']) ?>      
