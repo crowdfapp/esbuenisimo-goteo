@@ -11,6 +11,7 @@
 
 namespace Goteo\Library\Forms\Model;
 
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Goteo\Library\Forms\FormProcessorInterface;
 use Goteo\Library\Forms\AbstractFormProcessor;
 use Symfony\Component\Form\FormInterface;
@@ -37,30 +38,6 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'message' => Text::get('validate-project-cost-description')
             ]);
         }
-        elseif($field ==  'capacity') {
-            $constraints[] = new Constraints\NotBlank();
-        }
-        elseif($field == 'supported_tickets_number') {
-            $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
-              $data = $context->getRoot()->getData();
-
-              $capacity = $data['capacity'];
-              $tickets_to_support = $data['tickets_to_support'];
-              $supported_tickets_number = $data['supported_tickets_number'];
-              
-              if($tickets_to_support == 2 && $supported_tickets_number == '') {
-                  $context->buildViolation(Text::get('validate-supported-tickets-number-not-blank'))
-                    ->atPath($field)
-                    ->addViolation();
-              }
-              elseif($capacity <= $supported_tickets_number) {
-                  $context->buildViolation(Text::get('validate-supported-tickets-less-than-capacity'))
-                    ->atPath($field)
-                    ->addViolation();
-              }              
-             
-            });
-        } 
       
         return $constraints;
     }
@@ -173,7 +150,7 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'constraints' => $this->getConstraints('capacity'),
                 'label' => 'total-capacity-question',
                 'attr' => [
-                    'class' => 'form-control number-format',
+                    'class' => 'form-control capacity',
                 ],
             ]) 
             ->add('tickets_to_support', 'choice', [
@@ -195,15 +172,15 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                     }
                 }
             ])     
-            ->add('supported_tickets_number', 'text', [
+            ->add('supported_tickets_number', 'number', [
                 'data' => $project->supported_tickets_number,
+                'grouping' => true,
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('supported_tickets_number'),
                 'label' => 'supported-tickets-number-label',
                 'attr' => [
-                    'class' => 'form-control number-format',
+                    'class' => 'form-control supported_tickets_number',
                 ],
-                'required' => false,
             ]) 
             ->add('title-supported-tickets-percentage', 'title', ['label' => 'title-supported-tickets-percentage-label'])
             ->add('title-costs', 'title', ['label' => 'costs-fields-main-title']);
@@ -257,8 +234,8 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
       
         $project->capacity = $data['capacity'];
         $project->tickets_to_support = $data['tickets_to_support'];
-        $project->supported_tickets_number = $data['supported_tickets_number'];
-          
+        $project->supported_tickets_number = (int) $project->tickets_to_support == 1 ? 0 :  $data['supported_tickets_number'];
+                
         $project->costs = $this->costs;
         // var_dump($project->costs);die;
         if (!$project->save($errors)) {

@@ -725,4 +725,27 @@ $(document).ready(function(e) {
   $('.show-tickets-number').click(function(e) {
       $('.supported-tickets-section').fadeOut('slow');
   });
+
+  $('.capacity').on('keyup', function(e) {
+      
+    if(e.which >= 37 && e.which <= 40) return;
+    
+    num = $(this).val();
+    $(this).val(num.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    
+    $('.supported_tickets_number').val(0);
+    
+  });  
+  
+  
+  $('.supported_tickets_number').on('keyup', function(e) {
+      
+    if(e.which >= 37 && e.which <= 40) return;
+    
+    capacity = $('.capacity').val().replace(/,/g, '');
+    supported_tickets_number = $(this).val().replace(/,/g, '');
+    
+    supported_tickets_number = parseFloat(supported_tickets_number) > parseFloat(capacity) ? capacity - 1 : supported_tickets_number;
+    $(this).val(supported_tickets_number.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+  });  
 });
