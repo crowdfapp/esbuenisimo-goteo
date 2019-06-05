@@ -32,7 +32,7 @@
         }
         echo '</div>';
 
-        echo $this->insert('dashboard/project/partials/costs_bar', ['minimum' => $min, 'optimum' => $opt]);
+        //echo $this->insert('dashboard/project/partials/costs_bar', ['minimum' => $min, 'optimum' => $opt]);
 
         echo '<div class="form-group pull-right">'.$this->form_row($form['add-cost'], [], true).'</div>';
 
