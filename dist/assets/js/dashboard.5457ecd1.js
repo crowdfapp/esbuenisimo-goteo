@@ -700,13 +700,20 @@ $(function() {
 });
 
 $(window).load(function(e) {
-          $('#autoform_webs').selectize({
-            delimiter: ';',
-            plugins: ['restore_on_backspace', 'remove_button'],
-            persist: false,
-            createOnBlur: true,
-            create: true
-          })
+    $('#autoform_webs').selectize({
+      delimiter: ';',
+      plugins: ['restore_on_backspace', 'remove_button'],
+      persist: false,
+      createOnBlur: true,
+      create: true
+    });
+  
+    capacity = $('.capacity').val().replace(/,/g, '');
+    supported_tickets_number = $('.supported_tickets_number').val().replace(/,/g, '');
+  
+    title_supported_tickets_percentage = ((supported_tickets_number / capacity) * 100).toFixed(2);
+  
+    $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');  
 });
 
 $(document).ready(function(e) { 
@@ -735,6 +742,14 @@ $(document).ready(function(e) {
     
     $('.supported_tickets_number').val(0);
     
+    
+    capacity = $('.capacity').val().replace(/,/g, '');
+    supported_tickets_number = $('.supported_tickets_number').val().replace(/,/g, '');
+  
+    title_supported_tickets_percentage = ((supported_tickets_number / capacity) * 100).toFixed(2);
+  
+    $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');     
+    
   });  
   
   
@@ -746,6 +761,12 @@ $(document).ready(function(e) {
     supported_tickets_number = $(this).val().replace(/,/g, '');
     
     supported_tickets_number = parseFloat(supported_tickets_number) > parseFloat(capacity) ? capacity - 1 : supported_tickets_number;
+    title_supported_tickets_percentage = ((supported_tickets_number / capacity) * 100).toFixed(2);
+   
     $(this).val(supported_tickets_number.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    
+    console.log(title_supported_tickets_percentage);
+    
+    $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');
   });  
 });

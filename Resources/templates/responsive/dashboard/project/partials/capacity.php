@@ -18,7 +18,7 @@
         <?= $this->form_row($form['supported_tickets_number']) ?>      
       </div>    
 
-      <div class="col-xs-12">
+      <div class="col-xs-12 title-supported-tickets-percentage">
             <?= $this->form_row($form['title-supported-tickets-percentage']) ?> 
       </div>      
       
