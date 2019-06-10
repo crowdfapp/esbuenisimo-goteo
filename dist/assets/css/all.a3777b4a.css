@@ -15420,3 +15420,19 @@ form.create-project-form div.form-group {
 .selectize-control {
   padding: 0px !important;
 }
+
+.width-41-percent {
+  width: 41% !important;
+}
+
+.width-17-percent {
+  width: 17% !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-top-6px {
+    margin-top: 6px;
+}

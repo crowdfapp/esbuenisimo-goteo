@@ -112,16 +112,19 @@ class ProjectRewardsForm extends AbstractFormProcessor implements FormProcessorI
                 'label' => 'rewards-field-individual_reward-units',
                 'data' => (int)$reward->units,
                 'disabled' => $units_readonly,
-                'pre_addon' => '#',
                 'constraints' => $this->getConstraints("units$suffix"),
                 'required' => false,
+              
             ])
             ->add("unlimited$suffix", 'boolean', [
                 'label' => false,
                 'data' => (int)$reward->units === 0,
                 'disabled' => $units_readonly,
                 'required' => false,
-                'color' => 'cyan'
+                'color' => 'cyan',
+                'attr' => [
+                    'class' => 'form-control margin-top-6px',
+                ],
             ])
             // ->add("icon$suffix", 'choice', [
             //     'label' => 'rewards-field-icon',

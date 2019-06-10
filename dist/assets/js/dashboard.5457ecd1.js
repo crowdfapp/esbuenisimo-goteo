@@ -10,22 +10,7 @@ function parseVideoURL(e) {
 }
 $(function() {
     var t = function() {
-        $(".material-switch").on("click", function(e) {
-            e.preventDefault();
-            var t = $(this).find('input[type="checkbox"]');
-            if (!t.prop("disabled")) {
-                var a = $(this).data("confirm-yes"),
-                    o = $(this).data("confirm-no"),
-                    i = t.prop("checked");
-                if (i && o && !confirm(o)) return !1;
-                if (!i && a && !confirm(a)) return !1;
-                t.prop("checked", !i), t.change()
-            }
-        }), $(".material-switch").hammer().bind("swiperight", function() {
-            $(this).find('input[type="checkbox"]').prop("checked", !0)
-        }), $(".material-switch").hammer().bind("swipeleft", function() {
-            $(this).find('input[type="checkbox"]').prop("checked", !1)
-        }), $(".auto-save-property").each(function() {
+        $(".auto-save-property").each(function() {
             var o = $(this);
             o.is("input") || (o = o.find("input")).length && $(this).contents("label").css("cursor", "pointer");
             var t = $(this).data("type"),
@@ -398,7 +383,7 @@ $(function() {
             amount = $(this).closest(".panel-body").find(".amount input").val().replace(/\D/g, "");
             //console.log(amount);
           
-            total = total + parseInt(amount);
+            if(!!amount) total = total + parseInt(amount);
           
             //console.log(total);
           
@@ -716,12 +701,13 @@ $(window).load(function(e) {
       create: true
     });
   
-    capacity = $('.capacity').val().replace(/,/g, '');
-    supported_tickets_number = $('.supported_tickets_number').val().replace(/,/g, '');
-  
-    title_supported_tickets_percentage = ((supported_tickets_number / capacity) * 100).toFixed(2);
-  
-    $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');  
+    if(!!$('.capacity').val()) capacity = $('.capacity').val().replace(/,/g, '');
+    if(!!$('.supported_tickets_number').val()) supported_tickets_number = $('.supported_tickets_number').val().replace(/,/g, '');
+ 
+    if(!!$('.capacity').val() && !!$('.supported_tickets_number').val()) {
+        title_supported_tickets_percentage = ((supported_tickets_number / capacity) * 100).toFixed(2);
+        $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');
+    }
 });
 
 $(document).ready(function(e) { 

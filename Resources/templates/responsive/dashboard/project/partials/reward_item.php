@@ -6,14 +6,14 @@
 <div class="panel section-content" data-id="<?= $id ?>">
   <div class="panel-body reward-item">
       <div class="row">
-        <div class="amount"><?= $this->form_row($form["amount_$id"]) ?></div>
-        <div class="units fade <?= $unlimited ? 'out' : 'in' ?>"><?= $this->form_row($form["units_$id"]) ?></div>
-        <div class="unlimited form-group">
+        <div class="amount width-41-percent"><?= $this->form_row($form["amount_$id"]) ?></div>
+        <div class="unlimited width-17-percent form-group text-center">
             <label for="unlimited_<?= $id ?>"><?= $this->text('project-reward-unlimited') ?></label>
             <div class="input-wrap">
               <?= $this->form_row($form["unlimited_$id"]) ?>
           </div>
         </div>
+        <div class="amount width-41-percent"><?= $this->form_row($form["units_$id"]) ?></div>
       </div>
       <?= $this->form_row($form["reward_$id"]) ?>
       <?= $this->form_row($form["description_$id"]) ?>
