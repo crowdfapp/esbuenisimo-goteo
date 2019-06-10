@@ -29,11 +29,12 @@ $(function(){
         var $container = $('.dashboard-content>.inner-container');
         var $bar = $container.find('.costs-bar');
 
-        var min = opt = 0;
+        var min = opt = total = 0;
         $container.find('.amount input').each(function() {
             var amount = parseInt($(this).closest('.panel-body').find('.amount input').val(), 10);
             var required = parseInt($(this).closest('.panel-body').find('.required select').val(), 10);
             if(amount) {
+                total = total + amount;
                 if(required) {
                     min += amount;
                 } else {
@@ -44,7 +45,7 @@ $(function(){
         });
         $bar.find('.amount-min').html(min);
         $bar.find('.amount-opt').html(opt);
-        $bar.find('.amount-total').html(min + opt);
+        $bar.find('.amount-total').html(total);
         var per_min = Math.round(100*min/(min+opt));
         var per_opt = Math.round(100*opt/(min+opt));
         var min_w = parseInt($bar.find('.min').css('width', 'auto').width());

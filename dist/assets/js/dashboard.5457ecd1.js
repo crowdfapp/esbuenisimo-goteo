@@ -392,12 +392,20 @@ $(function() {
     var n = function() {
         var e = $(".dashboard-content>.inner-container"),
             t = e.find(".costs-bar"),
-            a = opt = 0;
+            a = opt = 0,
+            total = 0;
         e.find(".amount input").each(function() {
+            amount = $(this).closest(".panel-body").find(".amount input").val().replace(/\D/g, "");
+            //console.log(amount);
+          
+            total = total + parseInt(amount);
+          
+            //console.log(total);
+          
             var e = parseInt($(this).closest(".panel-body").find(".amount input").val(), 10),
                 t = parseInt($(this).closest(".panel-body").find(".required select").val(), 10);
             e && (t ? a += e : opt += e)
-        }), t.find(".amount-min").html(a), t.find(".amount-opt").html(opt), t.find(".amount-total").html(a + opt);
+        }), t.find(".amount-min").html(a), t.find(".amount-opt").html(opt), t.find(".amount-total").html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         var o = Math.round(100 * a / (a + opt)),
             i = Math.round(100 * opt / (a + opt)),
             n = parseInt(t.find(".min").css("width", "auto").width()),
