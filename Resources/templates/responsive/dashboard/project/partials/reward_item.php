@@ -13,7 +13,7 @@
               <?= $this->form_row($form["unlimited_$id"]) ?>
           </div>
         </div>
-        <div class="amount width-41-percent"><?= $this->form_row($form["units_$id"]) ?></div>
+        <div class="amount width-41-percent" style="display: none;"><?= $this->form_row($form["units_$id"]) ?></div>
       </div>
       <?= $this->form_row($form["reward_$id"]) ?>
       <?= $this->form_row($form["description_$id"]) ?>
