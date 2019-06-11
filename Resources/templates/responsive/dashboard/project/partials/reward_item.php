@@ -13,7 +13,7 @@
               <?= $this->form_row($form["unlimited_$id"]) ?>
           </div>
         </div>
-        <div class="amount reward-entry width-41-percent units hide"><?= $this->form_row($form["units_$id"]) ?></div>
+        <div class="amount reward-entry width-41-percent units <?php if($unlimited): ?> hide <?php endif; ?>"><?= $this->form_row($form["units_$id"]) ?></div>
       </div>
       <?= $this->form_row($form["reward_$id"]) ?>
       <?= $this->form_row($form["description_$id"]) ?>

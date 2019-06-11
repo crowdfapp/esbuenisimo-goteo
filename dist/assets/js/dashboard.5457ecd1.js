@@ -757,7 +757,7 @@ $(document).ready(function(e) {
    
     $(this).val(supported_tickets_number.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     
-    console.log(title_supported_tickets_percentage);
+    //console.log(title_supported_tickets_percentage);
     
     $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');
   });  
@@ -781,13 +781,19 @@ $(window).load(function(e) {
       
         $(".reward-cost input").each(function() {
             amount = $(this).val().replace(/\D/g, "");
-            console.log(amount);
+            //console.log(amount);
             if(!!amount) {
-                entries = $(this).parent('.reward-row').find('.reward-entry amount').val();
-                entries = 0;
-                rewardsTotal = rewardsTotal + parseFloat(amount); 
+                entry = $(this).closest('.reward-row').find('.reward-entry input').val();
+                entry = entry > 0 ? parseFloat(entry) : capacity;
+                //console.log(entry);
+                rewardsTotal = rewardsTotal + (parseFloat(amount) * entry); 
             }          
-            console.log(rewardsTotal);
+            //console.log(rewardsTotal);
         }), $(".rewards-total-collection").html(rewardsTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+      
+        percentage = rewardsTotal / total;
+        console.log(percentage);
+      
+        $(".rewards-percentage").html(parseFloat(percentage * 100).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     }
 });
