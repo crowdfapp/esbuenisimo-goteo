@@ -15429,10 +15429,36 @@ form.create-project-form div.form-group {
   width: 17% !important;
 }
 
+.width-33-percentage {
+  float: left;
+  width: 33%;
+}
+
 .text-center {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
 .margin-top-6px {
     margin-top: 6px;
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  display: block;
+}
+
+.cost-strong {
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1;
+    margin-bottom: 10px;
+    white-space: nowrap;
 }

@@ -26,6 +26,8 @@
             echo $this->insert('dashboard/project/partials/reward_item', ['reward' => $reward, 'form' => $form, 'show_taken' => $this->project->isApproved()]);
         }
         echo '</div>';
+  
+          echo $this->insert('dashboard/project/partials/rewards_total', ['totalCost' => 0, 'totalCollection' => 0, 'rewardsPercentage' => 0]);
 
         echo '<div class="form-group pull-right">'.$this->form_row($form['add-reward'], [], true).'</div>';
 

@@ -390,12 +390,12 @@ $(function() {
             var e = parseInt($(this).closest(".panel-body").find(".amount input").val(), 10),
                 t = parseInt($(this).closest(".panel-body").find(".required select").val(), 10);
             e && (t ? a += e : opt += e)
-        }), t.find(".amount-min").html(a), t.find(".amount-opt").html(opt), t.find(".amount-total").html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+        }), t.find(".amount-total").html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
         var o = Math.round(100 * a / (a + opt)),
             i = Math.round(100 * opt / (a + opt)),
-            n = parseInt(t.find(".min").css("width", "auto").width()),
-            r = parseInt(t.find(".opt").css("width", "auto").width()),
-            s = parseInt(t.find(".total").css("width", "auto").width());
+            n = parseInt(t.find(".min").width()),
+            r = parseInt(t.find(".opt").width()),
+            s = parseInt(t.find(".total").width());
         console.log("calc", a + "€", opt + "€", o + "%", i + "%", n + "px", r + "px", s + "px"), t.find(".min").css("width", o + "%").css({
             minWidth: n + "px",
             maxWidth: "calc(" + o + "% - " + (s + r) + "px)"
@@ -489,7 +489,7 @@ $(function() {
             t = e.find('input[type="checkbox"]');
         if (!t.prop("disabled")) {
             var a = e.find(".units");
-            t.prop("checked") ? a.addClass("out").removeClass("in") : (a.addClass("in").removeClass("out"), a.find('input[type="text"]').select())
+            t.prop("checked") ? a.addClass("hide").removeClass("display") : (a.addClass("display").removeClass("hide"), a.find('input[type="text"]').select())
         }
     }), $("form.autoform").on("change", ".reward-item .units input", function() {
         $(this).closest(".reward-item").find(".material-switch").find('input[type="checkbox"]').prop("checked", 0 == $(this).val())
@@ -763,4 +763,19 @@ $(document).ready(function(e) {
     
     $('.title-supported-tickets-percentage h4').html('EsBuenisimo financiará el ' + title_supported_tickets_percentage + '% de tu proyecto');
   });  
+});
+
+$(window).load(function(e) {
+  
+    totalCostString = $('.totalCostString').val();
+  
+    if(!!totalCostString) {      
+        costs = totalCostString.split(','); total = 0;
+        $(costs).each(function(index, cost) {
+            total += parseInt(cost);
+        });
+      
+        //console.log(total);
+        $('.rewards-total-cost').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    }
 });
