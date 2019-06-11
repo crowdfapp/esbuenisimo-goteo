@@ -382,11 +382,9 @@ $(function() {
         e.find(".amount input").each(function() {
             amount = $(this).closest(".panel-body").find(".amount input").val().replace(/\D/g, "");
             //console.log(amount);
-          
             if(!!amount) total = total + parseInt(amount);
           
             //console.log(total);
-          
             var e = parseInt($(this).closest(".panel-body").find(".amount input").val(), 10),
                 t = parseInt($(this).closest(".panel-body").find(".required select").val(), 10);
             e && (t ? a += e : opt += e)
@@ -777,5 +775,12 @@ $(window).load(function(e) {
       
         //console.log(total);
         $('.rewards-total-cost').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+        $(".reward-cost input").each(function() {
+            amount = $(this).val().replace(/\D/g, "");
+            console.log(amount);
+            if(!!amount) total = total + parseInt(amount);          
+            //console.log(total);
+        }), $(".rewards-total-collection").html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     }
 });

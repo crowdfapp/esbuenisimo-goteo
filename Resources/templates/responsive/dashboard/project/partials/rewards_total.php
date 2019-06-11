@@ -1,5 +1,6 @@
 <?php
 $costs = $this->project->costs;
+$capacity = (int) $this->project->capacity;
 $totalCostString = [];
 foreach($costs as $cost) {
   $totalCostString[] = $cost->amount;
@@ -14,6 +15,7 @@ $totalCostString = implode(',', $totalCostString);
          <span class="cost-strong"><?= $this->currency($this->project->currency) ?> <strong class="rewards-total-cost"><?= euro_format($totalCost) ?></strong></span>
     </div>
     <div class="width-33-percentage text-center">
+        <input type="hidden" id="capacity" class="capacity" value="<?php echo $capacity; ?>" />
         <?= $this->text('rewards-total-collection') ?>
          <span class="cost-strong"><?= $this->currency($this->project->currency) ?> <strong class="rewards-total-collection"><?= euro_format($totalCollection) ?></strong></span>
     </div>
