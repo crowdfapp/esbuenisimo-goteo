@@ -5,7 +5,7 @@
 ?>
 <div class="panel section-content" data-id="<?= $id ?>">
   <div class="panel-body reward-item">
-      <div class="row">
+      <div class="row reward-row">
         <div class="amount reward-cost width-41-percent"><?= $this->form_row($form["amount_$id"]) ?></div>
         <div class="unlimited width-17-percent form-group text-center">
             <label for="unlimited_<?= $id ?>"><?= $this->text('project-reward-unlimited') ?></label>

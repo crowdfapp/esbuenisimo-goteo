@@ -776,11 +776,18 @@ $(window).load(function(e) {
         //console.log(total);
         $('.rewards-total-cost').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 
+        rewardsTotal = 0;
+        capacity = parseFloat($('.capacity').val());
+      
         $(".reward-cost input").each(function() {
             amount = $(this).val().replace(/\D/g, "");
             console.log(amount);
-            if(!!amount) total = total + parseInt(amount);          
-            //console.log(total);
-        }), $(".rewards-total-collection").html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+            if(!!amount) {
+                entries = $(this).parent('.reward-row').find('.reward-entry amount').val();
+                entries = 0;
+                rewardsTotal = rewardsTotal + parseFloat(amount); 
+            }          
+            console.log(rewardsTotal);
+        }), $(".rewards-total-collection").html(rewardsTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     }
 });
