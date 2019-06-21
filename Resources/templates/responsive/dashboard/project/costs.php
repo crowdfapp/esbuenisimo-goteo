@@ -34,9 +34,11 @@
 
         echo $this->insert('dashboard/project/partials/costs_total', ['total' => 0]);
 
-        echo '<div class="form-group pull-right">'.$this->form_row($form['add-cost'], [], true).'</div>';
-
-        echo $submit;
+        echo '<div class="form-group">'.$this->form_row($form['add-cost'], [], true).'</div>';
+  
+         echo '<div class="clearfix"></div>';
+  
+        echo '<div class="form-group pull-right">'.$submit.'</div>';
 
         echo $this->form_end($form);
 

@@ -376,15 +376,16 @@ $(function() {
 }), $(function() {
     var n = function() {
         var e = $(".dashboard-content>.inner-container"),
+            cl = $('.cost-list'),
             t = e.find(".costs-bar"),
             a = opt = 0,
             total = 0;
-        e.find(".amount input").each(function() {
+        cl.find(".amount input").each(function() {
             amount = $(this).closest(".panel-body").find(".amount input").val().replace(/\D/g, "");
             //console.log(amount);
             if(!!amount) total = total + parseInt(amount);
           
-            //console.log(total);
+            console.log(total);
             var e = parseInt($(this).closest(".panel-body").find(".amount input").val(), 10),
                 t = parseInt($(this).closest(".panel-body").find(".required select").val(), 10);
             e && (t ? a += e : opt += e)

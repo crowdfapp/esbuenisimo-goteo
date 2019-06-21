@@ -97,20 +97,20 @@ class ProjectCostsForm extends AbstractFormProcessor implements FormProcessorInt
                 'constraints' => $this->getConstraints("type$suffix"),
                 'required' => true,
             ])
-            ->add("required$suffix", 'choice', [
-                'label' => 'costs-field-required_cost',
-                'disabled' => $this->getReadonly(),
-                'data' => (int)$cost->required,
-                'choices' => [
-                    '1' => Text::get('costs-field-required_cost-yes'),
-                    '0' => Text::get('costs-field-required_cost-no')
-                ],
-                'required' => true,
-            ])
-//             ->add("required$suffix", 'hidden', [
-//                 'data' => 1,
+//             ->add("required$suffix", 'choice', [
+//                 'label' => 'costs-field-required_cost',
+//                 'disabled' => $this->getReadonly(),
+//                 'data' => (int)$cost->required,
+//                 'choices' => [
+//                     '1' => Text::get('costs-field-required_cost-yes'),
+//                     '0' => Text::get('costs-field-required_cost-no')
+//                 ],
 //                 'required' => true,
 //             ])
+            ->add("required$suffix", 'hidden', [
+                'data' => 1,
+                'required' => true,
+            ])
             ->add("cost$suffix", 'text', [
                 // 'label' => 'costs-field-cost',
                 'label' => 'regular-title',
