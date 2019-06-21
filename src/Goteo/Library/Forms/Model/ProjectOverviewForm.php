@@ -180,7 +180,7 @@ class ProjectOverviewForm extends AbstractFormProcessor implements FormProcessor
                 'label' => 'overview-field-social-category',
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('social_commitment'),
-                'required' => false,
+                //'required' => false,
                 // 'wrap_class' => 'col-sm-3 col-xs-4',
                 'choices' => array_map(function($el){
                         return [$el->id => $el->name];
