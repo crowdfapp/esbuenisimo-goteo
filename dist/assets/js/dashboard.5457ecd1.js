@@ -385,7 +385,7 @@ $(function() {
             //console.log(amount);
             if(!!amount) total = total + parseInt(amount);
           
-            console.log(total);
+            //console.log(total);
             var e = parseInt($(this).closest(".panel-body").find(".amount input").val(), 10),
                 t = parseInt($(this).closest(".panel-body").find(".required select").val(), 10);
             e && (t ? a += e : opt += e)
@@ -710,7 +710,7 @@ $(window).load(function(e) {
 });
 
 $(document).ready(function(e) { 
-  $('.number-format').on('keyup', function(e) {
+  $('.number-format').bind('keyup', function(e) {
     
       if(e.which >= 37 && e.which <= 40) return;
     
@@ -785,7 +785,7 @@ $(window).load(function(e) {
             //console.log(amount);
             if(!!amount) {
                 entry = $(this).closest('.reward-row').find('.reward-entry input').val();
-                entry = entry > 0 ? parseFloat(entry) : capacity;
+                entry = entry > 0 ? parseFloat(entry) : 1;
                 //console.log(entry);
                 rewardsTotal = rewardsTotal + (parseFloat(amount) * entry); 
             }          

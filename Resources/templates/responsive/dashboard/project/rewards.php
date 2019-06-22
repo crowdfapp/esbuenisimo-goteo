@@ -31,7 +31,9 @@
 
         echo '<div class="form-group pull-right">'.$this->form_row($form['add-reward'], [], true).'</div>';
 
-        echo $submit;
+        echo '<div class="clearfix"></div>';
+  
+        echo '<div class="form-group pull-right">'.$submit.'</div>';
 
         echo $this->form_end($form);
 

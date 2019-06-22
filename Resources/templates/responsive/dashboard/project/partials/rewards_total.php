@@ -8,7 +8,7 @@ foreach($costs as $cost) {
 $totalCostString = implode(',', $totalCostString);
 ?>
 
-<div class="costs-bar spacer-10">
+<div class="costs-bar rewards-bar spacer-10">
     <div class="width-33-percentage">
         <input type="hidden" id="totalCostString" class="totalCostString" value="<?php echo $totalCostString; ?>" />
         <?= $this->text('rewards-total-cost') ?>
