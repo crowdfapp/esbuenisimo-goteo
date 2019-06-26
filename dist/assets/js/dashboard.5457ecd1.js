@@ -446,6 +446,9 @@ $(function() {
         })
     })
 }), $(function() {
+    $(".autoform").on("change", ".reward-item .amount input", function() {
+        calculateRewards();
+    }),
     $(".autoform").on("click", ".add-reward", function(e) {
         e.preventDefault();
         var t = $(this).closest("form"),
@@ -477,7 +480,7 @@ $(function() {
         }).done(function() {
             i.slideUp(function() {
                 $(this).remove()
-            })
+            }), calculateRewards();
         }).fail(function(e) {
             console.log("An error occurred.", e), alert(e.responseText)
         }).always(function() {
@@ -769,8 +772,7 @@ $(document).ready(function(e) {
   });  
 });
 
-$(window).load(function(e) {
-  
+function calculateRewards() {
     //Get total cost from costs section.
     totalCostString = $('.totalCostString').val();
     costs = !!totalCostString ? totalCostString.split(',') : 0; total = 0;
@@ -796,4 +798,8 @@ $(window).load(function(e) {
     percentage = (rewardsTotal - total) / total;
     //console.log(percentage);
     $(".rewards-percentage").html(parseFloat(percentage * 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+}
+
+$(window).load(function(e) {
+     calculateRewards();
 });
