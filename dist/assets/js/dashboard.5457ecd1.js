@@ -479,8 +479,8 @@ $(function() {
             data: o
         }).done(function() {
             i.slideUp(function() {
-                $(this).remove()
-            }), calculateRewards();
+                $(this).remove(), calculateRewards();
+            })
         }).fail(function(e) {
             console.log("An error occurred.", e), alert(e.responseText)
         }).always(function() {
@@ -787,7 +787,7 @@ function calculateRewards() {
   
     $(".reward-cost input").each(function() {
         reward = !!$(this).val() ? parseFloat($(this).val().replace(/\D/g, "")) : 0;
-        //console.log(reward);
+        console.log(reward);
         entry = $(this).closest('.reward-row').find('.reward-entry input').val();
         entry = entry > 0 ? parseFloat(entry) : capacity;
         //console.log(entry);
