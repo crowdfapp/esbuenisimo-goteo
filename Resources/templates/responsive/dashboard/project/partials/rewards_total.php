@@ -3,7 +3,7 @@ $costs = $this->project->costs;
 $capacity = (int) $this->project->capacity;
 $totalCostString = [];
 foreach($costs as $cost) {
-  $totalCostString[] = $cost->amount;
+  $totalCostString[] = (int) $cost->amount;
 }
 $totalCostString = implode(',', $totalCostString);
 ?>

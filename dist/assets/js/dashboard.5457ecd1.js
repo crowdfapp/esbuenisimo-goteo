@@ -418,7 +418,7 @@ $(function() {
             data: o
         }).done(function(e) {
             var t = $(e);
-            a.append(t.hide()), t.slideDown()
+            a.append(t.hide()), t.slideDown(), formatNumber()
         }).fail(function(e) {
             a.append('<p class="text-danger">' + e.responseText + "</p>")
         }).always(function() {
@@ -457,7 +457,7 @@ $(function() {
             data: o
         }).done(function(e) {
             var t = $(e);
-            a.append(t.hide()), t.slideDown()
+            a.append(t.hide()), t.slideDown(), formatNumber()
         }).fail(function(e) {
             a.append('<p class="text-danger">' + e.responseText + "</p>")
         }).always(function() {
@@ -709,14 +709,19 @@ $(window).load(function(e) {
     }
 });
 
-$(document).ready(function(e) { 
-  $('.number-format').bind('keyup', function(e) {
+function formatNumber() {
+  $('.number-format').on('keyup', function(e) {
     
       if(e.which >= 37 && e.which <= 40) return;
     
       num = $(this).val();
       $(this).val(num.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ","));
   });
+}
+
+$(document).ready(function(e) { 
+  
+  formatNumber();
   
   $('.hide-tickets-number').click(function(e) {
       $('.supported-tickets-section').fadeIn('slow');
@@ -766,35 +771,29 @@ $(document).ready(function(e) {
 
 $(window).load(function(e) {
   
+    //Get total cost from costs section.
     totalCostString = $('.totalCostString').val();
+    costs = !!totalCostString ? totalCostString.split(',') : 0; total = 0;
+    $(costs).each(function(index, cost) {
+        total += parseInt(cost);
+    });
+    //console.log(total);
+    $('.rewards-total-cost').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
   
-    if(!!totalCostString) {      
-        costs = totalCostString.split(','); total = 0;
-        $(costs).each(function(index, cost) {
-            total += parseInt(cost);
-        });
-      
-        //console.log(total);
-        $('.rewards-total-cost').html(total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-
-        rewardsTotal = 0;
-        capacity = parseFloat($('.capacity').val());
-      
-        $(".reward-cost input").each(function() {
-            amount = $(this).val().replace(/\D/g, "");
-            //console.log(amount);
-            if(!!amount) {
-                entry = $(this).closest('.reward-row').find('.reward-entry input').val();
-                entry = entry > 0 ? parseFloat(entry) : 1;
-                //console.log(entry);
-                rewardsTotal = rewardsTotal + (parseFloat(amount) * entry); 
-            }          
-            //console.log(rewardsTotal);
-        }), $(".rewards-total-collection").html(rewardsTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-      
-        percentage = rewardsTotal / total;
-        console.log(percentage);
-      
-        $(".rewards-percentage").html(parseFloat(percentage * 100).toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-    }
+    rewardsTotal = 0;
+    capacity = parseFloat($('.capacity').val());
+  
+    $(".reward-cost input").each(function() {
+        reward = !!$(this).val() ? parseFloat($(this).val().replace(/\D/g, "")) : 0;
+        //console.log(reward);
+        entry = $(this).closest('.reward-row').find('.reward-entry input').val();
+        entry = entry > 0 ? parseFloat(entry) : capacity;
+        //console.log(entry);
+        rewardsTotal = rewardsTotal + (parseFloat(reward) * entry); 
+        //console.log(rewardsTotal);       
+    }), $(".rewards-total-collection").html(rewardsTotal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+  
+    percentage = (rewardsTotal - total) / total;
+    //console.log(percentage);
+    $(".rewards-percentage").html(parseFloat(percentage * 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
 });
