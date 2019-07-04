@@ -153,8 +153,8 @@ db:
     host:     localhost # Database host
     port:     3306      # Database port
     charset:  utf8     # Database charset
-    database: felipe02_goteo     # Database schema (database name)
-    username: felipe02_usuario     # Database user for the goteo database
+    database: sistemas_esbuenisimo_web     # Database schema (database name)
+    username: sistemas_ebroot     # Database user for the goteo database
     password: DyCEnA4RpXdZS01W  # Password for the goteo database
 
     # SELECT queries caching
