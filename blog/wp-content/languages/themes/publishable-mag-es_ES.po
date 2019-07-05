@@ -1,0 +1,661 @@
+# Translation of Themes - Publishable Mag in Spanish (Spain)
+# This file is distributed under the same license as the Themes - Publishable Mag package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2018-10-15 19:53:58+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es\n"
+"Project-Id-Version: Themes - Publishable Mag\n"
+
+#. Description of the plugin/theme
+msgid "It does not matter if you want to create classic news website, online editorial magazine, a personal modern lifestyle blog or an affilaite review website. Publishable Magazine offers limitless customization. The theme is a perfect combination of beautiful and professional. There is a ton of ad space, you can use the header widgets to place ads banners and adsense in case you need to earn money as an affiliate - No matter if it is image ads advertisment or video advertising, all ad networks work such as Google DFP Ads, adsense and more. Our theme is made for the search engines, so you can easily beat the other bloggers and newspapers in Google with our fast and SEO optimized theme. If you wish to start blogging about business or travel for example then our responsive and flexible design is perfect - It is elegant and you can make it dark, white, minimal, boxed, flat, clean or advanced and full of sidebar widgets if you wish. Being creative and setting up a theme has never been so simple."
+msgstr "No importa si quieres crear una web clásica de noticias , una revista digital, un blog personal de estilo de vida moderno o un sitio web de reseñas para afiliación. Publishable Magazine ofrece una personalización ilimitada. El tema es una combinación perfecta entre hermoso y profesional. Hay un montón de espacio publicitario, puedes utilizar los widgets de cabacera para colocar banners de anuncios y Adsense en caso de que necesites ganar dinero como un afiliado-no importa si se trata de anuncios de imagen o publicidad de vídeo, todas las redes de anuncios funcionan como Google DFP Ads , Adsense y más. Nuestro tema está hecho para los motores de búsqueda, por lo que fácilmente puedes vencer a los otros bloggers y periódicos en Google con nuestro tema rápido y optimizado para SEO. Si quieres comenzar a bloguear sobre negocios o viajar por ejemplo, entonces nuestro diseño flexible y adaptable es perfecto-es elegante y puedes hacerlo oscuro, blanco, mínimo, encajonado, plano, limpio o avanzado y lleno de widgets de la barra lateral si así lo deseas. Ser creativo y configurar un tema nunca ha sido tan sencillo."
+
+#. #-#-#-#-#  publishable-mag.pot (Publishable Mag 4.2)  #-#-#-#-#
+#. Theme Name of the plugin/theme
+#: functions.php:701
+msgid "Publishable Mag"
+msgstr "Publishable Mag"
+
+#: functions.php:803
+msgid "Custom Primary Color"
+msgstr "Color de Fondo"
+
+#: functions.php:798
+msgid "Numbered Pagination"
+msgstr "Paginación Numerada"
+
+#: functions.php:784 functions.php:789 functions.php:794 functions.php:799
+#: functions.php:804 functions.php:809 functions.php:814 functions.php:819
+#: functions.php:824 functions.php:829 functions.php:834 functions.php:839
+#: functions.php:844 functions.php:849 functions.php:854 functions.php:859
+#: functions.php:864
+msgid "No"
+msgstr "No"
+
+#: functions.php:783
+msgid "Premium Support"
+msgstr "Soporte premium"
+
+#: functions.php:768 functions.php:769 functions.php:773 functions.php:774
+#: functions.php:778 functions.php:779 functions.php:785 functions.php:790
+#: functions.php:795 functions.php:800 functions.php:805 functions.php:810
+#: functions.php:815 functions.php:820 functions.php:825 functions.php:830
+#: functions.php:835 functions.php:840 functions.php:845 functions.php:850
+#: functions.php:855 functions.php:860 functions.php:865
+msgid "Yes"
+msgstr "Si"
+
+#: functions.php:767
+msgid "Page Background Image"
+msgstr "Imagen de fondo de la página"
+
+#: functions.php:761
+msgid "Premium Version"
+msgstr "Versión Premium"
+
+#: functions.php:760
+msgid "Basic Version"
+msgstr "Versión Básica"
+
+#: functions.php:745
+msgid "Free Vs Premium"
+msgstr "Gratis vs Premium"
+
+#: functions.php:734 justinadlock-customizer-button/class-customize.php:76
+msgid "Premium Edition"
+msgstr "Edición Premium"
+
+#: functions.php:728
+msgid "View All Themes"
+msgstr "Ver todos los temas"
+
+#: functions.php:716 functions.php:719
+msgid "Contact Support"
+msgstr "Contacta con soporte"
+
+#: functions.php:269
+msgid " Superb Themes"
+msgstr " Superb Themes"
+
+#: functions.php:269
+msgid " | WordPress Theme by"
+msgstr " | Tema de WordPress por"
+
+#: functions.php:828
+msgid "Custom Copyright Text\t"
+msgstr "Texto de copyright personalizado\t"
+
+#: functions.php:823
+msgid "Custom Header Background Color"
+msgstr "Color de fondo de la cabecera personalizado"
+
+#: functions.php:793
+msgid "Custom Primary Color\t"
+msgstr "Color primario personalizado\t"
+
+#: functions.php:726
+msgid "Do you like our concept but feel like the design doesn't fit your need? Then check out our website for more designs."
+msgstr "¿Te gusta nuestro concepto, pero te sientes que el diseño no se ajusta a tus necesidades? Entonces visita nuestro sitio web para más diseños."
+
+#: functions.php:777
+msgid "Excerpts/Full Posts on Homepage"
+msgstr "Extractos/Entradas completas en página de inicio"
+
+#: functions.php:833
+msgid "Fullwidth Mode\t"
+msgstr "Modo ancho completo\t"
+
+#: justinadlock-customizer-button/class-customize.php:77
+msgid "Get All Features"
+msgstr "Obtener todas las funcionalidades"
+
+#: functions.php:717
+msgid "Getting started with a new theme can be difficult, if you have issues with Publishable Mag then throw us an email."
+msgstr "Empezar con un nuevo tema puede ser difícil, si tienes problemas con la Publishable Mag, envíanos un correo electrónico."
+
+#: functions.php:863
+msgid "Hide/Show Author Box"
+msgstr "Ocultar/mostrar la caja del autor"
+
+#: functions.php:848
+msgid "Hide/Show Breadcrumbs\t"
+msgstr "Ocultar/Mostrar miga de pan\t"
+
+#: functions.php:858
+msgid "Hide/Show Related Posts"
+msgstr "Ocultar/mostrar mensajes relacionados"
+
+#: functions.php:853
+msgid "Hide/Show Tags Section"
+msgstr "Ocultar/mostrar sección de etiquetas"
+
+#: functions.php:735
+msgid "If you enjoy Publishable Mag and want to take your website to the next step, then check out our premium edition here."
+msgstr "Si te gusta Publishable Mag y quieres llevar tu sitio web al siguiente nivel, entonces echa un échale un vistazo a nuestra edición Premium aquí."
+
+#: functions.php:808
+msgid "Improved Search Engine Optimizaiton (SEO)"
+msgstr "Mejorada la optimización para motores de búsqueda (SEO)"
+
+#: functions.php:813
+msgid "More Language Meta Data"
+msgstr "Más Metadatos de idioma"
+
+#: functions.php:843
+msgid "Next/Previous Pagination"
+msgstr "Paginación siguiente/anterior"
+
+#: functions.php:748
+msgid "Read Full Description"
+msgstr "Leer descripción completa"
+
+#: functions.php:838
+msgid "Right or Left Sidebar"
+msgstr "Barra lateral derecha o izquierda"
+
+#: functions.php:818
+msgid "SEO Plugins & Page Speed Plugins"
+msgstr "Plugins de SEO y velocidad de página"
+
+#: functions.php:759
+msgid "Theme Feature"
+msgstr "Funcionalidad del tema"
+
+#: functions.php:751
+msgid "View Theme Demo"
+msgstr "Ver Demo del tema"
+
+#: functions.php:710
+msgid "Welcome to Publishable Mag!"
+msgstr "¡ Bienvenido a Publishable Mag!"
+
+#: functions.php:788
+msgid "Post Widgets Extended"
+msgstr "Widgets de entradas extendidos"
+
+#: functions.php:772
+msgid "Header Background Image & Logo Image / Text"
+msgstr "Imagen/texto de fondo del logo y de la imagen de la cabecera"
+
+#: functions.php:725
+msgid "View our other themes"
+msgstr "Ver nuestros otros temas"
+
+#: functions.php:268
+msgid "Y"
+msgstr "Y"
+
+#: single.php:87
+msgid "About The Author"
+msgstr "Sobre el Autor"
+
+#: single.php:40
+msgid "Tags"
+msgstr "Etiquetas"
+
+#: single.php:37
+msgid "Previous"
+msgstr "Anterior"
+
+#: single.php:37
+msgid "Next"
+msgstr "Siguiente"
+
+#: sidebar.php:31
+msgid "Meta"
+msgstr "Meta"
+
+#: sidebar.php:23
+msgid "Archives"
+msgstr "Archivo"
+
+#: searchform.php:4 sidebar.php:17
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:3
+msgid "Search this site..."
+msgstr "Busca en este sitio..."
+
+#: search.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo sentimos, pero no se encontró ninguna coincidencia con sus términos de búsqueda. Por favor, pruebe de nuevo con otras palabras clave."
+
+#: search.php:21
+msgid "Nothing Found"
+msgstr "Nada encontrado"
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:117
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: inc/template-tags.php:110
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: inc/template-tags.php:110
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#. translators: translate which tags it was posted in
+#: inc/template-tags.php:104
+msgid "Tagged %1$s"
+msgstr "Etiquetado con %1$s"
+
+#. translators: translate which category it was posted in
+#: inc/template-tags.php:97
+msgid "Posted in %1$s"
+msgstr "Publicada en %1$s"
+
+#. translators: translate post author text
+#: inc/template-tags.php:77
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+#. translators: translate when a date was posted
+#: inc/template-tags.php:71
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Publicado el %s"
+
+#: inc/template-tags.php:36
+msgid "Posts navigation"
+msgstr "Ir a las entradas"
+
+#: inc/customizer.php:241
+msgid "Related Posts Section"
+msgstr "Sección de publicaciones relacionadas"
+
+#: inc/customizer.php:211 inc/customizer.php:229 inc/customizer.php:247
+#: inc/customizer.php:265
+msgid "ON"
+msgstr "ON"
+
+#: inc/customizer.php:210 inc/customizer.php:228 inc/customizer.php:246
+#: inc/customizer.php:264
+msgid "OFF"
+msgstr "OFF"
+
+#: inc/customizer.php:191
+msgid "Single Post Settings"
+msgstr "Ajustes de entrada individual"
+
+#: inc/customizer.php:180
+msgid "Copyright Text"
+msgstr "Copyright Text"
+
+#: inc/customizer.php:168
+msgid "Footer"
+msgstr "Pie"
+
+#: inc/customizer.php:156
+msgid "Numbered"
+msgstr "Numerados"
+
+#: inc/customizer.php:155
+msgid "Next/Previous"
+msgstr "Siguiente/Anterior"
+
+#: inc/customizer.php:133 inc/customizer.php:150
+msgid "Pagination Type"
+msgstr "Tipo de paginaci&oacute;n"
+
+#: inc/customizer.php:123
+msgid "Header"
+msgstr "Cabecera"
+
+#: inc/customizer.php:113
+msgid "Colors"
+msgstr "Colores"
+
+#: inc/customizer.php:105
+msgid "Full Posts"
+msgstr "Entradas completas"
+
+#: inc/customizer.php:104
+msgid "Excerpts"
+msgstr "Extractos"
+
+#: inc/customizer.php:87
+msgid "Secondary Color Scheme"
+msgstr "Esquema secundario de color"
+
+#: inc/customizer.php:68
+msgid "Header Background Color"
+msgstr "Color de Fondo de la Cabecera"
+
+#: inc/customizer.php:56
+msgid "Left Sidebar"
+msgstr "Barra lateral izquierda"
+
+#: inc/customizer.php:55
+msgid "Right Sidebar"
+msgstr "Barra lateral derecha"
+
+#: inc/customizer.php:51
+msgid "Sidebar Position"
+msgstr "Posición de Barra Lateral"
+
+#: inc/customizer.php:37
+msgid "General Layout"
+msgstr "Diseño general"
+
+#: header.php:55
+msgid "Menu"
+msgstr "Menú"
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: functions.php:632
+msgid "Featured"
+msgstr "Destacados"
+
+#: functions.php:580
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d elemento"
+msgstr[1] "%d elementos"
+
+#: functions.php:580
+msgid "View your shopping cart"
+msgstr "Ver tu carrito de la compra"
+
+#. Translators: If there are characters in your language that are not supported
+#. by Monda, translate this to 'off'. Do not translate into your own language.
+#: functions.php:454
+msgctxt "Monda font: on or off"
+msgid "on"
+msgstr "en"
+
+#: functions.php:363
+msgid "Home"
+msgstr "Página de Inicio"
+
+#: functions.php:346 functions.php:737
+msgid "Read More"
+msgstr "Leer Más"
+
+#: functions.php:299
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está pendiente de moderación."
+
+#: functions.php:294
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: functions.php:273
+msgid "Back to Top"
+msgstr "Volver arriba"
+
+#: functions.php:155
+msgid "Appears on single product pages."
+msgstr "Aparece en las páginas de productos individuales."
+
+#: functions.php:154
+msgid "Single Product Sidebar"
+msgstr "Barra lateral de la página de producto"
+
+#: functions.php:145
+msgid "Shop Page Sidebar"
+msgstr "Barra lateral de la página de tienda"
+
+#: functions.php:133
+msgid "Footer 3"
+msgstr "Pie de página 3"
+
+#: functions.php:122
+msgid "Footer 2"
+msgstr "Pie de página 2"
+
+#: functions.php:111
+msgid "Footer 1"
+msgstr "Pie de página 1"
+
+#: functions.php:100
+msgid "Header Ad"
+msgstr "Anuncio del encabezado"
+
+#: functions.php:89
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:50
+msgid "Primary"
+msgstr "Primario"
+
+#: functions/widget-social.php:170
+msgid "Open links in new window?"
+msgstr "¿Abrir enlaces en una nueva ventana?"
+
+#: functions/widget-social.php:168
+msgid "Title:"
+msgstr "Titulo:"
+
+#: functions/widget-social.php:145
+msgid "Show profile icons."
+msgstr "Mostrar iconos de perfil."
+
+#: functions/widget-social.php:138
+msgid "RSS URI"
+msgstr "URI de RSS"
+
+#: functions/widget-social.php:134
+msgid "Email URI"
+msgstr "URI de Email"
+
+#: functions/widget-social.php:130
+msgid "Skype URI"
+msgstr "URI de Skype"
+
+#: functions/widget-social.php:126
+msgid "Dropbox URI"
+msgstr "URI de Dropbox"
+
+#: functions/widget-social.php:122
+msgid "Reddit URI"
+msgstr "URI de Reddit"
+
+#: functions/widget-social.php:118
+msgid "FourSquare URI"
+msgstr "URI de FourSquare"
+
+#: functions/widget-social.php:114
+msgid "YouTube URI"
+msgstr "URI de YouTube"
+
+#: functions/widget-social.php:110
+msgid "GitHub URI"
+msgstr "URI de GitHub"
+
+#: functions/widget-social.php:106
+msgid "Tumblr URI"
+msgstr "URI de Tumblr"
+
+#: functions/widget-social.php:102
+msgid "StumbleUpon URI"
+msgstr "URI de StumbleUpon"
+
+#: functions/widget-social.php:98
+msgid "Vimeo URI"
+msgstr "URI de Vimeo"
+
+#: functions/widget-social.php:94
+msgid "Twitter URI"
+msgstr "URI de Twitter"
+
+#: functions/widget-social.php:90
+msgid "Soundcloud URI"
+msgstr "URI de Soundcloud"
+
+#: functions/widget-social.php:82
+msgid "Dribbble URI"
+msgstr "URI de Dribbble"
+
+#: functions/widget-social.php:78
+msgid "Instagram URI"
+msgstr "URI de Instagram"
+
+#: functions/widget-social.php:74
+msgid "Pinterest URI"
+msgstr "URI de Pinterest"
+
+#: functions/widget-social.php:70
+msgid "Google+ URI"
+msgstr "URI de Google+"
+
+#: functions/widget-social.php:66
+msgid "Flickr URI"
+msgstr "URI de Flickr"
+
+#: functions/widget-social.php:62
+msgid "Behance URI"
+msgstr "URI de Behance"
+
+#: comments.php:48
+msgid "Website"
+msgstr "Web"
+
+#: comments.php:45
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+#: comments.php:42
+msgid "Name"
+msgstr "Nombre"
+
+#: comments.php:38
+msgid "Comment:"
+msgstr "Comentario:"
+
+#: comments.php:37
+msgid "Add Comment"
+msgstr "Añadir comentario"
+
+#: comments.php:36
+msgid "Add a Comment"
+msgstr "Añadir un comentario"
+
+#: comments.php:14 inc/template-tags.php:110
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: comments.php:14
+msgid "One Comment"
+msgstr "Un Comentario"
+
+#: comments.php:14
+msgid "No Comments"
+msgstr "Sin comentarios"
+
+#: 404.php:20
+msgid "Please check your URL or use the search form below."
+msgstr "Por favor comprueba la URL o usa el formulario de búsqueda a continuación."
+
+#: 404.php:16
+msgid "Error 404 Not Found"
+msgstr "Error 404  No encontrado"
+
+#: functions/widget-social.php:152
+msgid "%s Social Profile Icons"
+msgstr "%s iconos de perfile sociales"
+
+#: functions.php:101
+msgid "728x90 Ad Area"
+msgstr "Área del anuncio de 728x90"
+
+#: inc/customizer.php:30
+msgid "All Blog Posts Settings"
+msgstr "Ajustes de todas las entradas del blog"
+
+#: functions.php:146
+msgid "Appears on Shop main page and product archive pages."
+msgstr "Aparece en la página principal de la tienda y en las de archivo de productos."
+
+#: inc/customizer.php:69
+msgid "Applied to header background."
+msgstr "Aplicado al fondo de la cabecera."
+
+#: inc/customizer.php:259
+msgid "Author box Section"
+msgstr "Sección de la caja del autor"
+
+#: inc/customizer.php:205
+msgid "Breadcrumb Section"
+msgstr "Sección miga de pan"
+
+#: functions/widget-social.php:58
+msgid "Facebook URI"
+msgstr "URI de Facebook"
+
+#: functions.php:112
+msgid "First footer column"
+msgstr "Primera columna del pie"
+
+#: inc/customizer.php:100
+msgid "Posts on Homepage"
+msgstr "Entradas en la página de inicio"
+
+#: inc/customizer.php:78
+msgid "Primary Color Scheme"
+msgstr "Esquema de color primario"
+
+#: functions.php:123
+msgid "Second footer column"
+msgstr "Segunda columna del pie"
+
+#: inc/customizer.php:223
+msgid "Tags Section"
+msgstr "Sección de etiquetas"
+
+#: inc/customizer.php:21 inc/customizer.php:22
+msgid "Theme Design Options"
+msgstr "Opciones de diseño de tema"
+
+#: functions.php:134
+msgid "Third footer column"
+msgstr "Tercera columna del pie"
+
+#: inc/customizer.php:181
+msgid "You can write your copyright own text or leave it blank."
+msgstr "Puedes escribir tu propio texto de copyright o dejarlo en blanco."
+
+#: inc/template-tags.php:43
+msgid "Newer posts "
+msgstr "Entradas más recientes"
+
+#: inc/template-tags.php:39
+msgid " Older posts"
+msgstr "Entradas anteriores"
+
+#: functions/widget-social.php:86
+msgid "Linkedin URI"
+msgstr "URI de Linkedin"
+
+#: comments.php:8
+msgid "This post is password protected. Enter the password to view comments"
+msgstr "Esta entrada está protegida. Escribe la contraseña para ver los comentarios"
+
+#: 404.php:19
+msgid "Oops! We couldn't find this Page."
+msgstr "¡Vaya! No pudimos encontrar esta página."
+
+#. Theme URI of the plugin/theme
+msgid "https://superbthemes.com/publishable-mag/publishable-mag-info/"
+msgstr "https://superbthemes.com/publishable-mag/publishable-mag-info/"
+
+#. Author of the plugin/theme
+msgid "ThemeEverest"
+msgstr "ThemeEverest"
+
+#. Author URI of the plugin/theme
+msgid "https://superbthemes.com/"
+msgstr "https://superbthemes.com/"

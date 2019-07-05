@@ -1,0 +1,13 @@
+[16-Nov-2018 12:20:55 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:20:55 UTC] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:20:55 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:20:55 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:21:48 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:21:48 UTC] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:21:48 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:21:48 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:22:59 UTC] PHP Warning:  Use of undefined constant DB_USER - assumed 'DB_USER' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:22:59 UTC] PHP Warning:  Use of undefined constant DB_PASSWORD - assumed 'DB_PASSWORD' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:22:59 UTC] PHP Warning:  Use of undefined constant DB_NAME - assumed 'DB_NAME' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:22:59 UTC] PHP Warning:  Use of undefined constant DB_HOST - assumed 'DB_HOST' (this will throw an Error in a future version of PHP) in /home/felipe02/public_html/blog/wp-includes/load.php on line 404
+[16-Nov-2018 12:23:00 UTC] Error Unknown column 'wp_' in 'field list' de la base de datos de WordPress para la consulta SELECT wp_

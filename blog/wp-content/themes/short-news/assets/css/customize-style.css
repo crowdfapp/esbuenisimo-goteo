@@ -1,0 +1,46 @@
+
+#customize-controls .radio-choices {
+	margin: 0 -6px;
+}
+
+#customize-controls .radio-item {
+    padding: 6px;
+    float: left;
+}
+
+#customize-controls .radio-choices .radio-item:nth-child(2n+1) {
+	clear: left;
+}
+
+#customize-controls .radio-item label {
+	position: relative;
+}
+
+#customize-controls .radio-item label input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+#customize-controls .radio-item label .radio-img {
+	background-color: #fff;
+	border-radius: 3px;
+	border: 3px solid #ddd;
+	padding: 2px;
+}
+
+#customize-controls .radio-item label img {
+	display: block;
+	max-width: 94px;
+	height: auto;
+}
+
+#customize-controls .radio-item label:hover .radio-img,
+#customize-controls .radio-item label input[type="radio"]:checked + div {
+	border-color: #00a0d2;
+}
+
+#customize-controls .customize-control-short-news-custom-content {
+	margin: 10px 0 0;
+}

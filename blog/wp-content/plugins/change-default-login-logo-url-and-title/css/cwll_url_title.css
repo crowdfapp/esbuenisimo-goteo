@@ -1,0 +1,49 @@
+.cwl_url_titles form{
+	border: 15px solid white;
+	border-radius: 2px;
+	box-shadow: 0 0 10px;
+	float: left;
+	font-size: 13px;
+	padding: 10px 55px 40px;
+	
+}
+.cwl_url_titles input[type=text]{
+
+	height: 34px;
+	padding-left: 5px;
+	margin-bottom: 20px;
+	margin-top: 8px;
+	color: #4f4f4f;
+	font-size: 16px;
+}
+.cwl_url_titles label{
+	clear: left;
+    color: #464646;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #fff;
+    width: 136px;
+}
+.cwl_url_titles .cwl_image_show
+{
+	max-width: 190px;
+	height:auto;
+	margin-right: 21px; 
+
+}
+.cwl_url_titles .cwll_url_title_submit_cls
+{
+	background: #0073aa none repeat scroll 0 0;
+	border: 1px solid #0f799e;
+	border-radius: 2px;
+	color: white;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 15px;
+	padding: 3px 32px;
+	text-shadow: 0 1px 0 #13506d;
+
+}
