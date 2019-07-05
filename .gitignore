@@ -25,3 +25,5 @@
 phpunit.xml
 /tests/build
 .couscous
+
+/blog/
