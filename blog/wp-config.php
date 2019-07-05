@@ -16,10 +16,10 @@
 
 // ** Ajustes de MySQL. Solicita estos datos a tu proveedor de alojamiento web. ** //
 /** El nombre de tu base de datos de WordPress */
-define('DB_NAME', 'felipe02_blog');
+define('DB_NAME', 'sistemas_esbuenisimo_blog');
 
 /** Tu nombre de usuario de MySQL */
-define('DB_USER', 'felipe02_usuario');
+define('DB_USER', 'sistemas_ebroot');
 
 /** Tu contraseña de MySQL */
 define('DB_PASSWORD', 'DyCEnA4RpXdZS01W');
