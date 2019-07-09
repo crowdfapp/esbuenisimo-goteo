@@ -289,4 +289,4 @@ oauth:
 # Example:
 # google: UA-0000000-01
 analytics:
-    google:
+    google: UA-124165001-1
