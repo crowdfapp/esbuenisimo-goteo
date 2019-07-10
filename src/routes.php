@@ -145,6 +145,13 @@ $routes->add('rss', new Route(
         )
 ));
 
+///// Sitemap //////
+
+$routes->add('sitemap', new Route(
+    '/sitemap',
+    array('_controller' => 'Goteo\Controller\SitemapController::indexAction')
+));
+
 /// Last newsletter
 $routes->add('newsletter', new Route(
     '/newsletter/{id}',
