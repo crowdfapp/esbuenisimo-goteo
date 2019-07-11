@@ -56,9 +56,9 @@ $handler = new Monolog\Handler\StreamHandler('php://stdout', Monolog\Logger::DEB
 $handler->setFormatter(new Bramus\Monolog\Formatter\ColoredLineFormatter());
 
 // Add a log level debug to stderr
-App::getService('logger')->pushHandler($handler);
-App::getService('syslogger')->pushHandler($handler);
-App::getService('paylogger')->pushHandler($handler);
+// App::getService('logger')->pushHandler($handler);
+// App::getService('syslogger')->pushHandler($handler);
+// App::getService('paylogger')->pushHandler($handler);
 
 // Get the app
 App::get()->run();
