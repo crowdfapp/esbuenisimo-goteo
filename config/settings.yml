@@ -34,11 +34,11 @@ timezone: Europe/Madrid
 
 # url
 url:
-    main: //esbuenisimo-goteo-joseantoniobayonamedinaesb368675.codeanyapp.com
+    main: //esbuenisimo-goteo-joseantoniobayonamedinaesb418358.codeanyapp.com
     # static resources url if you use a different assets server
-    assets: //esbuenisimo-goteo-joseantoniobayonamedinaesb368675.codeanyapp.com/dist
+    assets: //esbuenisimo-goteo-joseantoniobayonamedinaesb418358.codeanyapp.com/dist
     #optional, configure this as hostname only (ex: example.com) if you want languages to be selected as subdomains (es.example.com, en.example.com)
-    url_lang: //esbuenisimo-goteo-joseantoniobayonamedinaesb368675.codeanyapp.com
+    url_lang: //esbuenisimo-goteo-joseantoniobayonamedinaesb418358.codeanyapp.com
 
     # If you want to use a CDN or another web server to serve the cached images
     # You can define this constants. All cached images links will point to this
