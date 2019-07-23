@@ -53,7 +53,7 @@ tooltip-project-about: 'Describe brevemente las características más importante
 tooltip-project-category: 'Selecciona tantas categorías como creas necesario para describir el proyecto, basándote en todo lo que has descrito arriba. Mediante estas palabras clave lo podremos hacer llegar a diferentes usuarios/as de esbuenisimo.'
 tooltip-project-currency: 'Indica en qué divisa calculas los costes del proyecto.'
 tooltip-project-currently: 'Indica en qué fase se encuentra el proyecto actualmente respecto a su proceso de creación o ejecución.'
-tooltip-project-description: 'Describe el proyecto con un mínimo de 80 palabras (con menos marcará error). Explícalo de modo que sea fácil de entender para cualquier persona. Intenta darle un enfoque atractivo y social, resumiendo sus puntos fuertes, qué lo hace único, innovador o especial.'
+tooltip-project-description: 'Describe el proyecto con un mínimo de 10 palabras (con menos marcará error). Explícalo de modo que sea fácil de entender para cualquier persona. Intenta darle un enfoque atractivo y social, resumiendo sus puntos fuertes, qué lo hace único, innovador o especial.'
 tooltip-project-goal: 'Enumera las metas principales del proyecto, a corto y largo plazo, en todos los aspectos que consideres importante destacar. Se trata de otra oportunidad para contactar y conseguir el apoyo de gente que simpatice con esos objetivos.'
 tooltip-project-image: 'Te recomendamos que sean diversas y de buena calidad, aunque no demasiado grandes (unos 900 píxeles de ancho / 2MB Max).'
 tooltip-project-image_upload: BORRAR

@@ -39,6 +39,8 @@
          echo '<div class="clearfix"></div>';
   
         echo '<div class="form-group pull-right">'.$submit.'</div>';
+  
+        echo '<div class="clearfix"></div>';
 
         echo $this->form_end($form);
 
