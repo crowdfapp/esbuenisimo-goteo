@@ -66,6 +66,18 @@ class UserProfileForm extends AbstractFormProcessor {
                     }                  
                 });
         }
+        if($field == 'business_name') {
+                $constraints[] = new Constraints\Callback(function($object, ExecutionContextInterface $context) use ($field) {
+                    $data = $context->getRoot()->getData();                  
+                    $legal_entity = $data['legal_entity']; 
+                  
+                    if($legal_entity > 0) {
+                        $context->buildViolation(Text::get('validate-user-profile-business_name'))
+                        ->atPath($field)
+                        ->addViolation();
+                    }                  
+                });
+        }
       if($field === 'region_id') {
           $constraints[] = new Constraints\NotBlank();
       }
@@ -223,6 +235,7 @@ class UserProfileForm extends AbstractFormProcessor {
                 'disabled' => $this->getReadonly(),
                 'constraints' => $this->getConstraints('business_name'),
                 'label' => 'profile-field-business-name',
+                'required' => false
             ])
           
             ->add('region_id', 'choice', [

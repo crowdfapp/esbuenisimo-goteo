@@ -77,6 +77,7 @@ validate-project-value-description: "La descripción del proyecto es demasiado c
 validate-project-reward-description: 'La descripción de la recompensa del proyecto es demasiado corta'
 validate-project-cost-description: 'La descripción del costo del proyecto es demasiado corta'
 validate-user-profile-rut: 'El RUT no es válido'
+validate-user-profile-business_name: 'Ingrese su razón social'
 validate-user-profile-about: 'El acerca de del usuario es demasiado corta'
 validate-project-value-keywords: 'Indica un mínimo de 5 palabras clave del proyecto para mejorar la valoración del mismo, de cara a determinar si publicarlo en esbuenisimo.'
 overview-field-execution-plan: 'Plan de ejecución'
