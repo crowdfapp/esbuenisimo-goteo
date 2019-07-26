@@ -27,6 +27,8 @@ if(empty($this->og_url)) $this->og_url = $this->url;
 
 <meta name="twitter:image" content="<?= $this->tw_image ?>">
 
+<meta name="google-site-verification" content="nvJxysQsxJ-DCE3gJbByOdujQBN9MFhdAR3eX_KQvsA" />
+
 
 <?php
 
