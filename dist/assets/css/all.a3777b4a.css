@@ -15462,3 +15462,12 @@ form.create-project-form div.form-group {
     margin-bottom: 10px;
     white-space: nowrap;
 }
+
+.create-project-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    margin: 60px 30px 20px 0;
+}

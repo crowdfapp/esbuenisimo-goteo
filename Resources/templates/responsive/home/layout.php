@@ -10,7 +10,7 @@ $this->section('content');
 ?>
 
 <div class="home">
-
+  
     <?= $this->supply('home-content') ?>
 
 </div>

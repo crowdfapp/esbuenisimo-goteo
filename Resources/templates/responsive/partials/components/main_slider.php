@@ -1,7 +1,5 @@
 <div class="section main-slider">
 
-    <?= $this->nav ? $this->insertif($this->nav) : '' ?>
-
 	<?php if($this->banners): ?>
 
 		<div class="slider slider-main">

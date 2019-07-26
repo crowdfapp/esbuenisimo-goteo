@@ -35,3 +35,12 @@
 
   </div><!--/.container -->
 </nav>
+<nav class="create-project-nav">
+    <ul class="list-inline navbar-right hidden-xs">
+        <li>
+            <a href="/project/create" class="btn btn-fashion">
+                Crea un proyecto            
+          </a>
+        </li>
+    </ul>
+</nav>
