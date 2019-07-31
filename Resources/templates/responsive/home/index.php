@@ -22,6 +22,16 @@
 
 
 <?php $this->section('home-content') ?>
+
+    <nav class="create-project-nav">
+        <ul class="list-inline navbar-right hidden-xs">
+            <li>
+                <a href="/project/create" class="btn btn-fashion">
+                    Crea un proyecto            
+              </a>
+            </li>
+        </ul>
+    </nav>
     
     <h1 class="titlevideo hidden-xs">#FanáticosDeVerdad</h1>
     <video width="100%" height="auto" playsinline autoplay muted loop style="    margin-top: -130px;">

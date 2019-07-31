@@ -15322,7 +15322,7 @@ div.row.message.child.no-owner div.user-name {
 
 .top-navbar {
     background-color: transparent !important;
-    min-height: 100px !important;
+    min-height: 55px !important;
 }
 
 ul.project-filters li.active {
@@ -15468,6 +15468,6 @@ form.create-project-form div.form-group {
     top: 0;
     right: 0;
     width: 100%;
-    z-index: 10000;
     margin: 60px 30px 20px 0;
+    z-index: 1000;
 }
