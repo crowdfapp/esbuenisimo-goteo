@@ -20,3 +20,10 @@ GBP:
     thousands: ','
     decimal: .
     active: true
+    
+PESO:
+    name: 'Peso'
+    symbol: '$'
+    thousands: ','
+    decimal: '.'
+    active: true
