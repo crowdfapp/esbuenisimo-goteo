@@ -10,7 +10,7 @@
                 <li><a href="/contact"><?= $this->text('regular-footer-contact')?></a></li>
                <!-- <li><a data-jslicense="1" href="/about/librejs">Licenses</a></li>
                 <li><a href="/faq"><? /*= $this->text('regular-header-faq') */?></a></li>-->
-                <li><a data-jslicense="1" target="_blank" href="https://www.esbuenisimo.com/blog/index.php">Blog</a></li>
+                <li><a data-jslicense="1" target="_blank" href="http://www.esbuenisimo.com/blog/index.php">Blog</a></li>
                 <li><a data-jslicense="1" href="#">Licencia</a></li>
                <!-- <li><a href="#"><? /*= $this->text('regular-header-faq')*/?></a></li> -->
               </ul> 
