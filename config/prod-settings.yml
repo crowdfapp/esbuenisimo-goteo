@@ -153,8 +153,8 @@ db:
     host:     localhost # Database host
     port:     3306      # Database port
     charset:  utf8     # Database charset
-    database: sistemas_esbuenisimo_web     # Database schema (database name)
-    username: sistemas_ebroot     # Database user for the goteo database
+    database: felipe02_goteo     # Database schema (database name)
+    username: felipe02_usuario     # Database user for the goteo database
     password: DyCEnA4RpXdZS01W  # Password for the goteo database
 
     # SELECT queries caching
@@ -223,7 +223,7 @@ mail:
             host:     mail.esbuenisimo.com
             port:     465
             username: noreply@esbuenisimo.com
-            password: wAqAE4m6mVHHH74s
+            password: DyCEnA4RpXdZS01W
 
     quota:
         total: 50000  # Maximum sending quota in 24 hours time (useful for SMTP servers like Amazon SES)
